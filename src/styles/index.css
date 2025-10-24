@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "./components.css";
+@import "./utilities.css";
+@import "./components/buttons.css";
+@import "./components/hero.css";
+/* Tout le reste vient après les imports */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply text-gray-800 antialiased; }
+}

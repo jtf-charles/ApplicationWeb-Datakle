@@ -1,0 +1,40 @@
+@layer components {
+  /* Conteneur principal hero */
+  .hero {
+    @apply relative w-full h-[72vh] md:h-[80vh] overflow-hidden;
+  }
+
+  /* Slide plein écran */
+  .hero-slide {
+    @apply absolute inset-0;
+  }
+
+  /* Overlay sombre avec dégradé gauche->droite */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none; /* ✅ empêche de bloquer les clics */
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0.25) 100%
+    );
+  }
+
+  /* Boutons de navigation */
+  .arrow-btn {
+    @apply grid place-items-center size-10 rounded-full bg-white/80 text-gray-800 font-bold shadow-sm transition hover:bg-white;
+    z-index: 30;
+    cursor: pointer; /* ✅ assure que la souris détecte le clic */
+  }
+
+  /* Points (indicateurs de slide) */
+  .dot {
+    @apply h-2.5 w-2.5 rounded-full bg-white/50 hover:bg-white transition;
+  }
+  .dot-active {
+    @apply bg-white;
+  }
+}

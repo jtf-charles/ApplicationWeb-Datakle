@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+@layer utilities {
+  .safe-area { padding-bottom: env(safe-area-inset-bottom); }
+}

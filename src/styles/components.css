@@ -1,0 +1,619 @@
+@reference "tailwindcss";
+
+@layer components {
+.partner-shell {
+    background-image:
+      radial-gradient(1200px 300px at 0% 0%, rgba(10,209,240,.12), transparent 70%),
+      radial-gradient(900px 260px at 100% 100%, rgba(0,89,251,.12), transparent 70%);
+  }
+
+/* cartes partenaires : léger survol */
+.partner-card {
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+.partner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(2, 32, 71, .12);
+  background-color: rgba(255,255,255,.92);
+}
+
+
+
+
+
+
+
+.footer-shell { @apply relative isolate bg-[#081835] text-white/90 pt-12 pb-8; }
+
+  .footer-accent {
+    @apply pointer-events-none absolute inset-0;
+    background:
+      radial-gradient(160px 160px at 6% 10%, rgba(0,89,251,.18), transparent 60%),
+      radial-gradient(260px 260px at 92% 16%, rgba(10,209,240,.16), transparent 60%);
+  }
+
+  /*.footer-title { @apply text-white font-semibold tracking-wide mb-3; }*/
+  .footer-title {
+  @apply text-white font-semibold tracking-wide mb-3;
+  
+  /* Base styles */
+  line-height: 1.3;
+  font-size: 1rem;
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+}
+  .footer-link  { @apply text-white/75 hover:text-white transition-colors; }
+
+  .footer-input {
+    @apply w-full rounded-xl bg-white/10 text-white placeholder-white/60 px-3 py-2
+           ring-1 ring-white/15 focus:outline-none focus:ring-2 focus:ring-[#0AD1F0];
+  }
+
+  .btn-hero {
+    @apply rounded-xl bg-[#0059FB] text-white px-4 py-2 font-semibold
+           shadow-[0_10px_20px_rgba(0,89,251,.25)]
+           hover:brightness-110 active:translate-y-[1px] transition-all;
+  }
+
+  .social-btn {
+    @apply inline-flex h-9 w-9 items-center justify-center rounded-full
+           bg-white/10 text-white ring-1 ring-white/15
+           hover:bg-white hover:text-[#0b1445] hover:-translate-y-0.5 transition-all;
+  }
+
+  .to-top {
+    @apply fixed bottom-6 right-6 z-20 inline-flex h-11 w-11 items-center justify-center
+           rounded-full bg-[#0AD1F0] text-[#001442] shadow-lg
+           hover:scale-105 active:scale-95 transition;
+  }
+
+
+.footer-link-row { @apply flex items-start gap-3; }
+  .footer-link-row svg { @apply mt-[2px]; } /* remonte un peu l’icône */
+
+
+.footer-row {
+    @apply flex gap-3 ;
+  @media (max-width: 768px) {
+        @apply justify-center items-center;
+  }
+}
+  .footer-row svg {
+    @apply h-5 w-5 shrink-0 text-white/70 mt-0.5 sm:mt-1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* --- Boutons "hérités" (on garde les noms) --- */
+  .btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition; }
+  .btn-primary { /* harmonisé sur le bleu Datakle */
+    @apply bg-[#0059FB] text-white hover:bg-[#0059FB]/90
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0AD1F0];
+  }
+  .btn-white   { @apply bg-white text-gray-900 hover:bg-gray-100; }
+
+  /* --- Texte du hero (boosté mais fidèle à la charte) --- */
+  .hero-eyebrow {
+    /* petite ligne d’en-tête plus lisible, accent cyan */
+    @apply text-[11px] sm:text-xs uppercase tracking-[.35em] font-semibold text-[#0AD1F0]
+           drop-shadow-[0_1px_1px_rgba(0,0,0,0.55)];
+  }
+
+   .hero-title {
+    @apply text-white font-black tracking-tight leading-[1.05]
+           text-4xl sm:text-5xl lg:text-6xl xl:text-7xl
+           drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]
+           max-w-[68rem] mx-auto; /* ⬅️ gagne en largeur, moins de retours à la ligne */
+  }
+
+ .hero-lead {
+    @apply text-white/95 /* ⬅️ plus lisible */
+           text-base sm:text-lg md:text-xl
+           leading-relaxed sm:leading-7
+           max-w-4xl md:max-w-5xl mx-auto /* ⬅️ un peu plus large */
+           drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)];
+  }
+
+  /* --- Conteneur plein écran --- */
+  .hero { @apply relative w-full h-[72vh] md:h-[80vh] overflow-hidden; }
+  .hero-slide { @apply absolute inset-0; }
+
+  /* --- Overlay sombre + gradient pour lisibilité --- */
+  .hero-overlay {
+    @apply absolute inset-0 pointer-events-none; /* ne bloque pas les clics */
+    background:
+      linear-gradient(90deg,
+        rgb(0 0 0 / .68) 0%,
+        rgb(0 0 0 / .42) 38%,
+        rgb(0 0 0 / .24) 100%);
+  }
+
+  /* --- NavBar --- */
+  .nav-solid { @apply bg-white/80 backdrop-blur border-b border-gray-200 shadow-sm; }
+  .nav-transparent { @apply bg-transparent; }
+
+  /* --- Dots / flèches du carrousel --- */
+  .dot { @apply h-2.5 w-2.5 rounded-full bg-white/50 hover:bg-white ring-0 transition; }
+  .dot-active { @apply bg-white; }
+
+  .arrow-btn {
+    @apply grid place-items-center size-10 rounded-full
+           bg-white/85 text-[#000044] border border-white/70
+           shadow-md transition hover:bg-white hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0AD1F0];
+  }
+
+  /* — Badges — (NE PAS @apply une classe custom) */
+  .badge       { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase; }
+  .badge-brand { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[.28em] bg-[#0059FB]/10 text-[#0059FB]; }
+
+  /* — Kicker tag — */
+  .kicker      { @apply inline-flex items-center justify-center rounded-xl bg-white/10 backdrop-blur px-2 py-1 text-[11px] tracking-[.18em] uppercase text-white/80; }
+
+  
+
+  /* ————— Cards ————— */
+  .tile           { @apply relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm ring-1 ring-black/5 transition-shadow ; }
+  .tile-hover     { @apply hover:shadow-xl focus-within:shadow-xl; }
+  .tile-bg        { @apply absolute inset-0 bg-cover bg-center transition-transform duration-700; }
+  .tile-bg-zoom   { @apply group-hover:scale-110; }
+  .tile-overlay   { @apply absolute inset-0 bg-gradient-to-t from-black/65 via-black/35 to-black/10; }
+  .tile-body      { @apply relative z-10 p-5 sm:p-6 lg:p-7 h-full flex flex-col; }
+
+  /* ————— Section header ————— */
+  .section-shell  { @apply relative isolate overflow-hidden rounded-3xl border border-white/60 bg-white/80 backdrop-blur shadow-sm ring-1 ring-black/5 px-2 sm:px-2 py-2 sm:py-2 mb-4 sm:mb-4; }
+  .section-shell-1  { @apply relative isolate overflow-hidden rounded-3xl border border-white/60 bg-[#0AD1F0]/80 backdrop-blur shadow-sm ring-1 ring-black/5 px-2 sm:px-2 py-2 sm:py-2 mb-4 sm:mb-4; }
+  
+  .section-title  { @apply font-black leading-tight text-[clamp(28px,5vw,48px)] text-[#000044]; }
+  .section-sub    { @apply mt-5 max-w-3xl mx-auto text-[clamp(14px,2.3vw,25px)] font-medium; }
+  .separator      { @apply mx-auto mt-8 h-[1px] w-full rounded-full bg-gradient-to-r from-transparent via-[#0059FB]/50 to-transparent; }
+
+
+ /* —— Variante 1 : Linear gradient (propre et lisible) —— */
+  .section-shell-gradient {
+    @apply relative isolate overflow-hidden rounded-3xl border border-white/60 backdrop-blur shadow-sm ring-1 ring-black/5 px-2 sm:px-2 py-2 sm:py-2 mb-4 sm:mb-4;
+    background: linear-gradient(135deg,
+      rgba(10, 209, 240, .92) 0%,
+      rgba(0, 153, 243, .92) 45%,
+      rgba(0, 89, 251, .92) 100%);
+  }
+  .section-shell-gradient::before,
+  .section-shell-gradient::after {
+    content: "";
+    position: absolute; inset: -30%;
+    background:
+      radial-gradient(closest-side, rgba(255,255,255,.25), transparent 70%) top left / 60% 60% no-repeat,
+      radial-gradient(closest-side, rgba(255,255,255,.18), transparent 70%) bottom right / 55% 55% no-repeat;
+    filter: blur(14px);
+    pointer-events: none;
+  }
+
+  /* —— Variante 2 : Soft “radial” gradient (effet halo élégant) —— */
+  .section-shell-gradient-soft {
+    @apply relative isolate overflow-hidden rounded-3xl border border-white/60 backdrop-blur shadow-sm ring-1 ring-black/5 px-2 sm:px-2 py-2 sm:py-2 mb-4 sm:mb-4;
+    background:
+      radial-gradient(120% 90% at 15% 0%, rgba(10,209,240,.55) 0%, rgba(10,209,240,.38) 40%, transparent 70%),
+      radial-gradient(120% 90% at 85% 100%, rgba(0,89,251,.55) 0%, rgba(0,89,251,.38) 40%, transparent 70%),
+      linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.06));
+  }
+  .section-shell-gradient-soft::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,.06), transparent 50%);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+  }
+
+ /* ===== Service Card ===== */
+  .service-card {
+    @apply relative overflow-hidden bg-[#00ABE4] rounded-3xl border-2 border-white ring-1 ring-black/5 
+           transition will-change-transform;
+           background: radial-gradient(60% 25% at 50% 0%,
+      #E9F1FA 100%,
+      rgba(10, 209, 240, .05) 100%,
+      transparent 60%);
+  }
+
+
+  .header-design {
+    @apply relative  bg-[#00ABE4]
+           transition will-change-transform;
+           background: radial-gradient(50% 125% at 10% 10%,
+      #0059FB 100%,
+      rgba(10, 209, 240, .05) 100%,
+      transparent 60%);
+  }
+
+
+   .header-simple-d {
+    @apply relative 
+           transition will-change-transform;
+           background: radial-gradient(50% 125% at 10% 10%,
+      #6ACFC7 100%,
+      rgba(10, 209, 240, .05) 100%,
+      transparent 60%);
+  }
+
+
+  
+  /*background: radial-gradient(60% 60% at 50% 0%,
+      rgba(0, 89, 251, .08) 100%,
+      rgba(10, 209, 240, .05) 100%,
+      transparent 60%);*/
+  .service-card-hover { @apply hover:shadow-xl hover:-translate-y-1 focus-within:shadow-xl focus-within:-translate-y-1; }
+  .service-min        { @apply min-h-[320px] lg:min-h-[360px]; }   /* ↑ un peu plus haute */
+
+  .service-body { @apply relative z-10 px-7 py-8 text-center; }
+
+  /* BG doux + animé au hover */
+  .service-bg {
+    @apply absolute inset-0 opacity-0 transition;
+    background: radial-gradient(70% 70% at 60% 0%,
+      rgba(0, 89, 251, .08) 70%,
+      rgba(10, 209, 240, .05) 60%,
+      transparent 70%);
+  }
+
+  .service-bg, .service-icon-halo { pointer-events: none; }
+  .service-card:hover .service-bg,
+  .service-card:focus-within .service-bg { @apply opacity-100; }
+
+
+  /* Feedback CTA (facultatif mais agréable) */
+  .btn:active { transform: translateY(1px); }
+
+  /* Variante de gradient + animation sur hover */
+  @keyframes dkGradientShift {
+    0%   { background-position: 50% 0%; }
+    50%  { background-position: 48% 4%; }
+    100% { background-position: 50% 0%; }
+  }
+  .service-card:hover .service-bg {
+    background:
+      radial-gradient(70% 70% at 50% 0%,
+        rgba(10, 209, 240, .10) 0%,
+        rgba(0, 89, 251, .12) 35%,
+        rgba(79, 70, 229, .10) 55%,
+        transparent 78%);
+    background-size: 120% 120%;
+    animation: dkGradientShift 6s ease-in-out infinite;
+  }
+
+  /* Icone + halo */
+  .service-icon-wrap { @apply relative mx-auto grid place-items-center size-20 rounded-full bg-white shadow-sm ring-1 ring-black/5; }
+  .service-icon-halo {
+    @apply absolute inset-0 rounded-full;
+    background: conic-gradient(from 180deg, #0AD1F0, #0059FB, #4F46E5, #0AD1F0);
+    filter: blur(10px);
+    opacity: .25;
+    transform: scale(.9);
+    transition: transform 500ms ease, opacity 500ms ease;
+  }
+  .service-card:hover .service-icon-halo { transform: scale(1.05) rotate(8deg); opacity: .45; }
+
+  .service-title { @apply mt-5 text-xl font-extrabold text-white text-gray-900; }
+  .service-desc  { @apply mt-8 text-sm leading-relaxed text-white text-gray-600 max-w-prose mx-auto; }
+
+  /* CTA toujours visible (plus de reveal) */
+  .service-cta      { @apply mt-8 flex justify-center; }
+  .service-cta .btn { transform: none; opacity: 1; }
+
+  /* Accessibilité focus */
+  .focus-ring { @apply outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0059FB] rounded-3xl; }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* Container élégant (non plein écran) bg-[#00ABE4]*/
+  .header-simple {
+   @apply relative overflow-hidden h-60 bg-[#FFFFFF]  shadow-sm ring-1 ring-black/5 mb-4;
+  } 
+
+
+   .simple-header {
+   @apply relative overflow-hidden h-60 bg-[#213F99]  shadow-sm ring-1 ring-black/5 mb-4;
+  } 
+
+    .header-p {
+   @apply relative overflow-hidden h-30 bg-[#000000]  shadow-sm ring-1 ring-black/5 mb-4;
+  } 
+
+
+  .header-simple-pad { @apply px-4 sm:px-6 lg:px-8 py-6 sm:py-8; }
+
+  /* Bande dégradée discrète en bas + animation 
+  .header-accent {
+    @apply absolute inset-x-0 bottom-0 h-20;
+    background: linear-gradient(90deg, #0af09f, #0059FB 60%, #4F46E5);
+    opacity: .9;
+  }
+  .header-accent::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+    animation: dkShimmer 3.5s ease-in-out infinite;
+  }
+  @keyframes dkShimmer {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }*/
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Hover subtil (container) */
+  .header-simple:hover { @apply shadow-md; }
+
+  /* Titre / texte */
+  .header-title { @apply text-2xl sm:text-3xl lg:text-5xl font-black tracking-tight text-[#0b1445]; }
+
+  .header-title-design { @apply text-2xl sm:text-3xl lg:text-5xl font-black tracking-tight text-[#FFFFFF]; }
+  /*.header-sub   { @apply mt-2 text-sm sm:text-base text-gray-600 max-w-2xl text-white; }*/
+  .header-sub {
+  @apply mt-2 text-sm sm:text-base text-center font-bold  text-black sm:text-white max-w-2xl;
+}
+
+ .header-sub-simple {
+  @apply mt-2 text-sm sm:text-base text-center font-bold text-white max-w-2xl;
+}
+
+  /* Zone CTA */
+  .header-cta { @apply flex items-center justify-start; }
+
+  /* Animation d’entrée (JS-free) */
+  .fade-up {
+    opacity: 0; transform: translateY(8px);
+    animation: fadeUp .6s ease forwards;
+  }
+  .fade-up-2 { animation-delay: .08s; }
+  .fade-up-3 { animation-delay: .16s; }  
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+}
+
+
+ /* Gros bouton d’action (version header) */
+  .btn-hero {
+    @apply inline-flex items-center justify-center rounded-full
+           px-6 sm:px-7 lg:px-8 py-3 sm:py-3.5
+           text-sm sm:text-base font-semibold
+           bg-[#FFFFFFF] text-white;
+    box-shadow: 0 10px 20px rgba(10, 91, 255, .18);
+    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  }
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(10, 91, 255, .28);
+    background-color: #084ee0;
+  }
+  .btn-hero:active { transform: translateY(0); }
+
+  /* Effet “sheen” discret au survol */
+  .btn-hero.sheen {
+    position: relative; overflow: hidden;
+  }
+  .btn-hero.sheen::after {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,.35), transparent);
+    transform: translateX(-120%);
+    transition: transform .7s ease;
+  }
+  .btn-hero.sheen:hover::after { transform: translateX(120%); }
+
+  /* Variante ambre (pas bleu/ni blanc) bg-[#01257D]  bg-[#00ABE4]  bg-[#00FFFF] bg-[#01257D] bg-[#111439] */
+  .btn-hero-amber {
+    /* mobile (par défaut) */
+    @apply bg-[#0059FB] text-white
+
+           /* ≥ sm : fond clair + texte navy + petite bordure */
+           sm:bg-[#6C0BA9] sm:text-[#FFFFFF] sm:border sm:border-black/10;
+
+    box-shadow: 0 10px 20px rgba(103, 20, 237, 0.18);
+  }
+
+   .btn-hero-amber {
+    /* mobile (par défaut) */
+    @apply bg-[#6C0BA9] text-white
+
+           /* ≥ sm : fond clair + texte navy + petite bordure */
+           sm:bg-[#0059FB] sm:text-[#FFFFFF] sm:border sm:border-black/10;
+
+    box-shadow: 0 10px 20px rgba(103, 20, 237, 0.18);
+  }
+
+
+.btn-p {
+    /* mobile (par défaut) */
+    @apply bg-[#6C0BA9] text-white;
+
+    box-shadow: 0 10px 20px rgba(103, 20, 237, 0.18);
+  }
+
+
+
+
+  .btn-hero-amber:hover {
+    @apply bg-[#0af09f];               /* amber 600 */
+    box-shadow: 0 14px 28px rgba(74, 9, 202, 0.28);
+  }
+
+
+
+
+
+  /* Bande pleine largeur pour les sections (fond doux compatible charte)
+  .band-services {
+    @apply relative w-full;               
+
+    background:
+      radial-gradient(60% 60% at 10% 0%, rgba(10,209,240,.10) 0%, transparent 70%),
+      radial-gradient(70% 60% at 90% 100%, rgba(0,89,251,.10) 0%, transparent 70%),
+      linear-gradient(180deg, #F7FBFF 0%, #F4F8FF 40%, #F2F7FF 100%);
+  }*/
+
+
+
+
+/*bg-[#4A8BDF] bg-[#002349]*/           /* occupe toute la largeur */
+    .band-services {
+    @apply relative w-full bg-[#6C0BA9];      
+  }
+
+
+  .band-about {
+    @apply relative w-full bg-[#E9F1FA];      
+  }
+
+  .band-services::after {
+    /* petit filet en bas pour séparer visuellement (optionnel, très léger) */
+    content: "";
+    @apply absolute inset-x-0 bottom-0 h-px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,.06), transparent);
+    pointer-events: none;
+  }
+
+  /* Resp. padding pour l’intérieur de la bande */
+  .band-pad {
+    @apply py-10 sm:py-12 lg:py-14;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Bande dégradée (conserve ta couleur) */
+.header-accent {
+  @apply absolute inset-x-0 bottom-0 h-5;
+  background: linear-gradient(90deg, #0af09f, #0059FB 70%, #00ABE4);
+  opacity: .9;
+  overflow: hidden;               /* pour garder la vague dans la bande */
+  transform-origin: 50% 100%;
+}
+
+/* 2 couches de vague : avant-plan (::after) + fond (::before) */
+.header-accent::before,
+.header-accent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* couleur blanche semi-transparente pour la “surface libre” */
+  background: rgba(255,255,255,.35);
+
+  /* masque en forme d’onde (surface libre) — répété en X */
+  -webkit-mask: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
+    <path fill='white' d='M0,120 C150,80 350,160 600,120 C850,80 1050,160 1200,120 L1200,200 L0,200 Z'/>\
+  </svg>") repeat-x 0 0 / 1200px 100%;
+  mask: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
+    <path fill='white' d='M0,120 C150,80 350,160 600,120 C850,80 1050,160 1200,120 L1200,200 L0,200 Z'/>\
+  </svg>") repeat-x 0 0 / 1200px 100%;
+
+  will-change: transform, background-position;
+}
+
+/* Vague proche (avant-plan) : amplitude un peu plus marquée */
+.header-accent::after {
+  animation: dkShimmer 5.2s cubic-bezier(.45,.05,.55,.95) infinite;
+}
+
+/* Vague de fond : vitesse différente + déphasée + un peu plus basse */
+.header-accent::before {
+  opacity: .28;
+  transform: translateY(6px);
+  animation: dkShimmer 7.4s cubic-bezier(.45,.05,.55,.95) -1.2s infinite;
+}
+
+/* “Slosh” : déplacement horizontal + léger tangage (rotate) + petite montée/descente */
+@keyframes dkShimmer {
+  0% {
+    transform: translateX(-4%) translateY(0) rotate(-1.2deg);
+    background-position: 0 0;
+  }
+  25% {
+    transform: translateX(-2%) translateY(-6px) rotate(-0.6deg);
+    background-position: 300px -4px;
+  }
+  50% {
+    transform: translateX(2%) translateY(0) rotate(1.2deg);
+    background-position: 600px 0;
+  }
+  75% {
+    transform: translateX(4%) translateY(6px) rotate(0.6deg);
+    background-position: 900px 4px;
+  }
+  100% {
+    transform: translateX(-4%) translateY(0) rotate(-1.2deg);
+    background-position: 1200px 0;
+  }
+}
+
+
+
+
+
+
+
+
+

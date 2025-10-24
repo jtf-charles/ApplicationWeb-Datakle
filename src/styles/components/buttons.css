@@ -1,0 +1,43 @@
+@reference "tailwindcss";
+
+@layer components {
+  /* base commune */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2
+           rounded-xl px-4 py-2 text-sm font-semibold select-none
+           transition-all duration-200 ease-in-out;
+           
+    /* petite ombre neutre */
+    @apply shadow-sm;
+  }
+
+  .btn-pill { @apply rounded-full; }
+  .btn-lg   { @apply px-5 py-3 text-base rounded-2xl; }
+
+  /* ====== Primaire (bleu #0059FB) ====== */
+  .btn--primary {
+    @apply bg-[#0059FB] text-white;
+    /* hover/active très visibles */
+    @apply hover:bg-[#FFFFFF] hover:text-gray-900
+           hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-md
+           hover:ring-2 hover:ring-[#0AD1F0]/40
+           focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-[#0AD1F0]
+           active:translate-y-0 active:scale-100;
+  }
+
+  /* ====== Secondaire (clair, non transparent) ======
+     - fond blanc + bord bleu
+     - texte navy
+     - au survol : inversion -> fond bleu, texte blanc
+  */
+  .btn--secondary {
+    @apply bg-white text-[#000044] border-2 border-[#0059FB];
+    @apply hover:bg-[#0059FB] hover:text-white
+           hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-md
+           hover:ring-2 hover:ring-[#0AD1F0]/30
+           focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-[#0059FB]
+           active:translate-y-0 active:scale-100;
+  }
+}
