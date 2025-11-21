@@ -25,8 +25,9 @@ export default function SectionHeaderSimple({
           {/* CTA à droite, même ligne que le titre */}
           <Link
             to={ctaTo}
-            className="btn-hero btn-hero-amber sheen sm:self-start sm:ml-auto"
+            className="btn btn--primary btn-pill sheen sm:self-start sm:ml-auto"    
           >
+
             {ctaLabel}
             <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
               <path d="M7.5 5l5 5-5 5" />

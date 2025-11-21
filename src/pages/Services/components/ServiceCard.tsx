@@ -5,13 +5,15 @@ export type Service = {
   title: string;
   description: string;
   to?: string; // la redirection ne s'applique PLUS qu'au CTA
-  Icon: (p: SVGProps<SVGSVGElement>) => JSX.Element;
+  /*Icon: (p: SVGProps<SVGSVGElement>) => JSX.Element;*/
+
+  Icon: (p: SVGProps<SVGSVGElement>) => React.ReactElement,
 };
 
 export default function ServiceCard({ title, description, to, Icon }: Service) {
   return (
     <div className="service-card service-card-hover service-min focus-ring group cursor-default">
-      {/* Fond décoratif — ne capte pas les clics */}
+    
       <div className="service-bg pointer-events-none" aria-hidden />
 
       <div className="service-body">

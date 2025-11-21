@@ -1,0 +1,91 @@
+/* ======================================================
+   NEXA — Variantes utilisées dans la charte graphique
+   ====================================================== */
+
+   /* ============= NEXA BLACK (titre) ============= */
+@font-face {
+  font-family: "Nexa-Black";
+  src: url("https://db.onlinewebfonts.com/t/916b90745d4fc6c6fa3b4af2c9f7c840.eot"); /* IE9 */
+  src: url("https://db.onlinewebfonts.com/t/916b90745d4fc6c6fa3b4af2c9f7c840.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/916b90745d4fc6c6fa3b4af2c9f7c840.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/916b90745d4fc6c6fa3b4af2c9f7c840.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/916b90745d4fc6c6fa3b4af2c9f7c840.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/916b90745d4fc6c6fa3b4af2c9f7c840.svg#Nexa-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+/* Nexa Light (300) */
+@font-face {
+  font-family: "Nexa";
+  src: url("https://fonts.cdnfonts.com/s/19227/Fontfabric - Nexa-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Nexa Light Italic (300 italic) */
+@font-face {
+  font-family: "Nexa";
+  src: url("https://fonts.cdnfonts.com/s/19227/Fontfabric - Nexa-LightItalic.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Nexa Book / Regular (400) */
+@font-face {
+  font-family: "Nexa";
+  src: url("https://fonts.cdnfonts.com/s/19227/Fontfabric - Nexa-Book.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Nexa Bold (700) */
+@font-face {
+  font-family: "Nexa";
+  src: url("https://fonts.cdnfonts.com/s/19227/Fontfabric - Nexa-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+/* =============================
+   CLASSES PRÊTES À L’EMPLOI
+   ============================= */
+
+/* Titre principal en Nexa Black */
+.nexa-black {
+  font-family: "Nexa-Black", "Nexa", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+/* Titres — Nexa Bold */
+.nexa-bold {
+  font-family: "Nexa", sans-serif;
+  font-weight: 700;
+}
+
+/* Paragraphes — Nexa Book */
+.nexa-book {
+  font-family: "Nexa", sans-serif;
+  font-weight: 400;
+}
+
+/* Paragraphes légers — Nexa Light */
+.nexa-light {
+  font-family: "Nexa", sans-serif;
+  font-weight: 300;
+}
+
+/* Recommandations — Nexa Light Italic */
+.nexa-light-italic {
+  font-family: "Nexa", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}

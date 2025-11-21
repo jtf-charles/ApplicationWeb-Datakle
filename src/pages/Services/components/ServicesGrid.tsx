@@ -29,10 +29,9 @@ const SERVICES: Service[] = [
 export default function ServicesGrid() {
   return (
     /* >>> Bande pleine largeur avec background */
-    <section className="band-services band-pad">
-      {/* Contenu centré et limité */}
+    <section className="band-services band-pad bg-gradient-to-b from-[#000044] via-[#0059FB] to-[#000044]">
       <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
-        <SectionHeaderDesign
+      <SectionHeaderDesign
           title="NOS SERVICES"
           subtitle={
             <>
@@ -44,6 +43,21 @@ export default function ServicesGrid() {
           ctaLabel="Voir tous les services"
           ctaTo="/default"
         />
+      </div>
+      <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
+        {/* Coquille blanche / translucide sur le fond bleu */}
+        <div
+          className="
+            rounded-[2rem] bg-white/5 border border-white/15
+            shadow-[0_30px_80px_rgba(0,0,0,0.45)]
+            backdrop-blur-md px-4 sm:px-6 py-6 sm:py-8
+          "
+        >
+
+        
+      {/* Contenu centré et limité */}
+      <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
+        
 
         {/* Grille des cartes */}
         <div className="mt-6 grid gap-6 md:gap-7 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -53,6 +67,8 @@ export default function ServicesGrid() {
             </div>
           ))}
         </div>
+      </div>
+      </div>
       </div>
     </section>
   );

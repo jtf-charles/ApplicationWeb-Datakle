@@ -8,7 +8,9 @@ export type Tile = {
   long?: string;
   image: string;
   to?: string;
-  Icon: (p: SVGProps<SVGSVGElement>) => JSX.Element;
+  /*Icon: (p: SVGProps<SVGSVGElement>) => JSX.Element;*/
+
+  Icon: (p: SVGProps<SVGSVGElement>) => React.ReactElement,
 };
 
 export type TileCardProps = { tile?: Tile }; // ← rendre optionnelle pour éviter le crash runtime
@@ -29,7 +31,7 @@ export default function TileCard({ tile }: TileCardProps) {
       <div className="tile-overlay pointer-events-none" aria-hidden="true" />
 
       <div className="tile-body">
-        <div className="flex items-center gap-2 text-white/80">
+        <div className="flex items-center gap-2">
           <span className="kicker">{kicker}</span>
           <Icon className="h-4 w-4 text-[#FFD44D]" />
         </div>
@@ -38,14 +40,14 @@ export default function TileCard({ tile }: TileCardProps) {
           {title}
         </h3>
 
-        <p className="mt-3 text-white/90 text-sm sm:text-[15px] leading-relaxed max-w-prose">
+        <p className="mt-8 text-[#FFFFFF] text-sm sm:text-[18px] text-center leading-relaxed max-w-prose font-bold ">
           {short}
         </p>
 
         {long && (
-          <div className="mt-3 grid transition-[grid-template-rows] duration-500 ease-out group-hover:grid-rows-[1fr] focus-within:grid-rows-[1fr] grid-rows-[0fr]">
+          <div className="mt-0 grid transition-[grid-template-rows] duration-500 ease-out group-hover:grid-rows-[1fr] focus-within:grid-rows-[1fr] grid-rows-[0fr]">
             <div className="overflow-hidden">
-              <p className="text-white/90 text-sm sm:text-[15px] leading-relaxed">
+              <p className="text-white text-sm sm:text-[18px] text-center leading-relaxed bg-[#000044]/50 font-bold">
                 {long}
               </p>
             </div>
@@ -53,7 +55,7 @@ export default function TileCard({ tile }: TileCardProps) {
         )}
 
         {to && (
-          <div className="mt-5">
+          <div className="mt-5 mx-auto" >
             <Link
               to={to}
               className="btn btn-primary btn-pill inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0059FB]"

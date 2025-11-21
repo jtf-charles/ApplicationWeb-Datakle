@@ -34,7 +34,7 @@
 
   /*.footer-title { @apply text-white font-semibold tracking-wide mb-3; }*/
   .footer-title {
-  @apply text-white font-semibold tracking-wide mb-3;
+  @apply text-[#0AD1F0] font-bold tracking-wide mb-3;
   
   /* Base styles */
   line-height: 1.3;
@@ -110,22 +110,27 @@
   .btn-white   { @apply bg-white text-gray-900 hover:bg-gray-100; }
 
   /* --- Texte du hero (boosté mais fidèle à la charte) --- */
-  .hero-eyebrow {
-    /* petite ligne d’en-tête plus lisible, accent cyan */
-    @apply text-[11px] sm:text-xs uppercase tracking-[.35em] font-semibold text-[#0AD1F0]
-           drop-shadow-[0_1px_1px_rgba(0,0,0,0.55)];
-  }
+.hero-eyebrow {
+  @apply text-xl sm:text-xl lg:text-xl xl:text-xl mb-5
+  uppercase tracking-[.35em] font-semibold text-[#FFFFFF]
+  bg-[#0059FB]/60 backdrop-blur-sm inline-flex
+  drop-shadow-[0_1px_1px_rgba(0,0,0,0.55)];
+}
 
    .hero-title {
-    @apply text-white font-black tracking-tight leading-[1.05]
+    @apply text-white font-black tracking-tight leading-[1.05] 
            text-4xl sm:text-5xl lg:text-6xl xl:text-7xl
            drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]
-           max-w-[68rem] mx-auto; /* ⬅️ gagne en largeur, moins de retours à la ligne */
+           /*max-w-[68rem] mx-auto; ⬅️ gagne en largeur, moins de retours à la ligne */
+           /* largeur + padding responsives */
+            max-w-[24ch] sm:max-w-[36ch] md:max-w-[48ch] lg:max-w-[60rem] xl:max-w-[68rem]
+            px-4 sm:px-0
+            mx-auto;
   }
 
  .hero-lead {
     @apply text-white/95 /* ⬅️ plus lisible */
-           text-base sm:text-lg md:text-xl
+           text-xl sm:text-2xl lg:text-2xl xl:text-4xl
            leading-relaxed sm:leading-7
            max-w-4xl md:max-w-5xl mx-auto /* ⬅️ un peu plus large */
            drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)];
@@ -164,7 +169,7 @@
   .badge-brand { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[.28em] bg-[#0059FB]/10 text-[#0059FB]; }
 
   /* — Kicker tag — */
-  .kicker      { @apply inline-flex items-center justify-center rounded-xl bg-white/10 backdrop-blur px-2 py-1 text-[11px] tracking-[.18em] uppercase text-white/80; }
+  .kicker      { @apply inline-flex items-center justify-center rounded-xl bg-[#0AD1F0] backdrop-blur px-2 py-1 text-[11px] tracking-[.18em] uppercase text-[#000044] font-bold; }
 
   
 
@@ -235,7 +240,7 @@
     @apply relative  bg-[#00ABE4]
            transition will-change-transform;
            background: radial-gradient(50% 125% at 10% 10%,
-      #0059FB 100%,
+      #FFFFFF 100%,
       rgba(10, 209, 240, .05) 100%,
       transparent 60%);
   }
@@ -245,7 +250,7 @@
     @apply relative 
            transition will-change-transform;
            background: radial-gradient(50% 125% at 10% 10%,
-      #6ACFC7 100%,
+      #000044 100%,
       rgba(10, 209, 240, .05) 100%,
       transparent 60%);
   }
@@ -342,7 +347,7 @@
 
 
    .simple-header {
-   @apply relative overflow-hidden h-60 bg-[#213F99]  shadow-sm ring-1 ring-black/5 mb-4;
+   @apply relative overflow-hidden h-60 bg-[#000044]  shadow-sm ring-1 ring-black/5 mb-4;
   } 
 
     .header-p {
@@ -394,16 +399,19 @@
   .header-simple:hover { @apply shadow-md; }
 
   /* Titre / texte */
-  .header-title { @apply text-2xl sm:text-3xl lg:text-5xl font-black tracking-tight text-[#0b1445]; }
+  .header-title { @apply text-2xl sm:text-3xl lg:text-5xl font-black tracking-tight text-[#0AD1F0]; }
 
-  .header-title-design { @apply text-2xl sm:text-3xl lg:text-5xl font-black tracking-tight text-[#FFFFFF]; }
+  .header-title-design { @apply text-2xl sm:text-3xl lg:text-5xl font-black tracking-tight text-[#000000]; }
   /*.header-sub   { @apply mt-2 text-sm sm:text-base text-gray-600 max-w-2xl text-white; }*/
   .header-sub {
-  @apply mt-2 text-sm sm:text-base text-center font-bold  text-black sm:text-white max-w-2xl;
+  @apply mt-2 px-4 mx-auto text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-xl
+         text-center font-bold text-black 
+         max-w-4xl;
 }
 
  .header-sub-simple {
-  @apply mt-2 text-sm sm:text-base text-center font-bold text-white max-w-2xl;
+  @apply mt-2 px-4 mx-auto text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-xl
+   text-center font-bold text-[#0AD1F0] max-w-4xl;
 }
 
   /* Zone CTA */
@@ -503,9 +511,15 @@
 
 
 
-/*bg-[#4A8BDF] bg-[#002349]*/           /* occupe toute la largeur */
+/*bg-[#4A8BDF] bg-[#002349] bg-[#6C0BA9]  bg-[#6600FF]     /* occupe toute la largeur */
     .band-services {
-    @apply relative w-full bg-[#6C0BA9];      
+    @apply relative w-full bg-[#0F52BA]; 
+    
+     /* Responsive */
+  @media (max-width: 1920px) {
+background-color: #0F52BA;
+  }
+  
   }
 
 

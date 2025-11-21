@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/images/Logo-05.svg";
+import ScrollToTopLink from "../../app/ScrollToTopLink";
 
-type Social = { name: string; href: string; Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element };
+/*type Social = { name: string; href: string; Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element };*/
+
+type Social = { name: string; href: string; Icon: (props: React.SVGProps<SVGSVGElement>) => React.ReactElement };
 
 const socials: Social[] = [
   {
@@ -38,6 +41,19 @@ const socials: Social[] = [
     Icon: (p) => (
       <svg viewBox="0 0 24 24" aria-hidden {...p}>
         <path fill="currentColor" d="M6.9 8.8H4V21h2.9V8.8Zm.3-4.2a1.9 1.9 0 1 0-3.8 0 1.9 1.9 0 0 0 3.8 0ZM20 21h-2.9v-6.1c0-1.5-.5-2.6-1.9-2.6-1 0-1.6.7-1.8 1.4-.1.2-.1.6-.1.9V21H8.4s.1-10.5 0-11.6H11v1.6c.4-.7 1.3-1.8 3.1-1.8 2.3 0 4 1.5 4 4.8V21Z" />
+      </svg>
+    ),
+  },
+  /* 🚀 Ajout WhatsApp — NE RIEN TOUCHER D'AUTRE */
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/50934389448", // <-- Remplace par ton numéro
+    Icon: (p) => (
+      <svg viewBox="0 0 32 32" aria-hidden {...p}>
+        <path
+          fill="currentColor"
+          d="M16.04 2.67A13.32 13.32 0 0 0 4.67 22.34L3 29l6.82-1.79a13.32 13.32 0 1 0 6.22-24.54Zm0 24.22a10.9 10.9 0 0 1-5.57-1.53l-.4-.23-4.04 1.06 1.08-3.94-.26-.38a10.78 10.78 0 1 1 9.2 5.02Zm6.03-7.98c-.33-.17-1.96-.96-2.26-1.06-.3-.12-.52-.17-.73.17-.21.33-.84 1.06-1.03 1.27-.19.21-.38.24-.7.08a8.6 8.6 0 0 1-2.53-1.53 9.83 9.83 0 0 1-1.82-2.25c-.19-.33-.02-.5.14-.66.14-.14.33-.38.5-.57.17-.19.22-.33.33-.55.12-.21.06-.4 0-.56-.06-.17-.73-1.78-1-2.44-.26-.63-.52-.54-.73-.55h-.63c-.21 0-.55.08-.84.38-.29.29-1.1 1.08-1.1 2.64 0 1.56 1.13 3.07 1.3 3.28.17.21 2.23 3.41 5.54 4.78.77.33 1.37.53 1.84.68.77.24 1.47.21 2.03.13.63-.1 1.96-.8 2.24-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.38Z"
+        />
       </svg>
     ),
   },
@@ -81,10 +97,10 @@ export default function Footer() {
           <nav>
             <h4 className="footer-title">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/default" className="footer-link">Tableaux de bord</Link></li>
-              <li><Link to="/default" className="footer-link">Pipelines & Qualité</Link></li>
-              <li><Link to="/default" className="footer-link">Sécurité & Gouvernance</Link></li>
-              <li><Link to="/default" className="footer-link">Apps & Automatisation</Link></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Tableaux de bord</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Pipelines & Qualité</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Sécurité & Gouvernance</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Apps & Automatisation</ScrollToTopLink></li>
             </ul>
           </nav>
 
@@ -92,9 +108,9 @@ export default function Footer() {
           <nav>
             <h4 className="footer-title">Ressources</h4>
             <ul className="space-y-2">
-              <li><Link to="/default" className="footer-link">Études de cas</Link></li>
-              <li><Link to="/default" className="footer-link">Blog</Link></li>
-              <li><Link to="/default" className="footer-link">À propos</Link></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Études de cas</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Blog</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">À propos</ScrollToTopLink></li>
             </ul>
           </nav>
 
@@ -169,26 +185,6 @@ export default function Footer() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           {/* Newsletter — full width en mobile */}
           <div className="max-w-md mx-auto sm:mx-0 w-full">
             <h4 className="footer-title">Newsletter</h4>
@@ -219,8 +215,8 @@ export default function Footer() {
             © {year} DATAKLE. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6 text-sm">
-            <Link to="/default" className="footer-link">Mentions légales</Link>
-            <Link to="/default" className="footer-link">Confidentialité</Link>
+            <ScrollToTopLink to="/default" className="footer-link">Mentions légales</ScrollToTopLink>
+            <ScrollToTopLink to="/default" className="footer-link">Confidentialité</ScrollToTopLink>
           </div>
         </div>
       </div>

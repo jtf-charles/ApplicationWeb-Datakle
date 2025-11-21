@@ -1,10 +1,93 @@
 @import "tailwindcss";
 @import "./components.css";
+@import "./font.css";
 @import "./utilities.css";
 @import "./components/buttons.css";
 @import "./components/hero.css";
+@import url("https://fonts.cdnfonts.com/css/nexa");
 /* Tout le reste vient après les imports */
 @layer base {
   html { scroll-behavior: smooth; }
   body { @apply text-gray-800 antialiased; }
+}
+
+
+
+/* === Animations flottantes Datakle === */
+
+@keyframes dk-float-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(28px);
+  }
+}
+
+@keyframes dk-float-y {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+}
+
+@keyframes dk-float-diag {
+  0%, 100% {
+    transform: translate(0, 0) rotate(12deg);
+  }
+  50% {
+    transform: translate(16px, -18px) rotate(22deg);
+  }
+}
+
+/* Classes utilitaires */
+.dk-float-x-slow {
+  animation: dk-float-x 5s ease-in-out infinite;
+}
+
+.dk-float-y-slow {
+  animation: dk-float-y 6s ease-in-out infinite;
+}
+
+.dk-float-diag-slow {
+  animation: dk-float-diag 2s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+
+/* Palette */
+:root {
+  --dk-blue:  #0059FB;
+  --dk-navy:  #000044;
+  --dk-cyan:  #0AD1F0;
+  --dk-gray:  #4B5563;
+}
+
+/* Appliquer Nexa */
+.font-nexa {
+  font-family: "Nexa", system-ui, sans-serif !important;
+}
+
+/* Classe test couleur */
+.text-dk-blue {
+  color: var(--dk-blue);
+}
+.text-dk-cyan {
+  color: var(--dk-cyan);
+}
+
+/* Titre */
+.dk-title {
+  font-family: "Nexa", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
 }

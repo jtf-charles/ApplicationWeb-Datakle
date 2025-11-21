@@ -4,9 +4,11 @@ import TileCard, { type Tile } from "../../../styles/components/TileCard";
 import TilesCarousel from "../../../styles/components/TilesCarousel";
 import { BulbIcon, ChartIcon, PuzzleIcon } from "../../../styles/components/icons";
 
-import card12 from "@/assets/cards/card12.webp";
-import card11 from "@/assets/cards/card11.jpg";
-import card2 from "@/assets/cards/card2.jpg";
+import card12 from "@/assets/cards/card19.jpg";
+import card11 from "@/assets/cards/card21.jpg";
+import card2 from "@/assets/cards/card30.jpg";
+import card24 from "@/assets/cards/card24.jpg";
+import card16 from "@/assets/cards/card18.jpg";
 
 const TILES: Tile[] = [
   {
@@ -42,7 +44,7 @@ const TILES: Tile[] = [
     short: "Donner du sens à vos données pour des décisions éclairées.",
     long: "Les bonnes décisions naissent d’informations fiables : confiance, agilité et performance pour vos équipes.",
     to: "/default",
-    image: card2,
+    image: card24,
     Icon: BulbIcon,
   },
   {
@@ -51,7 +53,7 @@ const TILES: Tile[] = [
     short: "Donner du sens à vos données pour des décisions éclairées.",
     long: "Les bonnes décisions naissent d’informations fiables : confiance, agilité et performance pour vos équipes.",
     to: "/default",
-    image: card2,
+    image: card16,
     Icon: BulbIcon,
   },
 ];
@@ -70,7 +72,7 @@ export default function ShowcaseTiles() {
                   Accélérez vos décisions avec des outils clairs et performants.
                 </>
               }
-              ctaLabel="Voir tous les services"
+              ctaLabel="EN SAVOIR PLUS"
               ctaTo="/default"
             />
     

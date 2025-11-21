@@ -213,7 +213,7 @@ export default function HeroCarousel() {
           {/* Titre : clamp pour une vraie fluidité entre mobile et desktop */}
           <h1
             className="
-              hero-title mt-3
+              hero-title mt-3 nexa-black
               text-[clamp(28px,6vw,72px)]  /* override doux & fluide */
               leading-[clamp(1.18,3.5vw,1.06)]
             "
@@ -225,9 +225,8 @@ export default function HeroCarousel() {
           <p
             className="
               hero-lead mt-4
-              text-white/95
-              text-[clamp(15px,2.2vw,20px)]
-              md:text-[clamp(16px,1.6vw,22px)]
+              text-white/100
+             
             "
           >
             {slides[index].lead}

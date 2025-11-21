@@ -31,7 +31,7 @@ export default function SectionHeaderDesign({
           {/* CTA à droite, même ligne que le titre */}
           <Link
             to={ctaTo}
-            className="btn-hero btn-hero-amber sheen sm:self-start sm:ml-auto"
+            className="btn btn--primary btn-pill sheen sm:self-start sm:ml-auto"
           >
             {ctaLabel}
             <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
@@ -41,7 +41,7 @@ export default function SectionHeaderDesign({
         </div>
 
         {/* Sous-texte sur toute la largeur sous la ligne titre/CTA */}
-        {subtitle && <p className="header-sub mt-3">{subtitle}</p>}
+        {subtitle && <p className="header-sub mt-5">{subtitle}</p>}
 
         <div className="header-accent" aria-hidden />
       </section>

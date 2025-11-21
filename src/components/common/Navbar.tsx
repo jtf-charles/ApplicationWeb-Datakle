@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import Logo from "@/components/common/Logo";
 
@@ -12,19 +12,19 @@ const MENUS: Menu[] = [
 
   {
     label: "À propos",
-    to: "/default",
+    to: "/a-propos",
     children: [
-      { label: "Ce que nous sommes", to: "/default" },
-      { label: "Ce que nous faisons", to: "/default" },
-      { label: "Équipe", to: "/default" },
-      { label: "Vision", to: "/default" },
-      { label: "Mission", to: "/default" },
+      { label: "Ce que nous sommes", to: "/a-propos#qui-nous-sommes" },
+      { label: "Ce que nous faisons", to: "/a-propos#ce-que-nous-faisons" },
+      { label: "Équipe", to: "/a-propos#Equipe" },
+      { label: "Vision", to: "/a-propos#vision-mission" },
+      { label: "Mission", to: "/a-propos#vision-mission" },
     ],
   },
 
   {
     label: "Services",
-    to: "/services",
+    to: "/default",
     children: [
       { label: "Marketing numériques", to: "/default" },
       { label: "Cybermétrie", to: "/default" },
@@ -60,7 +60,6 @@ const MENUS: Menu[] = [
     ],
   },
 
-  { label: "Termes & conditions", to: "/default" },
 ];
 
 /* -------------------------- SMALL UTILITIES ------------------------ */
@@ -76,6 +75,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
+  const location = useLocation();
 
   // Solid / transparent on scroll
   useEffect(() => {
@@ -97,6 +97,11 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, []);
 
+  // Fermer tout dropdown à chaque changement de route
+  useEffect(() => {
+    setOpenMenu(null);
+  }, [location.pathname]);
+
   const toggleMobile = () => setMobileOpen((s) => !s);
 
   return (
@@ -104,8 +109,8 @@ export default function Navbar() {
       <header
         ref={navRef as any}
         className={classNames(
-          "fixed top-0 z-50 w-full transition-colors",
-          solid ? "nav-solid" : "nav-transparent" 
+          "fixed top-0 z-50 w-full transition-colors mb-2",
+          solid ? "nav-solid" : "nav-transparent"
         )}
       >
         {/* Barre principale : même hauteur à toutes les tailles */}
@@ -126,12 +131,13 @@ export default function Navbar() {
               [&_svg]:h-8 sm:[&_svg]:h-9 lg:[&_svg]:h-10 xl:[&_svg]:h-12
               [&_svg]:w-auto
             "
+            onClick={() => setOpenMenu(null)}
           >
             <Logo />
           </Link>
 
           {/* Liens (>= lg) — centrés verticalement */}
-          <div className="hidden lg:flex h-full items-center gap-2 lg:gap-3 xl:gap-4">
+          <div className="hidden xl:flex h-full items-center gap-2 lg:gap-3 xl:gap-4 xl:px-16">
             {MENUS.map((m) =>
               m.children ? (
                 <Dropdown
@@ -147,10 +153,11 @@ export default function Navbar() {
                 <NavLink
                   key={m.label}
                   to={m.to!}
+                  onClick={() => setOpenMenu(null)}
                   className={({ isActive }) =>
                     classNames(
                       "h-full inline-flex items-center px-3 rounded-lg font-medium transition",
-                      "text-[clamp(14px,0.9vw,17px)]",
+                      "text-[clamp(30px,1.5vw,30px)]",
                       isActive
                         ? "text-[#0059FB]"
                         : "text-gray-700 hover:text-[#0059FB]"
@@ -164,16 +171,18 @@ export default function Navbar() {
           </div>
 
           {/* CTA (>= xl) — centré verticalement */}
-          <div className="hidden xl:flex h-full items-center">
+          <div className="hidden 2xl:flex h-full items-center">
             <Link
-              to="/default"
+              to="https://wa.me/50934389448?text=Bonjour%2C%20je%20sollicite%20votre%20expertise%2C%20pourriez-vous%20m%27aider%20%3F
+"
               className="
                 inline-flex items-center justify-center leading-none
-                btn btn--primary btn-pill
+                btn btn--secondary btn-pill
                 h-[44px] xl:h-[48px] 2xl:h-[52px]
                 px-5 lg:px-6 text-[clamp(14px,0.95vw,18px)]
                 m-2
               "
+              onClick={() => setOpenMenu(null)}
             >
               Demander une consultation
             </Link>
@@ -182,10 +191,9 @@ export default function Navbar() {
           {/* Burger (< lg) — centré verticalement */}
           <button
             className="
-              lg:hidden h-14 inline-flex items-center justify-center border-1 border-[#0059FB]
+              xl:hidden h-14 inline-flex items-center justify-center border-1 border-[#0059FB]
               rounded-xl px-2 m-1 mb-1  text-[#0059FB] 
             "
-
             aria-label="Ouvrir le menu"
             onClick={toggleMobile}
           >
@@ -229,10 +237,11 @@ function Dropdown({
       {/* Libellé : survol visuel uniquement, clic = navigation */}
       <NavLink
         to={to || "#"}
+        onClick={onClose}
         className={({ isActive }) =>
           classNames(
             "h-full inline-flex items-center px-2 rounded-lg font-medium transition",
-            "text-[clamp(14px,0.9vw,17px)]",
+            "text-[clamp(30px,1.5vw,30px)]",
             isActive ? "text-[#0059FB]" : "text-gray-700 hover:text-[#0059FB]"
           )
         }
@@ -283,9 +292,10 @@ function Dropdown({
             <Link
               key={it.label}
               to={it.to}
+              onClick={onClose}
               className="
                 flex items-center justify-between rounded-xl
-                px-3 py-2 text-[clamp(14px,0.9vw,16px)]
+                px-3 py-2 text-[clamp(25px,0.9vw,25px)]
                 text-gray-700 hover:bg-[#0059FB]/8 hover:text-[#0059FB] transition
               "
               role="menuitem"
@@ -318,7 +328,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
     <div
       className={classNames(
-        "lg:hidden transition-[max-height] duration-300 overflow-hidden",
+        "xl:hidden transition-[max-height] duration-300 overflow-hidden",
         "bg-white/95 backdrop-blur border-t border-gray-200",
         open ? "max-h-[90vh]" : "max-h-0"
       )}
@@ -352,9 +362,9 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
 
               <div
                 className={classNames(
-                  "grid transition-[grid-template-rows] duration-300",
-                  expanded === m.label ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                )}
+                    "grid transition-[grid-template-rows] duration-300",
+                    expanded === m.label ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  )}
               >
                 <div className="overflow-hidden">
                   <div className="flex flex-col gap-1 pb-3">
@@ -395,7 +405,8 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
 
         <div className="pt-3">
           <Link
-            to="/default"
+            to="https://wa.me/50934389448?text=Bonjour%2C%20je%20sollicite%20votre%20expertise%2C%20pourriez-vous%20m%27aider%20%3F
+"
             className="btn btn--primary btn-pill w-full justify-center text-[clamp(15px,3.5vw,17px)]"
             onClick={onClose}
           >
