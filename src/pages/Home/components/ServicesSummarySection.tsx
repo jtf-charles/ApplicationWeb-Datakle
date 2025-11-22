@@ -120,7 +120,11 @@ export default function ServicesSummarySection() {
                sm:text-base
                lg:text-xl
                xl:text-2xl
-               font-semibold tracking-[.25em] uppercase text-[#0AD1F0]">
+               font-semibold 
+               tracking-[.15em] 
+               sm:tracking-[.15em]
+               uppercase 
+               text-[#0AD1F0]">
                 Nos services
               </p>
               <h2 className="mt-2 text-2xl sm:text-3xl lg:text-[2.2rem] font-extrabold">
