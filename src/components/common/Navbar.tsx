@@ -157,7 +157,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     classNames(
                       "h-full inline-flex items-center px-3 rounded-lg font-medium transition",
-                      "text-[clamp(30px,1.5vw,30px)]",
+                      "text-[clamp(25px,1.0vw,25px)]",
                       isActive
                         ? "text-[#0059FB]"
                         : "text-gray-700 hover:text-[#0059FB]"
