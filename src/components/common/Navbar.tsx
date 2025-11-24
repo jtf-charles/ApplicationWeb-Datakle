@@ -136,7 +136,7 @@ export default function Navbar() {
           </Link>
 
           {/* Liens (>= lg) — centrés verticalement */}
-          <div className="hidden xl:flex h-full items-center gap-2 lg:gap-3 xl:gap-4 xl:px-10 nexa-bold">
+          <div className="hidden xl:flex h-full items-center gap-1 lg:gap-2 xl:gap-3 xl:px-5 nexa-bold">
             {MENUS.map((m) =>
               m.children ? (
                 <Dropdown
