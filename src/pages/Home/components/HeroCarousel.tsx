@@ -197,7 +197,7 @@ export default function HeroCarousel() {
       <div className="hero-overlay pointer-events-none z-10" />
 
       {/* Contenu centré */}
-      <div className="relative z-20 h-full grid place-items-center text-center px-3 sm:px-4">
+      <div className="relative z-20 h-full grid  text-center px-3 sm:px-4">
         <div
           className="
             text-white
