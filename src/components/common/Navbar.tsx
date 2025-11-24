@@ -59,7 +59,6 @@ const MENUS: Menu[] = [
       { label: "Autres", to: "/default" },
     ],
   },
-
 ];
 
 /* -------------------------- SMALL UTILITIES ------------------------ */
@@ -176,7 +175,7 @@ export default function Navbar() {
               to="https://wa.me/50934389448?text=Bonjour%2C%20je%20sollicite%20votre%20expertise%2C%20pourriez-vous%20m%27aider%20%3F
 "
               className="
-                inline-flex items-center justify-center leading-none
+                inline-flex items-center justify-center leading-none nexa-black
                 btn btn--secondary btn-pill
                 h-[44px] xl:h-[48px] 2xl:h-[52px]
                 px-5 lg:px-6 text-[clamp(14px,0.95vw,18px)]
@@ -328,13 +327,14 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
     <div
       className={classNames(
-        "xl:hidden transition-[max-height] duration-300 overflow-hidden",
+        // 🔴 ICI : on rend le panneau mobile FIXE sous la navbar
+        "xl:hidden fixed inset-x-0 top-16 sm:top-18 z-40 transition-[max-height] duration-300 overflow-hidden",
         "bg-white/95 backdrop-blur border-t border-gray-200",
         open ? "max-h-[90vh]" : "max-h-0"
       )}
     >
       {/* Décalage sous le logo pour ne pas masquer “Accueil” */}
-      <div className="container-app pt-16 sm:pt-18 pb-3">
+      <div className="container-app pt-5 sm:pt-5 pb-2 px-2 nexa-black">
         {MENUS.map((m) =>
           m.children ? (
             <div key={m.label} className="border-b border-gray-100">
@@ -362,9 +362,9 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
 
               <div
                 className={classNames(
-                    "grid transition-[grid-template-rows] duration-300",
-                    expanded === m.label ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  )}
+                  "grid transition-[grid-template-rows] duration-300 nexa-bold",
+                  expanded === m.label ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                )}
               >
                 <div className="overflow-hidden">
                   <div className="flex flex-col gap-1 pb-3">

@@ -1,4 +1,4 @@
-import logoUrl from "@/assets/images/Logo-05.svg";  /* grand ecran*/
+import logoUrl from "@/assets/images/Logos-05.png";  /* grand ecran*/
 import logoUrl1 from "@/assets/images/Logo-03.svg"; /*Petit ecran  */
 
 {/*export default function Logo() {
