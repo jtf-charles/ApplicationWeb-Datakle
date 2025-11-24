@@ -204,18 +204,18 @@ export default function HeroCarousel() {
             xl:max-w-[78rem]
           "
         >
-          <div className="hero-eyebrow">— {slides[index].eyebrow}</div>
+          <div className="hero-eyebrow nexa-bold">— {slides[index].eyebrow}</div>
 
           <h1 className="hero-title mt-3 nexa-black">
             {slides[index].title}
           </h1>
 
-          <p className="hero-lead mt-4">
+          <p className="hero-lead mt-10 nexa-book">
             {slides[index].lead}
           </p>
 
           {/* CTAs : espacement & wrap soigné */}
-          <div className="mt-6 flex flex-wrap justify-center gap-3 md:gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <Link
               to={slides[index].primary.to}
               className="btn btn--primary btn-pill"
