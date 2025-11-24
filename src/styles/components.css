@@ -111,22 +111,21 @@
 
   /* --- Texte du hero (boosté mais fidèle à la charte) --- */
 .hero-eyebrow {
-  @apply text-xl sm:text-xl lg:text-xl xl:text-xl mb-5
+  @apply text-xs sm:text-sm lg:text-base xl:text-lg mb-5 rounded-full   px-4 py-1
   uppercase tracking-[.35em] font-semibold text-[#FFFFFF]
   bg-[#0059FB]/60 backdrop-blur-sm inline-flex
   drop-shadow-[0_1px_1px_rgba(0,0,0,0.55)];
 }
 
-   .hero-title {
-    @apply text-white font-black tracking-tight leading-[1.05] 
-           text-4xl sm:text-5xl lg:text-6xl xl:text-7xl
-           drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]
-           /*max-w-[68rem] mx-auto; ⬅️ gagne en largeur, moins de retours à la ligne */
-           /* largeur + padding responsives */
-            max-w-[24ch] sm:max-w-[36ch] md:max-w-[48ch] lg:max-w-[60rem] xl:max-w-[68rem]
-            px-4 sm:px-0
-            mx-auto;
-  }
+  /* Titre principal : vrai responsive mobile → tablette → desktop */
+.hero-title {
+  @apply text-white font-black tracking-tight
+    text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+    leading-[1.2] md:leading-[1.12] lg:leading-[1.08]
+    drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]
+    max-w-[48rem] md:max-w-[56rem] lg:max-w-[60rem]
+    mx-auto px-2 sm:px-0;
+}
 
  .hero-lead {
     @apply text-white/95 /* ⬅️ plus lisible */

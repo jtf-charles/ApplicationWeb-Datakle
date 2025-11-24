@@ -18,8 +18,7 @@ const slides: Slide[] = [
   {
     image: hero1,
     eyebrow: "MISSION",
-    title:
-      "Transformer vos données en leviers de performance",
+    title: "Transformer vos données en leviers de performance",
     lead: "Collecte → stockage → transformation → visualisation. De bout en bout.",
     primary: { to: "/default", label: "Études de cas →" },
     secondary: { to: "/default", label: "Nos analyses" },
@@ -35,8 +34,7 @@ const slides: Slide[] = [
   {
     image: hero3,
     eyebrow: "SERVICES",
-    title:
-      "Analyse de données, marketing numériques et coaching.",
+    title: "Analyse de données, marketing numériques et coaching.",
     lead: "Pipelines data, dashboards, applications, sécurité et formation.",
     primary: { to: "/default", label: "Nos services →" },
     secondary: { to: "/default", label: "Contactez-nous" },
@@ -63,8 +61,7 @@ export default function HeroCarousel() {
 
   const nextTransitionType = () =>
     transitionTypes[
-      (transitionTypes.indexOf(transitionType) + 1) %
-        transitionTypes.length
+      (transitionTypes.indexOf(transitionType) + 1) % transitionTypes.length
     ];
 
   const tick = () => {
@@ -182,8 +179,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    // padding-top pour éviter que le contenu passe sous la navbar sticky,
-    // et hauteur "safe viewport" pour améliorer le rendu mobile
+    // padding-top pour éviter que le contenu passe sous la navbar sticky
     <section
       ref={containerRef}
       className="hero relative overflow-hidden pt-16 md:pt-20"
@@ -197,7 +193,7 @@ export default function HeroCarousel() {
       <div className="hero-overlay pointer-events-none z-10" />
 
       {/* Contenu centré */}
-      <div className="relative z-20 h-full grid  text-center px-3 sm:px-4">
+      <div className="relative z-20 h-full grid place-items-center text-center px-3 sm:px-4">
         <div
           className="
             text-white
@@ -210,25 +206,11 @@ export default function HeroCarousel() {
         >
           <div className="hero-eyebrow">— {slides[index].eyebrow}</div>
 
-          {/* Titre : clamp pour une vraie fluidité entre mobile et desktop */}
-          <h1
-            className="
-              hero-title mt-3 nexa-black
-              text-[clamp(28px,6vw,72px)]  /* override doux & fluide */
-              leading-[clamp(1.18,3.5vw,1.06)]
-            "
-          >
+          <h1 className="hero-title mt-3 nexa-black">
             {slides[index].title}
           </h1>
 
-          {/* Lead : un peu plus visible et fluide */}
-          <p
-            className="
-              hero-lead mt-4
-              text-white/100
-             
-            "
-          >
+          <p className="hero-lead mt-4">
             {slides[index].lead}
           </p>
 
@@ -253,7 +235,7 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Flèches : tailles un peu plus grandes sur desktop */}
+      {/* Flèches : mêmes logiques, juste classes existantes */}
       <div className="absolute inset-0 z-30 flex items-center justify-between px-2 sm:px-3 md:px-5 pointer-events-none">
         <button
           type="button"
@@ -273,7 +255,7 @@ export default function HeroCarousel() {
         </button>
       </div>
 
-      {/* Bullets : légèrement remontés sur mobile pour ne pas coller au bord */}
+      {/* Bullets */}
       <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-30 flex gap-2">
         {slides.map((_, i) => (
           <button
