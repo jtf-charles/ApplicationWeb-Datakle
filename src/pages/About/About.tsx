@@ -4,6 +4,9 @@ import type React from "react";
 import aboutHero from "@/assets/about/graph2.jpg";
 import aboutOps from "@/assets/about/portrait4.jpg";
 import aboutData from "@/assets/about/site.jpg";
+import visionImg from "@/assets/about/graph.jpg";
+import missionImg from "@/assets/about/team5.jpg";
+import impactImg from "@/assets/about/man1.webp";
 
 // 🔥 Hook de scroll vers les sections (#id)
 import { useScrollToHash } from "@/hooks/useScrollToHash";
@@ -244,61 +247,114 @@ export default function About() {
         </div>
       </section>
 
-      {/* ========= STRIP VISION / MISSION ========= */}
+      {/* ========= STRIP VISION / MISSION / VALEURS / IMPACT ========= */}
       <section
         id="vision-mission"
-        className="bg-[#000044] text-white py-16 sm:py-18"
+        className="bg-[#000044] text-white py-16 sm:py-20"
       >
         <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1.4fr)] items-start">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1.6fr)] items-start">
+            {/* Texte d’intro */}
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0AD1F0]">
-                Vision & Mission
+              <p className="text-[11px] font-semibold tracking-[0.24em] uppercase text-[#0AD1F0]">
+                Vision • Mission • Valeurs • Impact
               </p>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold">
+              <h2 className="mt-3 text-2xl sm:text-[1.9rem] font-extrabold leading-snug">
                 Là où nous allons,
-                <span className="text-[#0AD1F0]"> et pourquoi nous faisons tout ça.</span>
+                <span className="text-[#0AD1F0]">
+                  {" "}
+                  et ce qui guide chacune de nos décisions.
+                </span>
               </h2>
-              <p className="mt-3 text-sm sm:text-base text-white/80 max-w-xl">
-                Notre conviction : chaque organisation, petite ou grande,
-                peut prendre de meilleures décisions quand la donnée est
-                accessible, comprise et partagée par tous.
+
+              <p className="mt-4 text-sm sm:text-[15px] text-white/85 max-w-xl leading-relaxed">
+                Pour nous, la donnée n’a de sens que si elle améliore la vie
+                réelle des équipes et des bénéficiaires. Nos engagements se
+                structurent autour de quatre piliers : une vision claire, une
+                mission opérationnelle, des valeurs assumées et un impact
+                mesurable dans vos projets.
               </p>
+
+              <div className="mt-5 grid gap-2 text-[13px] text-white/80 sm:grid-cols-2">
+                <div className="space-y-1">
+                  <p>• Une boussole : là où nous voulons amener nos clients.</p>
+                  <p>• Une façon de faire : comment nous délivrons nos projets.</p>
+                </div>
+                <div className="space-y-1">
+                  <p>• Un cadre : les valeurs qui régissent nos collaborations.</p>
+                  <p>• Un résultat : l’impact concret de nos interventions.</p>
+                </div>
+              </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {/* Vision */}
-              <div className="rounded-2xl border border-[#0AD1F0]/20 bg-white/5 p-5 backdrop-blur">
-                <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0AD1F0]">
-                  Vision
-                </p>
-                <p className="mt-2 text-sm font-semibold">
-                  Faire de chaque organisation une entité où les décisions sont
-                  guidées par les données et l’intelligence analytique.
-                </p>
-                <p className="mt-2 text-[13px] text-white/75">
-                  Une culture data forte, inclusive, où les chiffres ne sont
-                  pas réservés aux « experts » mais deviennent un langage
-                  commun.
-                </p>
-              </div>
+            {/* Mosaïque d’images + textes */}
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[
+                {
+                  key: "vision",
+                  label: "Vision",
+                  image: visionImg,
+                  text: "Faire de chaque organisation une entité où les décisions sont guidées par les données et l’intelligence analytique.",
+                  detail:
+                    "Nous aidons vos équipes à passer d’une logique de réaction à une logique d’anticipation, grâce à des indicateurs partagés.",
+                },
+                {
+                  key: "mission",
+                  label: "Mission",
+                  image: missionImg,
+                  text: "Transformer vos données en leviers de performance et de rentabilité, avec des solutions concrètes et documentées.",
+                  detail:
+                    "Nos interventions vont de la collecte à la visualisation, avec un accompagnement pour que les outils soient réellement utilisés.",
+                },
+                {
+                  key: "valeurs",
+                  label: "Valeurs",
+                  image: aboutData,
+                  text: "Pédagogie, transparence, exigence de qualité et respect des réalités haïtiennes : pas de promesses impossibles.",
+                  detail:
+                    "On préfère un tableau de bord simple qui tourne, plutôt qu’une usine à gaz qui dort dans un dossier partagé.",
+                },
+                {
+                  key: "impact",
+                  label: "Impact",
+                  image: impactImg,
+                  text: "Des tableaux de bord qui servent vraiment, des décisions mieux informées et des programmes qui apprennent de leurs données.",
+                  detail:
+                    "L’impact se mesure dans vos chiffres, mais aussi dans la confiance retrouvée entre décideurs, équipes opérationnelles et partenaires.",
+                },
+              ].map((item, idx) => (
+                <article
+                  key={item.key}
+                  className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_24px_80px_rgba(15,23,42,0.7)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_28px_90px_rgba(15,23,42,0.85)] ${
+                    idx % 2 === 1 ? "sm:translate-y-6" : ""
+                  }`}
+                >
+                  {/* Image */}
+                  <div className="h-40 sm:h-44 md:h-48 w-full overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
-              {/* Mission */}
-              <div className="rounded-2xl border border-[#0AD1F0]/20 bg白/5 p-5 backdrop-blur">
-                <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0AD1F0]">
-                  Mission
-                </p>
-                <p className="mt-2 text-sm font-semibold">
-                  Transformer vos données en
-                  <span className="text-[#0AD1F0]"> leviers de performance</span>
-                  {" "}et de rentabilité.
-                </p>
-                <p className="mt-2 text-[13px] text-white/75">
-                  Construire des solutions concrètes, documentées, adaptées à
-                  votre réalité haïtienne, pour que la technologie reste au
-                  service de l’humain, jamais l’inverse.
-                </p>
-              </div>
+                  {/* Cartouche texte chevauchant l’image */}
+                  <div className="relative -mt-7 mx-4 mb-4 rounded-2xl bg-[#020617]/95 px-4 py-4 text-left">
+                    <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0AD1F0]">
+                      {item.label}
+                    </p>
+                    <p className="mt-2 text-[13px] sm:text-sm text-white/95 leading-relaxed">
+                      {item.text}
+                    </p>
+                    <p className="mt-2 text-[12px] text-white/70 leading-relaxed">
+                      {item.detail}
+                    </p>
+                  </div>
+
+                  {/* halo décoratif */}
+                  <div className="pointer-events-none absolute -bottom-6 -right-4 h-16 w-16 rounded-full bg-[#0AD1F0]/30 blur-2xl" />
+                </article>
+              ))}
             </div>
           </div>
         </div>
@@ -358,9 +414,18 @@ export default function About() {
                 </div>
                 <div className="grid gap-3 text-[12px] sm:text-[13px]">
                   {[
-                    ["Tableurs dispersés, chiffres contradictoires", "Une seule source fiable, partagée"],
-                    ["Rapports produits à la main", "Automatisation & mises à jour rapides"],
-                    ["Décisions au feeling", "Décisions appuyées par des indicateurs clairs"],
+                    [
+                      "Tableurs dispersés, chiffres contradictoires",
+                      "Une seule source fiable, partagée",
+                    ],
+                    [
+                      "Rapports produits à la main",
+                      "Automatisation & mises à jour rapides",
+                    ],
+                    [
+                      "Décisions au feeling",
+                      "Décisions appuyées par des indicateurs clairs",
+                    ],
                   ].map(([before, after], i) => (
                     <div
                       key={i}

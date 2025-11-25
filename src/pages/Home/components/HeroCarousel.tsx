@@ -28,7 +28,7 @@ const slides: Slide[] = [
     eyebrow: "CONCURRENCE",
     title: "Prix compétitifs, qualité internationale",
     lead: "Équipe pluridisciplinaire, livrables propres et orientés résultats.",
-    primary: { to: "/default", label: "Notre équipe →" },
+    primary: { to: "/a-propos#Equipe", label: "Notre équipe →" },
     secondary: { to: "/default", label: "Obtenir un devis" },
   },
   {
@@ -218,7 +218,7 @@ export default function HeroCarousel() {
           <div className="mt-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <Link
               to={slides[index].primary.to}
-              className="btn btn--primary btn-pill"
+              className="btn btn--primary btn-pill nexa-black"
             >
               {slides[index].primary.label}
             </Link>
@@ -226,7 +226,7 @@ export default function HeroCarousel() {
             {slides[index].secondary && (
               <Link
                 to={slides[index].secondary!.to}
-                className="btn btn--secondary btn-pill"
+                className="btn btn--secondary btn-pill nexa-black"
               >
                 {slides[index].secondary!.label}
               </Link>

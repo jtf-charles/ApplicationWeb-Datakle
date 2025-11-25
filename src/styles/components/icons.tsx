@@ -80,3 +80,79 @@ export function AppIcon(p: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+
+
+/* ------------------------------------------------------------------ */
+/*      NOUVELLES ICÔNES SPÉCIFIQUES : VISION / MISSION / VALEURS     */
+/* ------------------------------------------------------------------ */
+
+export function VisionIcon(p: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...p}>
+      {/* œil stylisé */}
+      <path
+        d="M3 12s3-5 9-5 9 5 9 5-3 5-9 5-9-5-9-5z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx={12} cy={12} r={2.5} fill="none" stroke="currentColor" strokeWidth={2} />
+    </svg>
+  );
+}
+
+export function MissionIcon(p: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...p}>
+      {/* cible + flèche */}
+      <circle
+        cx={12}
+        cy={12}
+        r={7}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+      />
+      <circle
+        cx={12}
+        cy={12}
+        r={3}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+      />
+      <path
+        d="M15 9l4-4"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+      />
+      <path
+        d="M16 7h3V4"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function ValuesIcon(p: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...p}>
+      {/* cœur (valeurs, culture, confiance) */}
+      <path
+        d="M12 20s-4.5-2.6-7-5.7C3.4 13.4 3 12.4 3 11.3 3 9.4 4.4 8 6.3 8c1.2 0 2.3.6 3 1.6.7-1 1.8-1.6 3-1.6 1.9 0 3.3 1.4 3.3 3.3 0 1.1-.4 2.1-2 3.4-2.5 2.9-7 5.3-7 5.3z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
