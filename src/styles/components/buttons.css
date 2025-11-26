@@ -2,17 +2,8 @@
 
 @layer components {
   /* base commune */
-  .btn {
-    @apply inline-flex items-center justify-center gap-2
-           rounded-xl px-4 py-2 text-sm font-semibold select-none
-           transition-all duration-200 ease-in-out;
-           
-    /* petite ombre neutre */
-    @apply shadow-sm;
-  }
 
   .btn-pill { @apply rounded-full; }
-  .btn-lg   { @apply px-5 py-3 text-base rounded-2xl; }
 
   /* ====== Primaire (bleu #0059FB) ====== */
   .btn--primary {
