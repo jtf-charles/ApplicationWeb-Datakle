@@ -20,7 +20,7 @@ export default function SectionHeaderSimple({
       <section className="simple-header header-simple-pad header-simple-d" >
         {/* Ligne titre + CTA (à droite). En mobile, CTA passe en dessous */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-          <h2 className="header-title">{title}</h2>
+          <h2 className="header-title nexa-black">{title}</h2>
 
           {/* CTA à droite, même ligne que le titre */}
           <Link

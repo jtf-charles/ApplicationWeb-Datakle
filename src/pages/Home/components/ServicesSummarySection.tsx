@@ -116,21 +116,13 @@ export default function ServicesSummarySection() {
 
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between relative z-10">
             <div>
-              <p className="text-base
-               sm:text-base
-               lg:text-xl
-               xl:text-2xl
-               font-semibold 
-               tracking-[.15em] 
-               sm:tracking-[.15em]
-               uppercase 
-               text-[#0AD1F0]">
+              <p className="section-kicker">
                 Nos services
               </p>
-              <h2 className="mt-2 text-2xl sm:text-3xl lg:text-[2.2rem] font-extrabold">
+              <h2 className="section-title1">
                 Des solutions data de bout en bout.
               </h2>
-              <p className="mt-2 text-sm sm:text-base text-white/80 max-w-2xl">
+              <p className="section-subtitle">
                 Mesurer, comprendre, automatiser et agir : une offre complète
                 pour rendre vos décisions plus rapides, plus sûres et plus
                 alignées avec le terrain.

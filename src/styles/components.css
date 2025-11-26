@@ -330,6 +330,33 @@
   .focus-ring { @apply outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0059FB] rounded-3xl; }
   
 
+/* ========== TYPO REUTILISABLE ========== */
+
+/* Petit kicker en uppercase */
+.section-kicker {
+  @apply text-base sm:text-base lg:text-xl xl:text-2xl
+         font-semibold
+         tracking-[.15em] sm:tracking-[.15em]
+         uppercase
+         text-[#0AD1F0];
+}
+
+/* Gros titre réutilisable */
+.section-title1 {
+  @apply mt-2 
+         text-2xl sm:text-3xl lg:text-[2.2rem]
+         font-extrabold
+         text-white;
+}
+
+/* Sous-titre (paragraphe introductif) */
+.section-subtitle {
+  @apply mt-2 
+         text-sm sm:text-base 
+         text-white/80 
+         max-w-2xl 
+         leading-relaxed;
+}
 
 
 
