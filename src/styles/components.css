@@ -107,8 +107,8 @@
   @apply inline-flex items-center justify-center rounded-xs 
          font-semibold transition 
          px-2 py-1.5 text-[2]                /* mobile */
-         sm:px-3 sm:py-2 sm:text-xs   /* tablette */
-         lg:px-6 lg:py-3 lg:text-[1rem];  /* laptop/desktop */
+         sm:px-3 sm:py-0 sm:text-xs   /* tablette */
+         lg:px-4 lg:py-2 lg:text-[1rem];  /* laptop/desktop */
 }
 
   .btn-primary { /* harmonisé sur le bleu Datakle */
