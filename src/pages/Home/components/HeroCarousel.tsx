@@ -218,7 +218,7 @@ export default function HeroCarousel() {
           <div className="mt-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <Link
               to={slides[index].primary.to}
-              className="btn btn--primary btn-pill nexa-black"
+              className="btn btn--primary btn-pill "
             >
               {slides[index].primary.label}
             </Link>
@@ -226,7 +226,7 @@ export default function HeroCarousel() {
             {slides[index].secondary && (
               <Link
                 to={slides[index].secondary!.to}
-                className="btn btn--secondary btn-pill nexa-black"
+                className="btn btn--secondary btn-pill"
               >
                 {slides[index].secondary!.label}
               </Link>
