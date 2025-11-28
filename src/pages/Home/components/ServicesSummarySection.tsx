@@ -88,7 +88,7 @@ export default function ServicesSummarySection() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.25 }
+      { threshold: 0.15 }
     );
 
     observer.observe(node);
