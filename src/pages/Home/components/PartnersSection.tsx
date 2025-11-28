@@ -52,9 +52,10 @@ export default function PartnersSection() {
                 text-xs sm:text-sm md:text-base            /* taille de texte responsive */
                 tracking-[.22em] font-semibold uppercase
                 text-center
+                nexa-black
                 "
             >
-                — Nos partenaires
+                Nos partenaires
                 <span className="inline-block size-2 rounded-full bg-[#0AD1F0]" />
             </span>
 
@@ -96,7 +97,7 @@ export default function PartnersSection() {
                   className="mx-auto h-16 sm:h-40 object-contain"
                   // pas de filtre/grayscale -> couleurs préservées
                 />
-                <p className="mt-3 text-sm sm:text-[15px] font-medium text-[#0d1b2a]">
+                <p className="mt-3 text-sm sm:text-[15px] font-medium nexa-bold text-[#0d1b2a]">
                   {p.name}
                 </p>
               </div>

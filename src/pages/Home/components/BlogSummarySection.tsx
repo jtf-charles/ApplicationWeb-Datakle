@@ -123,17 +123,17 @@ export default function BlogSummarySection() {
           <header className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-3 max-w-2xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#000044]/90 px-3 py-1">
-                <span className="text-[10px] sm:text-[11px] tracking-[.25em] font-semibold uppercase text-white/80">
+                <span className="text-[10px] sm:text-[11px] tracking-[.25em] font-semibold nexa-black uppercase text-white/80">
                   Blog Datakle
                 </span>
                 <span className="inline-block h-2 w-2 rounded-full bg-[#0AD1F0]" />
               </div>
 
               <div>
-                <h2 className="text-2xl sm:text-3xl lg:text-[2.1rem] font-extrabold text-white">
+                <h2 className="text-2xl sm:text-3xl lg:text-[2.1rem] font-extrabold nexa-bold text-white">
                   Ils parlent data, nous partageons l’essentiel.
                 </h2>
-                <p className="mt-2 text-sm sm:text-base text-[#E5F0FF]/85">
+                <p className="mt-2 text-sm sm:text-base text-[#E5F0FF]/85 nexa-book">
                   Articles, FAQ, tutoriels et retours d’expérience pour faire
                   grandir votre culture data et inspirer vos décisions.
                 </p>
@@ -152,6 +152,7 @@ export default function BlogSummarySection() {
                   hover:bg-[#E6F0FF] hover:shadow-[0_18px_50px_rgba(0,0,0,0.55)]
                   transition-all duration-200 hover:-translate-y-0.5
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0AD1F0]
+                  
                 "
               >
                 Voir tous les articles
@@ -191,7 +192,7 @@ export default function BlogSummarySection() {
                     hover:-translate-y-1 flex flex-col overflow-hidden
                   "
                 >
-                  <div className="relative h-40 sm:h-44 overflow-hidden bg-[#000044]">
+                  <div className="relative h-40 sm:h-44 overflow-hidden nexa-black bg-[#000044]">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -210,17 +211,17 @@ export default function BlogSummarySection() {
                   <div className="flex-1 p-4 sm:p-5 flex flex-col">
                     {/* Meta */}
                     <div className="flex flex-wrap items-center gap-2 text-[12px] text-[#6B7280] mb-2">
-                      <span className="font-semibold text-[#000044]/80">
+                      <span className="font-semibold nexa-bold text-[#000044]/80">
                         {item.author}
                       </span>
                       <span className="h-1 w-1 rounded-full bg-gray-300" />
-                      <span>{item.date}</span>
+                      <span className="nexa-light-italic">{item.date}</span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold text-[#000044] leading-snug">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#000044] nexa-bold leading-snug">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[#4B5563] line-clamp-3">
+                    <p className="mt-2 text-sm text-[#4B5563] line-clamp-3 nexa-book">
                       {item.preview}
                     </p>
 
