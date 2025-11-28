@@ -98,7 +98,7 @@ export default function ServicesSummarySection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-[#000044] via-[#00115C] to-[#001B80]"
+      className="py-5 bg-gradient-to-b from-[#000044] via-[#00115C] to-[#001B80]"
     >
       <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
         {/* === Header réutilisable === */}
@@ -129,7 +129,7 @@ export default function ServicesSummarySection() {
                     ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
                   `}
                   style={{
-                    transitionDelay: inView ? `${idx * 110}ms` : "0ms",
+                    transitionDelay: inView ? `${idx * 80}ms` : "0ms",
                   }}
                 >
                   {/* Icône dédiée */}

@@ -68,7 +68,7 @@ export default function TeamSection() {
         // true quand ~30% de la section est visible
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.3 }
+      { threshold: 0.15 }
     );
 
     observer.observe(node);
@@ -86,7 +86,7 @@ export default function TeamSection() {
   return (
     <section id="Equipe"
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-[#F5FAFF] via-white to-[#E6F2FF]"
+      className="py-10 bg-gradient-to-b from-[#F5FAFF] via-white to-[#E6F2FF]"
     >
       <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
         {/* En-tête */}
@@ -136,7 +136,7 @@ export default function TeamSection() {
               `}
               style={{
                 // apparition en cascade : 0ms, 120ms, 240ms, ...
-                transitionDelay: inView ? `${idx * 120}ms` : "0ms",
+                transitionDelay: inView ? `${idx * 80}ms` : "0ms",
               }}
             >
               {/* halo bleu derrière la photo */}
