@@ -79,7 +79,7 @@ export default function Footer() {
               <img src={logo} alt="DATAKLE" className="h-9 w-auto" />
               <span className="sr-only">DATAKLE</span>
             </Link>
-            <p className="text-sm text-white/80 max-w-sm">
+            <p className="text-sm text-white/80 max-w-sm nexa-book">
               Entreprise tech : Nous transformons vos données en décisions utiles, mesurables et orientées résultats.
             </p>
 
@@ -95,8 +95,8 @@ export default function Footer() {
 
           {/* Services */}
           <nav>
-            <h4 className="footer-title">Services</h4>
-            <ul className="space-y-2">
+            <h4 className="footer-title nexa-bold">Services</h4>
+            <ul className="space-y-2 nexa-book">
               <li><ScrollToTopLink to="/default" className="footer-link">Tableaux de bord</ScrollToTopLink></li>
               <li><ScrollToTopLink to="/default" className="footer-link">Pipelines & Qualité</ScrollToTopLink></li>
               <li><ScrollToTopLink to="/default" className="footer-link">Sécurité & Gouvernance</ScrollToTopLink></li>
@@ -106,8 +106,8 @@ export default function Footer() {
 
           {/* Ressources */}
           <nav>
-            <h4 className="footer-title">Ressources</h4>
-            <ul className="space-y-2">
+            <h4 className="footer-title nexa-bold">Ressources</h4>
+            <ul className="space-y-2 nexa-book">
               <li><ScrollToTopLink to="/default" className="footer-link">Études de cas</ScrollToTopLink></li>
               <li><ScrollToTopLink to="/default" className="footer-link">Blog</ScrollToTopLink></li>
               <li><ScrollToTopLink to="/default" className="footer-link">À propos</ScrollToTopLink></li>
@@ -124,9 +124,9 @@ export default function Footer() {
             </ul>
           </nav>*/}
 <nav>
-  <h4 className="footer-title">Contact</h4>
+  <h4 className="footer-title nexa-bold">Contact</h4>
 
-  <ul className="space-y-2">
+  <ul className="space-y-2 nexa-book">
 
     {/* Téléphone */}
     <li className="footer-row">
@@ -187,22 +187,22 @@ export default function Footer() {
 
           {/* Newsletter — full width en mobile */}
           <div className="max-w-md mx-auto sm:mx-0 w-full">
-            <h4 className="footer-title">Newsletter</h4>
+            <h4 className="footer-title nexa-bold">Newsletter</h4>
             <form
               className="mt-2 flex flex-col sm:flex-row gap-2"
               onSubmit={(e) => e.preventDefault()}
             >
-              <input
+              <input 
                 type="email"
                 placeholder="Votre email"
-                className="footer-input flex-1"
+                className="footer-input flex-1 nexa-book"
                 aria-label="Votre email"
               />
               <button type="submit" className="btn-hero sm:whitespace-nowrap">
                 S’inscrire
               </button>
             </form>
-            <p className="mt-2 text-[13px] text-white/60">
+            <p className="mt-2 text-[13px] text-white/60 nexa-book">
               Pas de spam. Vous pouvez vous désabonner à tout moment.
             </p>
           </div>
@@ -211,26 +211,27 @@ export default function Footer() {
         {/* Barre bas — centrée en mobile, espacée en desktop */}
         <div className="mt-10 border-t border-white/10 pt-6 
                         flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/70 text-sm">
+          <p className="text-white/70 text-sm nexa-light">
             © {year} DATAKLE. Tous droits réservés.
           </p>
-          <div className="flex items-center gap-6 text-sm">
+          <div className="flex items-center gap-6 text-sm nexa-book">
             <ScrollToTopLink to="/default" className="footer-link">Mentions légales</ScrollToTopLink>
             <ScrollToTopLink to="/default" className="footer-link">Confidentialité</ScrollToTopLink>
           </div>
         </div>
       </div>
 
-      {/* back-to-top */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        aria-label="Revenir en haut"
-        className="to-top"
-      >
-        <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-          <path fill="currentColor" d="M12 5l6 6-1.4 1.4L13 8.8V19h-2V8.8L7.4 12.4 6 11l6-6Z" />
-        </svg>
-      </button>
+     {/* back-to-top */}
+<button
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  aria-label="Revenir en haut"
+  className="to-top"
+>
+  <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
+    <path fill="currentColor" d="M12 5l6 6-1.4 1.4L13 8.8V19h-2V8.8L7.4 12.4 6 11l6-6Z" />
+  </svg>
+</button>
+
     </footer>
   );
 }

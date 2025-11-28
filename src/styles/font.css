@@ -89,3 +89,28 @@
   font-weight: 300;
   font-style: italic;
 }
+
+
+
+
+
+.to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999999 !important; /* toujours devant TOUT */
+  background: #0059FB;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: all .2s ease;
+}
+.to-top:hover {
+  transform: translateY(-3px);
+  background: #0042C5;
+}
