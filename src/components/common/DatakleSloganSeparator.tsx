@@ -3,11 +3,11 @@ export default function DatakleSeparator() {
     <section className="relative overflow-hidden bg-gradient-to-r from-[#000044] via-[#001366] to-[#0059FB] py-12 sm:py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center relative z-10">
         <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#A5B4FC]">
-          <span className="inline-block h-1 w-1 rounded-full bg-[#0AD1F0]" />
+          <span className="inline-block h-1 w-1 rounded-full bg-[#0AD1F0] nexa-black" />
           Slogan Datakle
         </span>
         <div className="font-nexa">
-        <h2 className="mt-4 text-2xl sm:text-3xl lg:text-[2rem] font-extrabold text-white">
+        <h2 className="mt-4 text-2xl sm:text-3xl lg:text-[2rem] font-extrabold text-white nexa-bold">
           Nous transformons vos données en décisions utiles,
           mesurables et orientées résultats.
         </h2>

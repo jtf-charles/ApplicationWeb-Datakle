@@ -95,17 +95,17 @@ export default function TeamSection() {
         >
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#000044]/90 px-3 py-1">
-              <span className="text-[10px] sm:text-[11px] tracking-[.25em] font-semibold uppercase text-white/80">
+              <span className="text-[10px] sm:text-[11px] tracking-[.25em] font-semibold uppercase text-white/80 nexa-black">
                 Équipe Datakle
               </span>
               <span className="inline-block h-2 w-2 rounded-full bg-[#0AD1F0]" />
             </div>
 
             <div>
-              <h2 className="text-2xl sm:text-3xl lg:text-[2.1rem] font-extrabold text-[#000044]">
+              <h2 className="text-2xl sm:text-3xl lg:text-[2.1rem] font-extrabold text-[#000044] nexa-bold">
                 Une équipe qui parle data tous les jours.
               </h2>
-              <p className="mt-2 text-sm sm:text-base text-[#1A2740]/80">
+              <p className="mt-2 text-sm sm:text-base text-[#1A2740]/80 nexa-book">
                 Consultants, analystes, ingénieurs et formateurs : des profils
                 complémentaires pour couvrir tout le cycle de vie de vos
                 données, du terrain à la décision.
@@ -113,7 +113,7 @@ export default function TeamSection() {
             </div>
           </div>
 
-          <p className="text-xs sm:text-sm text-[#4B5563]/80 max-w-sm">
+          <p className="text-xs sm:text-sm text-[#4B5563]/80 max-w-sm nexa-book">
             Chaque projet est suivi par une équipe resserrée. Vous savez qui
             vous accompagne, du premier atelier jusqu’au déploiement
             opérationnel.
@@ -150,15 +150,15 @@ export default function TeamSection() {
                 />
               </div>
 
-              <h3 className="text-base sm:text-lg font-semibold text-[#000044]">
+              <h3 className="text-base sm:text-lg font-semibold text-[#000044] nexa-black">
                 {member.name}
               </h3>
-              <p className="mt-1 text-[13px] font-medium uppercase tracking-[.12em] text-[#0059FB]">
+              <p className="mt-1 text-[13px] font-medium uppercase tracking-[.12em] text-[#0059FB] nexa-bold">
                 {member.role}
               </p>
 
               {member.tagline && (
-                <p className="mt-3 text-xs sm:text-sm text-[#4B5563]">
+                <p className="mt-3 text-xs sm:text-sm text-[#4B5563] nexa-book">
                   {member.tagline}
                 </p>
               )}
