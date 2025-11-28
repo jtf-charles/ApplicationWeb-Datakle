@@ -137,11 +137,11 @@ export default function ServicesSummarySection() {
                     <Icon className="h-6 w-6" />
                   </div>
 
-                  <h3 className="mt-1 text-[15px] sm:text-base font-semibold text-[#00124F]">
+                  <h3 className="mt-1 text-[15px] sm:text-base nexa-bold text-[#00124F]">
                     {service.title}
                   </h3>
 
-                  <p className="mt-3 text-xs sm:text-sm text-[#4B5563]">
+                  <p className="mt-3 text-xs sm:text-sm nexa-book text-[#4B5563]">
                     {service.description}
                   </p>
 
