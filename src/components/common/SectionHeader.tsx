@@ -48,7 +48,7 @@ export function SectionHeader({
       {/* petit trait dégradé en bas */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-[#0AD1F0] via-[#0059FB] to-[#0AD1F0]" />
 
-      <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between relative z-10">
+      <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between relative z-10">
         <div>
           <p className={`section-kicker nexa-black ${kickerClassName}`}>{kicker}</p>
           <h2 className={`section-title1 nexa-bold ${titleClassName}`}>{title}</h2>
