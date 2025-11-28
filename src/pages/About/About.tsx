@@ -29,12 +29,12 @@ export default function About() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1.1fr)] items-center">
             {/* Texte */}
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] tracking-[0.2em] uppercase text-[#0AD1F0]">
+              <span className="inline-flex nexa-black items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] tracking-[0.2em] uppercase text-[#0AD1F0]">
                 À propos • DATAKLE
                 <span className="h-1.5 w-1.5 rounded-full bg-[#0AD1F0]" />
               </span>
 
-              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-tight">
+              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-tight nexa-bold">
                 Nous transformons vos données
                 <span className="block text-[#0AD1F0]">
                   en décisions utiles, mesurables
@@ -42,7 +42,7 @@ export default function About() {
                 </span>
               </h1>
 
-              <p className="mt-4 text-sm sm:text-base text-white/80 max-w-xl">
+              <p className="mt-4 text-sm sm:text-base text-white/80 max-w-xl nexa-book">
                 De plus en plus d’activités se jouent en ligne ou sans mesure
                 claire sur le terrain. Chez DATAKLE, on vous aide à reprendre
                 le contrôle : des objectifs clairs, les bons outils, des
@@ -50,7 +50,7 @@ export default function About() {
               </p>
 
               {/* mini badges */}
-              <div className="mt-6 flex flex-wrap gap-3 text-[12px]">
+              <div className="mt-6 flex flex-wrap gap-3 text-[12px] nexa-book">
                 <div className="rounded-full bg-white/10 px-4 py-2">
                   + de 30 projets accompagnés
                 </div>
@@ -73,7 +73,7 @@ export default function About() {
                     className="h-full w-full object-cover"
                   />
                   {/* pastille */}
-                  <span className="absolute bottom-4 right-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-[#000044]">
+                  <span className="absolute nexa-black bottom-4 right-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-[#000044]">
                     Culture data
                   </span>
                 </div>
@@ -95,22 +95,22 @@ export default function About() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)] items-start">
             {/* Texte gauche */}
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0059FB]">
+              <p className="  section-kicker nexa-black">
                 Ce que nous sommes
               </p>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044]">
+              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044] nexa-bold">
                 Une équipe data proche du terrain,
                 <span className="text-[#0059FB]"> qui parle chiffres & réalité.</span>
               </h2>
 
-              <p className="mt-4 text-sm sm:text-base text-[#4B5563]">
+              <p className="mt-4 text-sm sm:text-base text-[#4B5563] nexa-book">
                 DATAKLE est née d’un constat simple : beaucoup d’organisations
                 collectent des données… mais ont du mal à les transformer en
                 décisions concrètes. Nous faisons le lien entre les besoins du
                 terrain, la technique et vos enjeux stratégiques.
               </p>
 
-              <p className="mt-3 text-sm sm:text-base text-[#4B5563]">
+              <p className="mt-3 text-sm sm:text-base text-[#4B5563] nexa-book">
                 Nous combinons expertise en statistiques, science des données,
                 développement logiciel et compréhension des contextes
                 haïtiens : contraintes réseau, budgets serrés, équipes
@@ -120,10 +120,10 @@ export default function About() {
               {/* bullets */}
               <div className="mt-5 grid gap-3 sm:grid-cols-2 text-sm text-[#111827]">
                 <div className="space-y-2">
-                  <h3 className="text-xs font-semibold tracking-[0.18em] uppercase text-[#0059FB]">
+                  <h3 className="text-xs font-semibold tracking-[0.18em] uppercase text-[#0059FB] nexa-bold">
                     Notre approche
                   </h3>
-                  <ul className="space-y-1 text-[13px] text-[#4B5563]">
+                  <ul className="space-y-1 text-[13px] text-[#4B5563] nexa-book">
                     <li>• Pédagogie : on explique, on documente.</li>
                     <li>• Co-construction avec vos équipes.</li>
                     <li>• Focus culture data, pas seulement outils.</li>
@@ -131,10 +131,10 @@ export default function About() {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-xs font-semibold tracking-[0.18em] uppercase text-[#0059FB]">
+                  <h3 className="text-xs font-semibold tracking-[0.18em] uppercase text-[#0059FB] nexa-bold">
                     Ce que vous gagnez
                   </h3>
-                  <ul className="space-y-1 text-[13px] text-[#4B5563]">
+                  <ul className="space-y-1 text-[13px] text-[#4B5563] nexa-book">
                     <li>• Indicateurs clairs & fiables.</li>
                     <li>• Reporting simplifié.</li>
                     <li>• Plus de décisions basées sur “le feeling”.</li>
@@ -144,7 +144,7 @@ export default function About() {
             </div>
 
             {/* carte stats droite */}
-            <div className="space-y-4">
+            <div className="space-y-4 nexa-book">
               <div className="grid gap-4 sm:grid-cols-2">
                 <InfoCard
                   label="Projets accompagnés"
@@ -190,21 +190,21 @@ export default function About() {
 
             {/* Texte droite */}
             <div className="order-1 lg:order-2">
-              <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0059FB]">
+              <p className="section-kicker nexa-black">
                 Ce que nous faisons
               </p>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044]">
+              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044] nexa-bold">
                 Des solutions data de bout en bout pour mesurer,
                 comprendre et agir.
               </h2>
 
-              <p className="mt-3 text-sm sm:text-base text-[#4B5563]">
+              <p className="mt-3 text-sm sm:text-base text-[#4B5563] nexa-book">
                 Nous intervenons sur toute la chaîne de valeur de la donnée :
                 de la collecte sur le terrain jusqu’à la prise de décision au
                 niveau stratégique.
               </p>
 
-              <div className="mt-6 space-y-4">
+              <div className="mt-6 space-y-4 nexa-book">
                 {[
                   {
                     id: "01",
@@ -256,10 +256,10 @@ export default function About() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1.6fr)] items-start">
             {/* Texte d’intro */}
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.24em] uppercase text-[#0AD1F0]">
+              <p className="section-kicker nexa-black">
                 Vision • Mission • Valeurs • Impact
               </p>
-              <h2 className="mt-3 text-2xl sm:text-[1.9rem] font-extrabold leading-snug">
+              <h2 className="mt-3 text-2xl sm:text-[1.9rem] font-extrabold leading-snug nexa-bold">
                 Là où nous allons,
                 <span className="text-[#0AD1F0]">
                   {" "}
@@ -267,7 +267,7 @@ export default function About() {
                 </span>
               </h2>
 
-              <p className="mt-4 text-sm sm:text-[15px] text-white/85 max-w-xl leading-relaxed">
+              <p className="mt-4 text-sm sm:text-[15px] text-white/85 max-w-xl leading-relaxed nexa-book">
                 Pour nous, la donnée n’a de sens que si elle améliore la vie
                 réelle des équipes et des bénéficiaires. Nos engagements se
                 structurent autour de quatre piliers : une vision claire, une
@@ -275,7 +275,7 @@ export default function About() {
                 mesurable dans vos projets.
               </p>
 
-              <div className="mt-5 grid gap-2 text-[13px] text-white/80 sm:grid-cols-2">
+              <div className="mt-5 grid gap-2 text-[13px] text-white/80 sm:grid-cols-2 nexa-book">
                 <div className="space-y-1">
                   <p>• Une boussole : là où nous voulons amener nos clients.</p>
                   <p>• Une façon de faire : comment nous délivrons nos projets.</p>
@@ -340,13 +340,13 @@ export default function About() {
 
                   {/* Cartouche texte chevauchant l’image */}
                   <div className="relative -mt-7 mx-4 mb-4 rounded-2xl bg-[#020617]/95 px-4 py-4 text-left">
-                    <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0AD1F0]">
+                    <p className="section-kicker nexa-black">
                       {item.label}
                     </p>
-                    <p className="mt-2 text-[13px] sm:text-sm text-white/95 leading-relaxed">
+                    <p className="mt-2 text-[13px] sm:text-sm text-white/95 leading-relaxed nexa-bold">
                       {item.text}
                     </p>
-                    <p className="mt-2 text-[12px] text-white/70 leading-relaxed">
+                    <p className="mt-2 text-[12px] text-white/70 leading-relaxed nexa-book">
                       {item.detail}
                     </p>
                   </div>
@@ -366,15 +366,15 @@ export default function About() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)] items-center">
             {/* Texte */}
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#0059FB]">
+              <p className="section-kicker nexa-black">
                 Notre façon de travailler
               </p>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044]">
+              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044] nexa-bold">
                 Une culture de la donnée pragmatique,
                 <span className="text-[#0059FB]"> pas de buzzword inutile.</span>
               </h2>
 
-              <p className="mt-3 text-sm sm:text-base text-[#4B5563]">
+              <p className="mt-3 text-sm sm:text-base text-[#4B5563] nexa-book">
                 On parle Excel, SQL, Python, Power BI… mais aussi « réalité
                 terrain », « réseau qui coupe », « budget limité » et
                 « équipe débordée ». Notre rôle : traduire les concepts data en
@@ -383,20 +383,20 @@ export default function About() {
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2 text-[13px] text-[#374151]">
                 <div className="space-y-1.5">
-                  <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-[#0059FB]">
+                  <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-[#0059FB] nexa-bold">
                     Ce que nous garantissons
                   </h3>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1 nexa-book">
                     <li>• Transparence sur les limites des données.</li>
                     <li>• Documentation claire et réutilisable.</li>
                     <li>• Transfert de compétences vers vos équipes.</li>
                   </ul>
                 </div>
                 <div className="space-y-1.5">
-                  <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-[#0059FB]">
+                  <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-[#0059FB] nexa-bold">
                     Ce que nous évitons
                   </h3>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1 nexa-book">
                     <li>• Projet “boîte noire” impossible à maintenir.</li>
                     <li>• Dashboard joli mais jamais utilisé.</li>
                     <li>• Outils surdimensionnés par rapport au besoin.</li>
@@ -407,10 +407,10 @@ export default function About() {
 
             {/* Illustration / tableau simplifié */}
             <div>
-              <div className="rounded-[1.8rem] bg-[#F5FAFF] p-5 shadow-[0_20px_50px_rgba(15,23,42,0.12)] border border-[#E5E7EB]">
+              <div className="rounded-[1.8rem] bg-[#F5FAFF] p-5 shadow-[0_20px_50px_rgba(15,23,42,0.12)] border border-[#E5E7EB] nexa-book">
                 <div className="flex items-center justify-between text-[11px] font-semibold text-[#6B7280] uppercase tracking-[0.18em] mb-3">
-                  <span>Avant DATAKLE</span>
-                  <span>Avec DATAKLE</span>
+                  <span className="nexa-black">Avant DATAKLE</span>
+                  <span className="nexa-black">Avec DATAKLE</span>
                 </div>
                 <div className="grid gap-3 text-[12px] sm:text-[13px]">
                   {[
@@ -447,7 +447,7 @@ export default function About() {
       </section>
 
       {/* ========= BANDEAU SLOGAN ========= */}
-      <section className="relative overflow-hidden py-10 bg-gradient-to-r from-[#0059FB] via-[#000044] to-[#0059FB]">
+      <section className="relative overflow-hidden py-10 bg-gradient-to-r from-[#0059FB] via-[#000044] to-[#0059FB] nexa-black">
         <div className="pointer-events-none absolute -left-16 top-0 h-40 w-40 rounded-full bg-[#0AD1F0]/30 blur-3xl" />
         <div className="pointer-events-none absolute right-0 -bottom-16 h-44 w-44 rounded-full bg-white/10 blur-3xl" />
 
