@@ -29,12 +29,12 @@ export default function About() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1.1fr)] items-center">
             {/* Texte */}
             <div>
-              <span className="inline-flex nexa-black items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] tracking-[0.2em] uppercase text-[#0AD1F0]">
+              <span className="inline-flex section-kicker nexa-black items-center gap-2 rounded-full bg-white/5 px-3 py-1  text-[#0AD1F0]">
                 À propos • DATAKLE
                 <span className="h-1.5 w-1.5 rounded-full bg-[#0AD1F0]" />
               </span>
 
-              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-tight nexa-bold">
+              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-tight nexa-book">
                 Nous transformons vos données
                 <span className="block text-[#0AD1F0]">
                   en décisions utiles, mesurables

@@ -29,7 +29,7 @@ const TEAM: TeamMember[] = [
     tagline: "Le fil rouge entre code, terrain et prise de décision.",
     story:
       "Chez DATAKLE, Charles est souvent le premier à ouvrir les fichiers bruts. Il adore comprendre comment les données ont été collectées, d’où viennent les incohérences et comment transformer tout ça en produits concrets : API, dashboards, applications. Son obsession : que chaque graphique réponde à une vraie question métier.",
-    linkedin: "https://www.linkedin.com/in/charles-tancrede", // à adapter
+    linkedin: "https://www.linkedin.com/in/joseph-tancrede-fils-charles-aaa112262", // à adapter
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const TEAM: TeamMember[] = [
     tagline: "Rend les chiffres lisibles même pour ceux qui détestent Excel.",
     story:
       "Marc-Elie part toujours d’une idée simple : si un dirigeant ne comprend pas un graphique en 10 secondes, le graphique est à refaire. Il travaille la dataviz comme un designer, en pensant aux couleurs, aux gestes de l’utilisateur, au contexte d’utilisation (mobile, réunion, terrain…). Résultat : des tableaux de bord qui donnent envie d’être utilisés, pas juste consultés.",
-    linkedin: "https://www.linkedin.com/in/marc-elie-lorzero", // à adapter
+    linkedin: "https://www.linkedin.com/in/lorz%C3%A9ro-marc-elie-811b90167/", // à adapter
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const TEAM: TeamMember[] = [
     tagline: "Rêve d’un monde où plus personne ne recopie des chiffres à la main.",
     story:
       "Jacques aime prendre un process manuel, long, répétitif… et le transformer en pipeline automatisé. Il connecte les bases, sécurise les flux, met en place des scripts qui tournent pendant que les équipes dorment. Sa phrase préférée : « Si tu le fais plus de deux fois, on peut sûrement l’automatiser. »",
-    linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy", // à adapter
+    linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy-561bb0159/", // à adapter
   },
   {
     id: 4,
@@ -59,7 +59,7 @@ const TEAM: TeamMember[] = [
     tagline: "Pense d’abord aux gens qui cliquent, ensuite à l’interface.",
     story:
       "Jean-Kerly accompagne les équipes du premier atelier jusqu’aux maquettes interactives. Il écoute les frustrations, observe les habitudes et transforme tout ça en écrans simples, cohérents, fluides. Sa mission chez DATAKLE : faire en sorte que les outils data soient adoptés, pas subis.",
-    linkedin: "https://www.linkedin.com/in/jean-kerly-valcy", // à adapter
+    linkedin: "https://www.linkedin.com/in/jean-kerly-valcy-0a0a882a5/", // à adapter
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ const TEAM: TeamMember[] = [
     tagline: "Met la pédagogie au centre de chaque projet data.",
     story:
       "Marie intervient là où la technique ne suffit plus : dans les salles de formation, les ateliers d’appropriation, les sessions de coaching. Elle traduit le langage des data en exemples concrets, adaptés au terrain. Son objectif : que chaque équipe se sente légitime pour utiliser les outils et challenger les chiffres.",
-    linkedin: "https://www.linkedin.com/in/marie-ernice", // à adapter
+    linkedin: "https://www.linkedin.com/in/marie-ernice-valcy-158878223/", // à adapter
   },
 ];
 
@@ -101,7 +101,7 @@ const SectionTeam: React.FC = () => {
     <section
       id="Equipe"
       ref={sectionRef}
-      className="py-16 bg-gradient-to-b from-[#F5FAFF] via-white to-[#E6F2FF]"
+      className="py-5 bg-gradient-to-b from-[#F5FAFF] via-white to-[#E6F2FF]"
     >
       <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
         {/* En-tête narratif */}

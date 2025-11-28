@@ -125,7 +125,7 @@ export default function TeamSection() {
             </p>
 
             <Link
-              to="/equipe" // adapte la route si besoin
+              to="/a-propos#equipe" // adapte la route si besoin
               className="
                 inline-flex items-center justify-center gap-2 rounded-full
                 bg-[#0059FB] text-white px-4 py-1.5 text-xs sm:text-sm font-semibold
