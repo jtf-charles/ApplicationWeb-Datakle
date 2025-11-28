@@ -222,15 +222,7 @@ export default function Footer() {
       </div>
 
      {/* back-to-top */}
-<button
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  aria-label="Revenir en haut"
-  className="to-top"
->
-  <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-    <path fill="currentColor" d="M12 5l6 6-1.4 1.4L13 8.8V19h-2V8.8L7.4 12.4 6 11l6-6Z" />
-  </svg>
-</button>
+
 
     </footer>
   );
