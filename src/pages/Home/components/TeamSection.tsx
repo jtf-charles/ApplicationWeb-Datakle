@@ -1,5 +1,3 @@
-
-
 // À adapter avec les vraies photos de ton dossier
 import team1 from "@/assets/team/tanc2.jpg";
 import team2 from "@/assets/team/Lorzero.jpg";
@@ -7,6 +5,7 @@ import team3 from "@/assets/team/Valcy.jpg";
 import team4 from "@/assets/team/Kerly.png";
 import team5 from "@/assets/team/Ernice.jpg";
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 type TeamMember = {
   id: number;
@@ -22,14 +21,16 @@ const TEAM: TeamMember[] = [
     name: "Charles J. Tancrède",
     role: "Developer and Data-analyst",
     photo: team1,
-    tagline: "Transforme les données en décisions concrètes pour les organisations.",
+    tagline:
+      "Transforme les données en décisions concrètes pour les organisations.",
   },
   {
     id: 2,
     name: "Marc-Elie Lorzéro",
     role: "Data Analyst & Visualisation",
     photo: team2,
-    tagline: "Dessine des tableaux de bord clairs et actionnables pour le terrain.",
+    tagline:
+      "Dessine des tableaux de bord clairs et actionnables pour le terrain.",
   },
   {
     id: 3,
@@ -50,7 +51,8 @@ const TEAM: TeamMember[] = [
     name: "Marie Ernice",
     role: "Consultant Data & Formation",
     photo: team5,
-    tagline: "Accompagne les équipes dans l’adoption d’une culture data.",
+    tagline:
+      "Accompagne les équipes dans l’adoption d’une culture data.",
   },
 ];
 
@@ -84,7 +86,8 @@ export default function TeamSection() {
     : "opacity-0 translate-y-6";
 
   return (
-    <section id="Equipe"
+    <section
+      id="Equipe"
       ref={sectionRef}
       className="py-10 bg-gradient-to-b from-[#F5FAFF] via-white to-[#E6F2FF]"
     >
@@ -113,11 +116,36 @@ export default function TeamSection() {
             </div>
           </div>
 
-          <p className="text-xs sm:text-sm text-[#4B5563]/80 max-w-sm nexa-book">
-            Chaque projet est suivi par une équipe resserrée. Vous savez qui
-            vous accompagne, du premier atelier jusqu’au déploiement
-            opérationnel.
-          </p>
+          {/* Texte + CTA à droite */}
+          <div className="max-w-sm flex flex-col gap-3 sm:items-end">
+            <p className="text-xs sm:text-sm text-[#4B5563]/80 nexa-book text-left sm:text-right">
+              Chaque projet est suivi par une équipe resserrée. Vous savez qui
+              vous accompagne, du premier atelier jusqu’au déploiement
+              opérationnel.
+            </p>
+
+            <Link
+              to="/equipe" // adapte la route si besoin
+              className="
+                inline-flex items-center justify-center gap-2 rounded-full
+                bg-[#0059FB] text-white px-4 py-1.5 text-xs sm:text-sm font-semibold
+                shadow-[0_10px_28px_rgba(0,0,0,0.30)]
+                hover:bg-[#0042C5] hover:shadow-[0_14px_36px_rgba(0,0,0,0.40)]
+                transition-all duration-200 hover:-translate-y-0.5
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0AD1F0]
+              "
+            >
+              Voir plus
+              <svg
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden
+              >
+                <path d="M7.5 5l5 5-5 5" />
+              </svg>
+            </Link>
+          </div>
         </header>
 
         {/* Cartes équipe */}
@@ -135,7 +163,7 @@ export default function TeamSection() {
                 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
               `}
               style={{
-                // apparition en cascade : 0ms, 120ms, 240ms, ...
+                // apparition en cascade : 0ms, 80ms, 160ms, ...
                 transitionDelay: inView ? `${idx * 80}ms` : "0ms",
               }}
             >
