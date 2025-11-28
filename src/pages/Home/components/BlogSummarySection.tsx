@@ -59,11 +59,12 @@ export default function BlogSummarySection() {
   const [likes, setLikes] = useState<Record<number, number>>({});
   const [ratings, setRatings] = useState<Record<number, number>>({});
   const [index, setIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(() =>
-    typeof window !== "undefined" &&
-    window.matchMedia("(min-width:768px)").matches
-      ? 2
-      : 1
+  const [itemsPerView, setItemsPerView] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(min-width:768px)").matches
+        ? 2
+        : 1
   );
 
   const n = BLOGS.length;
@@ -72,8 +73,7 @@ export default function BlogSummarySection() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const mql = window.matchMedia("(min-width:768px)");
-    const handleChange = () =>
-      setItemsPerView(mql.matches ? 2 : 1);
+    const handleChange = () => setItemsPerView(mql.matches ? 2 : 1);
 
     handleChange();
     mql.addEventListener("change", handleChange);
@@ -152,7 +152,6 @@ export default function BlogSummarySection() {
                   hover:bg-[#E6F0FF] hover:shadow-[0_18px_50px_rgba(0,0,0,0.55)]
                   transition-all duration-200 hover:-translate-y-0.5
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0AD1F0]
-                  
                 "
               >
                 Voir tous les articles
@@ -225,78 +224,101 @@ export default function BlogSummarySection() {
                       {item.preview}
                     </p>
 
-                    {/* Actions */}
-                    <div className="mt-4 flex items-center justify-between gap-3">
-                      {/* Like */}
-                      <button
-                        type="button"
-                        onClick={() => handleLike(item.id)}
-                        className="inline-flex items-center gap-1.5 text-[13px] text-[#EF4444] hover:text-[#F97373] transition-colors"
-                      >
-                        <FaHeart />
-                        <span>{likes[item.id] || 0}</span>
-                      </button>
+                    {/* ===== FOOTER ACTIONS + CTA ===== */}
+                    <div className="mt-4 pt-3 border-t border-[#E5E7EB]">
+                      {/* 1) zone actions (like / partage / rating / commentaire) */}
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex flex-wrap items-center gap-4 text-xs sm:text-[13px]">
+                          {/* Like */}
+                          <button
+                            type="button"
+                            onClick={() => handleLike(item.id)}
+                            className="inline-flex items-center gap-1.5 rounded-full bg-[#FEE2E2] px-3 py-1.5 text-[#EF4444] hover:bg-[#FECACA] transition-colors"
+                          >
+                            <FaHeart className="h-3.5 w-3.5" />
+                            <span>{likes[item.id] || 0}</span>
+                          </button>
 
-                      {/* Partage */}
-                      <button
-                        type="button"
-                        onClick={() =>
-                          navigator.share
-                            ? navigator.share({
-                                title: item.title,
-                                text: item.preview,
-                                url: window.location.origin + item.slug,
-                              })
-                            : alert(
-                                "Le partage natif n’est pas supporté par ce navigateur."
-                              )
-                        }
-                        className="inline-flex items-center gap-1.5 text-[13px] text-[#6B7280] hover:text-[#111827] transition-colors"
-                      >
-                        <FaShareAlt />
-                        Partager
-                      </button>
+                          {/* Partage */}
+                          <button
+                            type="button"
+                            onClick={() =>
+                              navigator.share
+                                ? navigator.share({
+                                    title: item.title,
+                                    text: item.preview,
+                                    url: window.location.origin + item.slug,
+                                  })
+                                : alert(
+                                    "Le partage natif n’est pas supporté par ce navigateur."
+                                  )
+                            }
+                            className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-[#4B5563] border border-[#E5E7EB] hover:border-[#0059FB] hover:text-[#0059FB] transition-colors"
+                          >
+                            <FaShareAlt className="h-3.5 w-3.5" />
+                            <span className="nexa-bold">Partager</span>
+                          </button>
 
-                      {/* Rating */}
-                      <div className="flex gap-0.5">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <FaStar
-                            key={star}
-                            onClick={() => handleRating(item.id, star)}
-                            className={`h-4 w-4 cursor-pointer transition-colors ${
-                              (ratings[item.id] || 0) >= star
-                                ? "text-[#FACC15]"
-                                : "text-gray-300 group-hover:text-gray-400"
-                            }`}
-                          />
-                        ))}
+                          {/* Rating */}
+                          <div className="flex items-center gap-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <FaStar
+                                key={star}
+                                onClick={() => handleRating(item.id, star)}
+                                className={`h-4 w-4 cursor-pointer transition-colors ${
+                                  (ratings[item.id] || 0) >= star
+                                    ? "text-[#FACC15]"
+                                    : "text-gray-300 group-hover:text-gray-400"
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Laisser un commentaire */}
+                        <button
+                          type="button"
+                          className="
+                            text-[11px] sm:text-xs rounded-full 
+                            border border-[#D1D5DB]               /* bordure visible par défaut */
+                            px-3 py-1.5 
+                            text-[#9CA3AF]                         /* texte par défaut */
+                            bg-white/70                             /* fond constant */
+                            hover:text-[#4B5563]                    /* texte plus foncé au hover */
+                            hover:border-[#4B5563]                  /* bordure suit la couleur du texte */
+                            transition-colors
+                            nexa-book
+                          "
+                        >
+                          Laisser un commentaire
+                        </button>
+                      </div>
+
+                      {/* 2) CTA tout seul en bas */}
+                      <div className="mt-4 flex justify-center">
+                        <Link
+                          to={item.slug}
+                          className="
+                            inline-flex items-center justify-center gap-1.5 rounded-full
+                            bg-[#0059FB] px-6 py-2 text-sm font-semibold text-white
+                            shadow-[0_12px_32px_rgba(0,0,0,0.30)]
+                            hover:bg-[#003EB5] hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]
+                            transition-all duration-200 hover:-translate-y-0.5
+                          "
+                        >
+                          Voir plus
+                          <svg
+                            className="h-4 w-4"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden
+                          >
+                            <path d="M7.5 5l5 5-5 5" />
+                          </svg>
+                        </Link>
                       </div>
                     </div>
-
-                    {/* CTA bas de carte */}
-                    <div className="mt-4 flex items-center justify-between">
-                      <Link
-                        to={item.slug}
-                        className="inline-flex items-center gap-1 text-sm font-semibold text-[#0059FB] hover:text-[#003EB5]"
-                      >
-                        Voir plus
-                        <svg
-                          className="h-4 w-4"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden
-                        >
-                          <path d="M7.5 5l5 5-5 5" />
-                        </svg>
-                      </Link>
-
-                      <button
-                        type="button"
-                        className="text-xs text-[#9CA3AF] hover:text-[#4B5563]"
-                      >
-                        Laisser un commentaire
-                      </button>
-                    </div>
+                    {/* ===== FIN FOOTER ===== */}
                   </div>
                 </article>
               ))}
@@ -339,7 +361,7 @@ export default function BlogSummarySection() {
                       <span
                         key={i}
                         className={`h-2 w-2 rounded-full transition-colors ${
-                          isActive ? "bg-[#0059FB]" : "bg-white/60"
+                          isActive ? "bg-[#0059FB]" : "bg:white/60"
                         }`}
                       />
                     );

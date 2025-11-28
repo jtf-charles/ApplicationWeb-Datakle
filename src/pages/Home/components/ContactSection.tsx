@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaTiktok, FaLinkedinIn } from "react-icons/fa";
+import { SectionHeader } from "@/components/common/SectionHeader";
 
 export default function ContactSection() {
   return (
@@ -49,55 +50,16 @@ export default function ContactSection() {
 
       {/* ===== CONTENU PRINCIPAL (au-dessus du fond) ===== */}
       <div className="relative z-10 mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
-        {/* ========= ENTÊTE STYLE "A PROPOS" ========= */}
-        <div className="relative overflow-hidden rounded-3xl bg-[#000044] text-white px-5 sm:px-10 py-8 sm:py-10 mb-10">
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)_auto] items-center">
-            {/* Titre gauche */}
-            <div className="space-y-2">
-              <p className="text-sm font-semibold tracking-[0.25em] uppercase text-[#0AD1F0]">
-                Contactez-nous
-              </p>
-              <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-extrabold leading-tight">
-                Parlons de vos données, de vos projets,
-                <br className="hidden sm:block" /> de vos idées.
-              </h2>
-            </div>
-
-            {/* Sous-titre centre */}
-            <p className="text-sm sm:text-base text-white/80 lg:text-center">
-              Une question, un projet ou une simple curiosité&nbsp;?  
-              Laissez-nous un message, on vous répond rapidement.
-            </p>
-
-            {/* CTA à droite */}
-            <div className="flex lg:justify-end">
-              <a
-                href="#contact-form"
-                className="
-                  inline-flex items-center justify-center gap-2 rounded-full
-                  bg-[#0059FB] text-white px-5 py-2.5 text-sm font-semibold
-                  shadow-[0_12px_30px_rgba(0,0,0,0.35)]
-                  hover:bg-[#0042C5] hover:shadow-[0_16px_40px_rgba(0,0,0,0.45)]
-                  transition-all duration-200 hover:-translate-y-0.5
-                  focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0AD1F0]
-                "
-              >
-                Écrire un message
-                <svg
-                  className="h-4 w-4"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M7.5 5l5 5-5 5" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          {/* Barre dégradée en bas, comme sur ton bloc A PROPOS */}
-          <div className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-[#0AD1F0] via-[#0059FB] to-[#0AD1F0] opacity-95" />
-        </div>
+        {/* ========= ENTÊTE AVEC SectionHeader ========= */}
+        <SectionHeader
+          kicker="Contactez-nous"
+          title="Parlons de vos données, de vos projets, de vos idées."
+          subtitle="Une question, un projet ou une simple curiosité ? Laissez-nous un message, on vous répond rapidement."
+          ctaLabel="Écrire un message"
+          ctaHref="#contact-form"
+          inView={true}              // 🔹 on force l’affichage du header
+          className="mb-10"
+        />
 
         {/* ========= CONTENU PRINCIPAL (fond blanc) ========= */}
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1.1fr)]">
@@ -106,9 +68,9 @@ export default function ContactSection() {
             id="contact-form"
             className="relative bg-white rounded-3xl shadow-[0_18px_50px_rgba(0,0,68,0.10)] border border-[#E5E7EB]"
           >
-            <form className="p-5 sm:p-7 space-y-5">
+            <form className="p-5 sm:p-7 space-y-5 nexa-bold">
               {/* Nom + Email */}
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2 nexa-book">
                 <div className="space-y-1.5">
                   <label
                     htmlFor="contact-name"
@@ -183,7 +145,7 @@ export default function ContactSection() {
                     type="checkbox"
                     className="mt-[2px] h-4 w-4 rounded border-[#D1D5DB] text-[#0059FB] focus:ring-[#0AD1F0]"
                   />
-                  <span>
+                  <span className="nexa-light">
                     J’accepte que DATAKLE utilise ces informations pour me
                     recontacter. Aucun spam, jamais.
                   </span>
@@ -210,7 +172,7 @@ export default function ContactSection() {
           <aside className="space-y-6">
             {/* Coordonnées */}
             <div className="rounded-3xl bg-white shadow-[0_14px_40px_rgba(0,0,68,0.08)] border border-[#E5E7EB] p-5 sm:p-6 space-y-4">
-              <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-[#000044]/80">
+              <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-[#000044]/80 nexa-bold">
                 Contact direct
               </h3>
 
@@ -220,10 +182,10 @@ export default function ContactSection() {
                     <FiMail />
                   </span>
                   <div>
-                    <p className="font-semibold text-[#000044]">Email</p>
+                    <p className="font-semibold text-[#000044] nexa-book">Email</p>
                     <a
                       href="mailto:datakle@gmail.com"
-                      className="text-[#0059FB] hover:text-[#003EB5]"
+                      className="text-[#0059FB] hover:text-[#003EB5] nexa-light"
                     >
                       datakle@gmail.com
                     </a>
@@ -235,10 +197,10 @@ export default function ContactSection() {
                     <FiPhone />
                   </span>
                   <div>
-                    <p className="font-semibold text-[#000044]">Téléphone</p>
+                    <p className="font-semibold text-[#000044] nexa-book">Téléphone</p>
                     <a
                       href="tel:+50938179008"
-                      className="text-[#0059FB] hover:text-[#003EB5]"
+                      className="text-[#0059FB] hover:text-[#003EB5] nexa-light"
                     >
                       +509 3817 9008
                     </a>
@@ -250,8 +212,8 @@ export default function ContactSection() {
                     <FiMapPin />
                   </span>
                   <div>
-                    <p className="font-semibold text-[#000044]">Adresse</p>
-                    <p className="text-[#4B5563]">
+                    <p className="font-semibold text-[#000044] nexa-book">Adresse</p>
+                    <p className="text-[#4B5563] nexa-light">
                       #16 Rue Romain, Pétion-Ville, Haïti
                     </p>
                   </div>
@@ -263,17 +225,17 @@ export default function ContactSection() {
             <div className="rounded-3xl bg-[#000044] text-white p-5 sm:p-6 space-y-4">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-[#0AD1F0]">
+                  <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-[#0AD1F0] nexa-bold">
                     Réseaux sociaux
                   </h3>
-                  <p className="mt-1 text-xs sm:text-[13px] text-white/80">
+                  <p className="mt-1 text-xs sm:text-[13px] text-white/80 nexa-book">
                     On partage des cas pratiques, des conseils et les coulisses
                     de projets data.
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 nexa-book">
                 <SocialButton
                   href="https://www.facebook.com/share/1BGFkDphSz/"
                   icon={<FaFacebookF />}
