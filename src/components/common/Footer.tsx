@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/images/Logo-05.svg";
+import logo from "@/assets/images/Logos-05.png";
 import ScrollToTopLink from "../../app/ScrollToTopLink";
 
 /*type Social = { name: string; href: string; Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element };*/

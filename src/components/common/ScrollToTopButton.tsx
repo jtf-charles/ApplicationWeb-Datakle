@@ -10,15 +10,20 @@ const ScrollToTopButton = () => {
     <button
       type="button"
       onClick={handleClick}
-      aria-label="Revenir en haut de la page"
+      aria-label="Revenir en haut"
       className="
         fixed
-        bottom-5 right-5
+        bottom-4 right-4
         z-[9999]
         bg-[#0059FB]
         hover:bg-[#0042C5]
         text-white
-        w-14 h-14
+
+        /* Responsive button sizes */
+        w-10 h-10         /* mobile */
+        sm:w-12 sm:h-12   /* tablette */
+        lg:w-14 lg:h-14   /* desktop */
+
         rounded-full
         flex items-center justify-center
         shadow-xl
@@ -27,7 +32,11 @@ const ScrollToTopButton = () => {
     >
       <svg
         viewBox="0 0 24 24"
-        className="w-7 h-7"
+        className="
+          w-5 h-5         /* mobile */
+          sm:w-6 sm:h-6   /* tablette */
+          lg:w-7 lg:h-7   /* desktop */
+        "
         fill="currentColor"
         aria-hidden
       >
