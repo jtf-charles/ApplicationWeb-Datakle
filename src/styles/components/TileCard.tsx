@@ -32,22 +32,22 @@ export default function TileCard({ tile }: TileCardProps) {
 
       <div className="tile-body">
         <div className="flex items-center gap-2">
-          <span className="kicker">{kicker}</span>
+          <span className="kicker nexa-black">{kicker}</span>
           <Icon className="h-4 w-4 text-[#FFD44D]" />
         </div>
 
-        <h3 className="mt-3 font-extrabold text-white text-xl sm:text-2xl leading-tight drop-shadow">
+        <h3 className="mt-3 section-title1 leading-tight drop-shadow nexa-bold">
           {title}
         </h3>
 
-        <p className="mt-8 text-[#FFFFFF] text-sm sm:text-[18px] text-center leading-relaxed max-w-prose font-bold ">
+        <p className="mt-8 section-subtitle text-center leading-relaxed max-w-prose nexa-book ">
           {short}
         </p>
 
         {long && (
           <div className="mt-0 grid transition-[grid-template-rows] duration-500 ease-out group-hover:grid-rows-[1fr] focus-within:grid-rows-[1fr] grid-rows-[0fr]">
             <div className="overflow-hidden">
-              <p className="text-white text-sm sm:text-[18px] text-center leading-relaxed bg-[#000044]/50 font-bold">
+              <p className="text-white section-subtitle text-center leading-relaxed bg-[#000044]/50 nexa-book">
                 {long}
               </p>
             </div>

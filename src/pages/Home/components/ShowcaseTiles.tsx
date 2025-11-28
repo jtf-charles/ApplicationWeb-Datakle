@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import SectionHeaderSimple from "@/components/common/SectionHeaderSimple";
 import TileCard, { type Tile } from "../../../styles/components/TileCard";
 import TilesCarousel from "../../../styles/components/TilesCarousel";
 import { BulbIcon, ChartIcon, PuzzleIcon,VisionIcon, MissionIcon, ValuesIcon,} from "../../../styles/components/icons";
-
+import { SectionHeader } from "../../../components/common/SectionHeader";
 
 import card12 from "@/assets/cards/card19.jpg";
 import card11 from "@/assets/cards/card21.jpg";
@@ -87,24 +88,64 @@ const TILES: Tile[] = [
   },
 ];
 
+
+
 export default function ShowcaseTiles() {
   return (
      <section className="band-about band-pad">
+      {/* petit cercle bleu en haut gauche */}
+      <div
+        className="
+          pointer-events-none absolute left-[10%] top-6
+          h-5 w-5 rounded-full bg-[#0059FB]/80
+          dk-float-x-slow
+        "
+      />
+      {/* petit cercle cyan en haut droit */}
+      <div
+        className="
+          pointer-events-none absolute right-[15%] top-10
+          h-4 w-4 rounded-full bg-[#0AD1F0]/90
+          dk-float-y-slow
+        "
+      />
+      {/* carré arrondi en contour derrière le bloc tête */}
+      <div
+        className="
+          pointer-events-none absolute right-[8%] top-[3.5rem]
+          h-12 w-12 rounded-2xl border border-white/40 bg-white/5
+          dk-float-diag-slow
+        "
+      />
+      {/* grand cercle cyan en bas droit */}
+      <div
+        className="
+          pointer-events-none absolute -right-20 bottom-[-6rem]
+          h-52 w-52 rounded-full bg-[#0AD1F0]/40
+          dk-float-y-slow
+        "
+      />
+      {/* grand cercle bleu foncé en bas gauche */}
+      <div
+        className="
+          pointer-events-none absolute -left-24 bottom-[-5rem]
+          h-40 w-40 rounded-full bg-[#000044]/35
+          dk-float-diag-slow
+        "
+      />
           {/* Contenu centré et limité */}
           <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
-            <SectionHeaderSimple
-              title="A PROPOS"
-              subtitle={
-                <>
-                  Des solutions data de bout en bout pour mesurer, comprendre et agir.
-                  <br className="hidden sm:block" />
-                  Accélérez vos décisions avec des outils clairs et performants.
-                </>
-              }
-              ctaLabel="EN SAVOIR PLUS"
-              ctaTo="/default"
-            />
-    
+          
+           <SectionHeader
+          kicker="A propos"
+          title="Vos données, la clé de votre performance"
+          subtitle="Des solutions data de bout en bout pour mesurer, comprendre et agir.Accélérez vos décisions avec des outils clairs et performants."
+          ctaLabel="EN SAVOIR PLUS"
+          ctaHref="/default"
+          // ✅ On force l'apparition du header ici
+          inView={true}
+        />
+          
             {/* Grille des cartes */}
              <div className="mt-6">
             <TilesCarousel tiles={TILES} />

@@ -1,3 +1,4 @@
+// src/components/services/ServicesSummarySection.tsx
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import type { IconType } from "react-icons";
@@ -9,6 +10,11 @@ import {
   FiUsers,
   FiCpu,
 } from "react-icons/fi";
+
+import { SectionHeader } from "../../../components/common/SectionHeader"; // adapte le chemin si besoin
+
+const BASE_ANIM =
+  "transition-all duration-700 ease-out will-change-transform will-change-opacity";
 
 type Service = {
   id: number;
@@ -89,71 +95,23 @@ export default function ServicesSummarySection() {
     return () => observer.disconnect();
   }, []);
 
-  const baseAnim =
-    "transition-all duration-700 ease-out will-change-transform will-change-opacity";
-  const headerAnim = inView
-    ? "opacity-100 translate-y-0"
-    : "opacity-0 translate-y-6";
-
   return (
     <section
       ref={sectionRef}
       className="py-20 bg-gradient-to-b from-[#000044] via-[#00115C] to-[#001B80]"
     >
       <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
-        {/* Bandeau titre type “A PROPOS / NOS SERVICES” */}
-        <header
-          className={`
-            mb-10 rounded-3xl bg-[#000044] text-white
-            px-5 sm:px-10 py-8 sm:py-9
-            shadow-[0_22px_70px_rgba(0,0,0,0.45)]
-            relative overflow-hidden
-            ${baseAnim} ${headerAnim}
-          `}
-        >
-          {/* petit trait dégradé en bas */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-[#0AD1F0] via-[#0059FB] to-[#0AD1F0]" />
+        {/* === Header réutilisable === */}
+        <SectionHeader
+          kicker="Nos services"
+          title="Des solutions data de bout en bout."
+          subtitle="Mesurer, comprendre, automatiser et agir : une offre complète pour rendre vos décisions plus rapides, plus sûres et plus alignées avec le terrain."
+          ctaLabel="Voir tous les services"
+          ctaHref="/services"
+          inView={inView}
+        />
 
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between relative z-10">
-            <div>
-              <p className="section-kicker">
-                Nos services
-              </p>
-              <h2 className="section-title1">
-                Des solutions data de bout en bout.
-              </h2>
-              <p className="section-subtitle">
-                Mesurer, comprendre, automatiser et agir : une offre complète
-                pour rendre vos décisions plus rapides, plus sûres et plus
-                alignées avec le terrain.
-              </p>
-            </div>
-
-            <Link
-              to="/services"
-              className="
-                inline-flex items-center justify-center gap-2 rounded-full
-                bg-[#0059FB] px-5 py-2.5 text-sm font-semibold text-white
-                shadow-[0_16px_40px_rgba(0,0,0,0.45)]
-                hover:bg-[#0A6CFF]
-                transition-all duration-200 hover:-translate-y-0.5
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0AD1F0]
-              "
-            >
-              Voir tous les services
-              <svg
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden
-              >
-                <path d="M7.5 5l5 5-5 5" />
-              </svg>
-            </Link>
-          </div>
-        </header>
-
-        {/* Bloc cartes services */}
+        {/* === Bloc cartes services === */}
         <div className="rounded-[2.3rem] bg-gradient-to-b from-[#00125F] via-[#002894] to-[#0035BF] p-6 sm:p-8 shadow-[0_24px_80px_rgba(0,0,0,0.55)]">
           <div className="grid gap-6 md:grid-cols-3">
             {SERVICES.map((service, idx) => {
@@ -167,7 +125,7 @@ export default function ServicesSummarySection() {
                     shadow-[0_18px_50px_rgba(0,0,68,0.20)]
                     px-5 py-7
                     hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(0,0,68,0.35)]
-                    ${baseAnim}
+                    ${BASE_ANIM}
                     ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
                   `}
                   style={{
