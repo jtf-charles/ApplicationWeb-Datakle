@@ -92,7 +92,7 @@ const TILES: Tile[] = [
 
 export default function ShowcaseTiles() {
   return (
-     <section className="band-about band-pad">
+     <section className="band-about band-pad relative  overflow-hidden">
       {/* petit cercle bleu en haut gauche */}
       <div
         className="
