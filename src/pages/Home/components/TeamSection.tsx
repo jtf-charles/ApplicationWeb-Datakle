@@ -6,6 +6,7 @@ import team4 from "@/assets/team/Kerly.png";
 import team5 from "@/assets/team/Ernice.jpg";
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { SectionHeader } from "@/components/common/SectionHeader";
 
 type TeamMember = {
   id: number;
@@ -19,40 +20,40 @@ const TEAM: TeamMember[] = [
   {
     id: 1,
     name: "Charles J. Tancrède",
-    role: "Developer and Data-analyst",
+    role: "Responsable technologie et informatique",
     photo: team1,
     tagline:
-      "Transforme les données en décisions concrètes pour les organisations.",
+      "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
   },
   {
     id: 2,
     name: "Marc-Elie Lorzéro",
-    role: "Data Analyst & Visualisation",
+    role: "Responsable Suivi & évaluation",
     photo: team2,
     tagline:
-      "Dessine des tableaux de bord clairs et actionnables pour le terrain.",
+      "Exploite les données pour suivre les activités, orienter les décisions et évaluer l’impact des projets.",
   },
   {
     id: 3,
     name: "Jacques Daguerre Valcy",
-    role: "Ingénieur Data & Automatisation",
+    role: "Responsable analytique",
     photo: team3,
-    tagline: "Automatise les flux de données pour gagner du temps au quotidien.",
+    tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
   },
   {
     id: 4,
     name: "Jean-Kerly Valcy",
-    role: "UX / Produit digital",
+    role: "Responsable marketing et médias sociaux",
     photo: team4,
-    tagline: "Fait le pont entre les utilisateurs, les outils et la donnée.",
+    tagline: "Travaille sur les stratégies de communication et les campagnes marketing numériques.",
   },
   {
     id: 5,
     name: "Marie Ernice",
-    role: "Consultant Data & Formation",
+    role: "Responsable finance et opération",
     photo: team5,
     tagline:
-      "Accompagne les équipes dans l’adoption d’une culture data.",
+      "Assure la gestion financière et le bon déroulement des activités.",
   },
 ];
 
@@ -87,66 +88,21 @@ export default function TeamSection() {
 
   return (
     <section
-      id="Equipe"
+      id="equipe"
       ref={sectionRef}
       className="py-10 bg-gradient-to-b from-[#F5FAFF] via-white to-[#E6F2FF]"
     >
       <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
         {/* En-tête */}
-        <header
-          className={`mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between ${baseAnim} ${headerAnim}`}
-        >
-          <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#000044]/90 px-3 py-1">
-              <span className="text-[10px] sm:text-[11px] tracking-[.25em] font-semibold uppercase text-white/80 nexa-black">
-                Équipe Datakle
-              </span>
-              <span className="inline-block h-2 w-2 rounded-full bg-[#0AD1F0]" />
-            </div>
-
-            <div>
-              <h2 className="text-2xl sm:text-3xl lg:text-[2.1rem] font-extrabold text-[#000044] nexa-bold">
-                Une équipe qui parle data tous les jours.
-              </h2>
-              <p className="mt-2 text-sm sm:text-base text-[#1A2740]/80 nexa-book">
-                Consultants, analystes, ingénieurs et formateurs : des profils
-                complémentaires pour couvrir tout le cycle de vie de vos
-                données, du terrain à la décision.
-              </p>
-            </div>
-          </div>
-
-          {/* Texte + CTA à droite */}
-          <div className="max-w-sm flex flex-col gap-3 sm:items-end">
-            <p className="text-xs sm:text-sm text-[#4B5563]/80 nexa-book text-left sm:text-right">
-              Chaque projet est suivi par une équipe resserrée. Vous savez qui
-              vous accompagne, du premier atelier jusqu’au déploiement
-              opérationnel.
-            </p>
-
-            <Link
-              to="/a-propos#equipe" // adapte la route si besoin
-              className="
-                inline-flex items-center justify-center gap-2 rounded-full
-                bg-[#0059FB] text-white px-4 py-1.5 text-xs sm:text-sm font-semibold
-                shadow-[0_10px_28px_rgba(0,0,0,0.30)]
-                hover:bg-[#0042C5] hover:shadow-[0_14px_36px_rgba(0,0,0,0.40)]
-                transition-all duration-200 hover:-translate-y-0.5
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0AD1F0]
-              "
-            >
-              Voir plus
-              <svg
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden
-              >
-                <path d="M7.5 5l5 5-5 5" />
-              </svg>
-            </Link>
-          </div>
-        </header>
+        <SectionHeader
+            kicker="Notre équipe"
+            title="Une équipe engagée pour faire parler vos données."
+            subtitle="Consultants, analystes, ingénieurs et formateurs : des profils complémentaires pour couvrir tout le cycle de vie de vos données, du terrain à la décision."
+            ctaLabel="Voir l'équipe"
+            ctaHref="/a-propos#equipe"
+            inView={true}
+            className="mb-10"
+          />
 
         {/* Cartes équipe */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

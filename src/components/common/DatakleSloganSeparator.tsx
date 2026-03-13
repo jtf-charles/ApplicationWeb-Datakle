@@ -8,8 +8,7 @@ export default function DatakleSeparator() {
         </span>
         <div className="font-nexa">
         <h2 className="mt-4 text-2xl sm:text-3xl lg:text-[2rem] font-extrabold text-white nexa-bold">
-          Nous transformons vos données en décisions utiles,
-          mesurables et orientées résultats.
+          Nous transformons vos données en informations utiles pour mieux décider
         </h2>
         </div>
         <div className="mt-5 flex items-center justify-center gap-3">

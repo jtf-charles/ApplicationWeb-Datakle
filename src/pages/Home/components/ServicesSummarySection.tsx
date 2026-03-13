@@ -8,6 +8,8 @@ import {
   FiShield,
   FiClipboard,
   FiUsers,
+  FiTrendingUp,
+  FiServer,
   FiCpu,
 } from "react-icons/fi";
 
@@ -25,54 +27,57 @@ type Service = {
 };
 
 const SERVICES: Service[] = [
-  {
-    id: 1,
-    title: "Tableaux de bord & Insights",
-    description:
-      "KPIs clairs, suivi temps réel, storytelling data (Power BI, Metabase…) pour décider vite.",
-    href: "/services/tableaux-de-bord",
-    Icon: FiBarChart2,
-  },
-  {
-    id: 2,
-    title: "Pipelines & Qualité de données",
-    description:
-      "Collecte, transformation, tests de qualité (ETL/ELT, dbt…) pour fiabiliser vos modèles.",
-    href: "/services/pipelines-qualite",
-    Icon: FiDatabase,
-  },
-  {
-    id: 3,
-    title: "Sécurité & Gouvernance",
-    description:
-      "Conformité, bonnes pratiques et gouvernance de la donnée dans un environnement maîtrisé.",
-    href: "/services/securite-gouvernance",
-    Icon: FiShield,
-  },
-  {
-    id: 4,
-    title: "Études & Enquêtes",
-    description:
-      "Collecte terrain/numérique, analyses statistiques et synthèses pour vos décisions.",
-    href: "/services/etudes-enquetes",
-    Icon: FiClipboard,
-  },
-  {
-    id: 5,
-    title: "Formation & Coaching",
-    description:
-      "Accompagnement des équipes : outils BI, culture data, process et bonnes pratiques.",
-    href: "/services/formation-coaching",
-    Icon: FiUsers,
-  },
-  {
-    id: 6,
-    title: "Apps & Automatisation",
-    description:
-      "Applications métiers, APIs et automatisations pour fluidifier vos processus.",
-    href: "/services/apps-automatisation",
-    Icon: FiCpu,
-  },
+{
+  id: 1,
+  title: "Analytique web",
+  description:
+    "Analyse du comportement des visiteurs sur votre site web : audit des pages, suivi des activités en ligne et tests utilisateurs pour améliorer l’expérience et la performance.",
+  href: "/default",
+  Icon: FiBarChart2,
+},
+
+{
+  id: 2,
+  title: "Marketing et médias sociaux",
+  description:
+    "Études de positionnement, lancement et gestion de campagnes, ainsi qu’analyse des résultats pour mieux comprendre l’impact de vos actions marketing.",
+  href: "/default",
+  Icon: FiTrendingUp,
+},
+
+{
+  id: 3,
+  title: "Analyse de données & évaluation d’impact",
+  description:
+    "Accompagnement des organisations et ONG dans l’analyse de leurs données et l’évaluation des résultats de leurs projets afin de mieux orienter leurs actions.",
+  href: "/default",
+  Icon: FiDatabase,
+},
+
+{
+  id: 4,
+  title: "Formation en analyse de données",
+  description:
+    "Formations et ateliers pratiques pour aider les équipes à mieux collecter, analyser et utiliser les données dans leur travail quotidien.",
+  href: "/default",
+  Icon: FiUsers,
+},
+{
+  id: 5,
+  title: "Systèmes de gestion de données",
+  description:
+    "Nous développons des bases de données et des applications web simples pour aider les entreprises et organisations à mieux gérer leurs informations et leurs activités.",
+  href: "/default",
+  Icon: FiServer,
+},
+{
+  id: 6,
+  title: "Études et enquêtes",
+  description:
+    "Nous concevons et réalisons des enquêtes pour mieux comprendre une situation, mesurer des résultats et appuyer les décisions des organisations et des projets.",
+  href: "/default",
+  Icon: FiClipboard,
+},
 ];
 
 export default function ServicesSummarySection() {
@@ -98,14 +103,15 @@ export default function ServicesSummarySection() {
   return (
     <section
       ref={sectionRef}
+      id="Services"
       className="py-5 bg-gradient-to-b from-[#000044] via-[#00115C] to-[#001B80]"
     >
       <div className="mx-auto max-w-6xl xl:max-w-[76rem] px-4 sm:px-6">
         {/* === Header réutilisable === */}
         <SectionHeader
           kicker="Nos services"
-          title="Des solutions data de bout en bout."
-          subtitle="Mesurer, comprendre, automatiser et agir : une offre complète pour rendre vos décisions plus rapides, plus sûres et plus alignées avec le terrain."
+          title="Des solutions utiles pour piloter vos activités"
+          subtitle="DATAKLE vous accompagne avec des services en analyse de données, analytique web, marketing et conception de solutions numériques adaptées à vos besoins."
           ctaLabel="Voir tous les services"
           ctaHref="/services"
           inView={inView}

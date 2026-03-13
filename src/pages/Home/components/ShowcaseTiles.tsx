@@ -21,8 +21,8 @@ const TILES: Tile[] = [
   {
     kicker: "IDENTITÉ",
     title: "Qui sommes-nous ?",
-    short: "Votre partenaire de confiance pour transformer les données en opportunités.",
-    long: "Nous sommes une équipe passionnée qui croit que les données, bien exploitées, révèlent un potentiel extraordinaire.",
+    short: "Une équipe dédiée à vous accompagner pour mieux comprendre et exploiter vos données.",
+    long: "Nous accompagnons les entreprises, les organisations et les gens qui souhaitent tirer un réel avantage de leurs données.",
     to: "/a-propos#qui-nous-sommes",
     image: card12,
     Icon: ChartIcon,
@@ -30,28 +30,19 @@ const TILES: Tile[] = [
   {
     kicker: "EXPERTISE",
     title: "Que faisons-nous ?",
-    short: "Des solutions basées sur les données qui transforment vos défis en résultats pertinents.",
+    short: "Nous vous offrons des solutions qui transforment vos défis en résultats pertinents.",
     long: "Nous concevons et déployons des solutions : analytics, transformation numérique, marketing digital, coaching, évaluation d’impact.",
     to: "/a-propos#ce-que-nous-faisons",
     image: card11,
     Icon: PuzzleIcon,
   },
-  {
-    kicker: "IMPACT",
-    title: "Pourquoi le faisons-nous ?",
-    short: "Donner du sens à vos données pour des décisions éclairées.",
-    long: "Les bonnes décisions naissent d’informations fiables : confiance, agilité et performance pour vos équipes.",
-    to: "/default",
-    image: card2,
-    Icon: BulbIcon,
-  },
    {
     kicker: "VISION",
     title: "Où allons-nous ?",
     short:
-      "Une organisation où chaque décision est guidée par les données.",
+      "Nous vous aidons à mieux décider",
     long:
-      "Faire de chaque organisation une entité où les décisions sont guidées par les données et l’intelligence analytique.",
+      "Faire de chaque organisation, entreprise une entité où les décisions sont guidées par les données et l’intelligence analytique.",
     to: "/a-propos#vision-mission",
     image: card22,
     Icon: VisionIcon,
@@ -79,9 +70,9 @@ const TILES: Tile[] = [
     kicker: "VALEURS",
     title: "Ce qui nous guide",
     short:
-      "Intégrité, excellence, innovation et impact réel.",
+      "Intégrité, excellence, innovation et volonté de produire un travail utile.",
     long:
-      "Nous croyons en des pratiques responsables : transparence, rigueur, créativité et engagement pour des résultats mesurables et durables.",
+      "Chez DATAKLE, nous croyons au travail bien fait. Nous privilégions la rigueur, la transparence et un réel souci de produire des résultats utiles.",
     to: "/a-propos#valeurs",
     image: card19,
     Icon: ValuesIcon,
@@ -138,10 +129,10 @@ export default function ShowcaseTiles() {
           
            <SectionHeader
           kicker="A propos"
-          title="Vos données, la clé de votre performance"
-          subtitle="Des solutions data de bout en bout pour mesurer, comprendre et agir.Accélérez vos décisions avec des outils clairs et performants."
+          title="Le professionnalisme qui fait la différence"
+          subtitle="Nous sommes convaincus que la différence se joue dans les détails. C’est pourquoi chez DATAKLE, nous abordons chaque mission avec sérieux, précision et un haut niveau d’exigence."
           ctaLabel="EN SAVOIR PLUS"
-          ctaHref="/default"
+          ctaHref="/a-propos"
           // ✅ On force l'apparition du header ici
           inView={true}
         />

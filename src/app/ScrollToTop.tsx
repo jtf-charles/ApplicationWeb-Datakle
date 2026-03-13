@@ -3,16 +3,28 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // On remonte en haut à chaque changement de route
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        return;
+      }
+    }
+
+    // si aucun hash → comportement normal
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth", // ou "auto" si tu ne veux pas d’animation
+      behavior: "smooth",
     });
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }

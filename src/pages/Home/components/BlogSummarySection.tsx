@@ -29,7 +29,7 @@ const BLOGS: BlogItem[] = [
     image: card11,
     author: "Équipe DATAKLE",
     date: "12 février 2025",
-    slug: "/blog/comment-analyser-ses-donnees-simplement",
+    slug: "/default",
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const BLOGS: BlogItem[] = [
     image: card12,
     author: "Charles J. Tancrède",
     date: "3 février 2025",
-    slug: "/blog/erreurs-courantes-en-data",
+    slug: "/default",
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const BLOGS: BlogItem[] = [
     image: card16,
     author: "Équipe DATAKLE",
     date: "25 janvier 2025",
-    slug: "/blog/culture-data-par-ou-commencer",
+    slug: "/default",
   },
 ];
 
@@ -144,7 +144,7 @@ export default function BlogSummarySection() {
               {/* petit accent vertical à droite */}
               <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-[#0AD1F0] via-white to-transparent" />
               <Link
-                to="/blog"
+                to="/default"
                 className="
                   inline-flex items-center justify-center gap-2 rounded-full
                   bg-white text-[#0059FB] px-5 py-2.5 text-sm font-semibold

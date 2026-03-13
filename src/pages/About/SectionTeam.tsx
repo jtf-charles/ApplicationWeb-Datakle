@@ -21,56 +21,60 @@ type TeamMember = {
 };
 
 const TEAM: TeamMember[] = [
-  {
-    id: 1,
-    name: "Charles J. Tancrède",
-    role: "Developer & Data Analyst",
-    photo: team1,
-    tagline: "Le fil rouge entre code, terrain et prise de décision.",
-    story:
-      "Chez DATAKLE, Charles est souvent le premier à ouvrir les fichiers bruts. Il adore comprendre comment les données ont été collectées, d’où viennent les incohérences et comment transformer tout ça en produits concrets : API, dashboards, applications. Son obsession : que chaque graphique réponde à une vraie question métier.",
-    linkedin: "https://www.linkedin.com/in/joseph-tancrede-fils-charles-aaa112262", // à adapter
-  },
-  {
-    id: 2,
-    name: "Marc-Elie Lorzéro",
-    role: "Data Analyst & Visualisation",
-    photo: team2,
-    tagline: "Rend les chiffres lisibles même pour ceux qui détestent Excel.",
-    story:
-      "Marc-Elie part toujours d’une idée simple : si un dirigeant ne comprend pas un graphique en 10 secondes, le graphique est à refaire. Il travaille la dataviz comme un designer, en pensant aux couleurs, aux gestes de l’utilisateur, au contexte d’utilisation (mobile, réunion, terrain…). Résultat : des tableaux de bord qui donnent envie d’être utilisés, pas juste consultés.",
-    linkedin: "https://www.linkedin.com/in/lorz%C3%A9ro-marc-elie-811b90167/", // à adapter
-  },
-  {
-    id: 3,
-    name: "Jacques Daguerre Valcy",
-    role: "Ingénieur Data & Automatisation",
-    photo: team3,
-    tagline: "Rêve d’un monde où plus personne ne recopie des chiffres à la main.",
-    story:
-      "Jacques aime prendre un process manuel, long, répétitif… et le transformer en pipeline automatisé. Il connecte les bases, sécurise les flux, met en place des scripts qui tournent pendant que les équipes dorment. Sa phrase préférée : « Si tu le fais plus de deux fois, on peut sûrement l’automatiser. »",
-    linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy-561bb0159/", // à adapter
-  },
-  {
-    id: 4,
-    name: "Jean-Kerly Valcy",
-    role: "UX / Produit Digital",
-    photo: team4,
-    tagline: "Pense d’abord aux gens qui cliquent, ensuite à l’interface.",
-    story:
-      "Jean-Kerly accompagne les équipes du premier atelier jusqu’aux maquettes interactives. Il écoute les frustrations, observe les habitudes et transforme tout ça en écrans simples, cohérents, fluides. Sa mission chez DATAKLE : faire en sorte que les outils data soient adoptés, pas subis.",
-    linkedin: "https://www.linkedin.com/in/jean-kerly-valcy-0a0a882a5/", // à adapter
-  },
-  {
-    id: 5,
-    name: "Marie Ernice",
-    role: "Consultante Data & Formation",
-    photo: team5,
-    tagline: "Met la pédagogie au centre de chaque projet data.",
-    story:
-      "Marie intervient là où la technique ne suffit plus : dans les salles de formation, les ateliers d’appropriation, les sessions de coaching. Elle traduit le langage des data en exemples concrets, adaptés au terrain. Son objectif : que chaque équipe se sente légitime pour utiliser les outils et challenger les chiffres.",
-    linkedin: "https://www.linkedin.com/in/marie-ernice-valcy-158878223/", // à adapter
-  },
+{
+  id: 1,
+  name: "Charles J. Tancrède",
+  role: "Co-fondateur • Technologie & systèmes data",
+  photo: team1,
+  tagline: "Conçoit les systèmes qui permettent aux données de circuler et d’être utilisées.",
+  story:
+    "Charles pilote la partie technologique de DATAKLE. Il conçoit les bases de données, développe les applications et met en place les outils qui permettent de collecter, structurer et exploiter les données de manière fiable. Son objectif est simple : transformer des données parfois dispersées en systèmes utiles pour la gestion et la décision.",
+  linkedin: "https://www.linkedin.com/in/joseph-tancrede-fils-charles-aaa112262",
+},
+
+{
+  id: 2,
+  name: "Marc-Elie Lorzéro",
+  role: "Co-fondateur • Analyse économique & suivi-évaluation",
+  photo: team2,
+  tagline: "Aide à comprendre les chiffres et ce qu’ils disent vraiment.",
+  story:
+    "Marc-Elie travaille sur l’analyse des données et l’interprétation des résultats. Il accompagne les organisations dans le suivi de leurs activités et l’évaluation de leurs projets. Son rôle est de transformer les chiffres en analyses compréhensibles et utiles pour orienter les décisions.",
+  linkedin: "https://www.linkedin.com/in/lorz%C3%A9ro-marc-elie-811b90167/",
+},
+
+{
+  id: 3,
+  name: "Jacques Daguerre Valcy",
+  role: "Fondateur & CEO • Vision et analytique",
+  photo: team3,
+  tagline: "Donne la direction et veille à la cohérence des analyses.",
+  story:
+    "Jacques assure la direction de DATAKLE et définit l’orientation stratégique de l’organisation. Il intervient également dans la supervision des analyses et veille à ce que les travaux réalisés répondent aux besoins réels des clients. Son rôle est de maintenir une vision claire et utile de l’utilisation des données.",
+  linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy-561bb0159/",
+},
+
+{
+  id: 4,
+  name: "Jean-Kerly Valcy",
+  role: "Co-fondateur • Marketing & médias sociaux",
+  photo: team4,
+  tagline: "Travaille sur la visibilité et la communication de DATAKLE.",
+  story:
+    "Jean-Kerly s’occupe du marketing et de la présence numérique de DATAKLE. Il accompagne les projets liés aux campagnes, aux médias sociaux et à la communication digitale. Son travail consiste à rendre les initiatives de l’équipe visibles et compréhensibles pour le public.",
+  linkedin: "https://www.linkedin.com/in/jean-kerly-valcy-0a0a882a5/",
+},
+
+{
+  id: 5,
+  name: "Marie Ernice",
+  role: "Co-fondatrice • Finance & opérations",
+  photo: team5,
+  tagline: "Veille au bon fonctionnement administratif et financier.",
+  story:
+    "Marie s’occupe des aspects financiers et opérationnels de DATAKLE. Elle veille à l’organisation interne, à la gestion des ressources et au bon déroulement des activités. Son rôle est de garantir un fonctionnement solide et structuré de l’organisation.",
+  linkedin: "https://www.linkedin.com/in/marie-ernice-valcy-158878223/",
+},
 ];
 
 const SectionTeam: React.FC = () => {
@@ -99,7 +103,7 @@ const SectionTeam: React.FC = () => {
 
   return (
     <section
-      id="Equipe"
+      id="equipe"
       ref={sectionRef}
       className="py-5 bg-gradient-to-b from-[#F5FAFF] via-white to-[#E6F2FF]"
     >
