@@ -35,7 +35,7 @@ const slides: Slide[] = [
     image: hero3,
     eyebrow: "SERVICES",
     title: "Exploitation données et marketing numériques",
-    lead: "Analyse de données, évaluation d'impact, cybermétrie et accompagnement personnalisé",
+    lead: "Analyse de données, évaluation d'impact, cybermétrie et coaching",
     primary: { to: "/default", label: "Nos services →" },
     secondary: { to: "/default", label: "Contactez-nous" },
   },
