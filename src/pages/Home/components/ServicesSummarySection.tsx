@@ -111,9 +111,9 @@ export default function ServicesSummarySection() {
         <SectionHeader
           kicker="Nos services"
           title="Des solutions utiles pour piloter vos activités"
-          subtitle="DATAKLE vous accompagne avec des services en analyse de données, analytique web, marketing et conception de solutions numériques adaptées à vos besoins."
+          subtitle="DATAKLE vous accompagne avec des services en gestion de données, analytique web, marketing et conception de solutions numériques adaptées à vos besoins."
           ctaLabel="Voir tous les services"
-          ctaHref="/services"
+          ctaHref="/default"
           inView={inView}
         />
 

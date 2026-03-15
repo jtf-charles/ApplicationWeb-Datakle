@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/images/Logos-05.png";
 import ScrollToTopLink from "../../app/ScrollToTopLink";
@@ -44,10 +45,9 @@ const socials: Social[] = [
       </svg>
     ),
   },
-  /* 🚀 Ajout WhatsApp — NE RIEN TOUCHER D'AUTRE */
   {
     name: "WhatsApp",
-    href: "https://wa.me/50934389448", // <-- Remplace par ton numéro
+    href: "https://wa.me/50934389448",
     Icon: (p) => (
       <svg viewBox="0 0 32 32" aria-hidden {...p}>
         <path
@@ -61,6 +61,17 @@ const socials: Social[] = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const [showNewsletterNotice, setShowNewsletterNotice] = useState(false);
+
+  useEffect(() => {
+    if (!showNewsletterNotice) return;
+
+    const timer = setTimeout(() => {
+      setShowNewsletterNotice(false);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, [showNewsletterNotice]);
 
   return (
     <footer className="footer-shell">
@@ -80,7 +91,7 @@ export default function Footer() {
               <span className="sr-only">DATAKLE</span>
             </Link>
             <p className="text-sm text-white/80 max-w-sm nexa-book">
-              Entreprise tech : Nous transformons vos données en décisions utiles, mesurables et orientées résultats.
+              Vos données, la clé de votre performance!
             </p>
 
             {/* Réseaux : centrés en mobile */}
@@ -97,10 +108,13 @@ export default function Footer() {
           <nav>
             <h4 className="footer-title nexa-bold">Services</h4>
             <ul className="space-y-2 nexa-book">
-              <li><ScrollToTopLink to="/default" className="footer-link">Tableaux de bord</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Pipelines & Qualité</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Sécurité & Gouvernance</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Apps & Automatisation</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Analytique web</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Marketing et médias sociaux</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Analyse de données</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">systèmes de gestion de données</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Etudes et enquêtes</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Formation</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/default" className="footer-link">Evaluation d'impact</ScrollToTopLink></li>
             </ul>
           </nav>
 
@@ -110,7 +124,7 @@ export default function Footer() {
             <ul className="space-y-2 nexa-book">
               <li><ScrollToTopLink to="/default" className="footer-link">Études de cas</ScrollToTopLink></li>
               <li><ScrollToTopLink to="/default" className="footer-link">Blog</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">À propos</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/a-propos" className="footer-link">À propos</ScrollToTopLink></li>
             </ul>
           </nav>
 
@@ -169,28 +183,21 @@ export default function Footer() {
         href="https://www.google.com/maps/search/?api=1&query=16+Rue+Romain,+Pétion-Ville,+Haïti"
         title="Voir sur Google Maps"
       >
-        #16 Rue Romain, Pétion-Ville, Haïti
+        Pétion-Ville, Haïti
       </a>
     </li>
   </ul>
 </nav>
-
-
-
-
-
-
-
-
-
-
 
           {/* Newsletter — full width en mobile */}
           <div className="max-w-md mx-auto sm:mx-0 w-full">
             <h4 className="footer-title nexa-bold">Newsletter</h4>
             <form
               className="mt-2 flex flex-col sm:flex-row gap-2"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={(e) => {
+                e.preventDefault();
+                setShowNewsletterNotice(true);
+              }}
             >
               <input 
                 type="email"
@@ -202,6 +209,16 @@ export default function Footer() {
                 S’inscrire
               </button>
             </form>
+
+            {showNewsletterNotice && (
+              <div
+                role="alert"
+                className="mt-3 rounded-xl border border-amber-300 bg-amber-100 px-4 py-3 text-sm text-amber-900 shadow-sm nexa-book"
+              >
+                La newsletter sera bientôt disponible. Nous travaillons encore dessus
+              </div>
+            )}
+
             <p className="mt-2 text-[13px] text-white/60 nexa-book">
               Pas de spam. Vous pouvez vous désabonner à tout moment.
             </p>

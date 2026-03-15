@@ -30,35 +30,38 @@ export default function About() {
             {/* Texte */}
             <div>
               <span className="inline-flex section-kicker nexa-black items-center gap-2 rounded-full bg-white/5 px-3 py-1  text-[#0AD1F0]">
-                À propos • DATAKLE
-                <span className="h-1.5 w-1.5 rounded-full bg-[#0AD1F0]" />
+                À propos de nous
+                
               </span>
 
               <h1 className="mt-4 text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-tight nexa-book">
-                Nous transformons vos données
+                Nous sommes le partenaire idéal pour vous aider
                 <span className="block text-[#0AD1F0]">
-                  en décisions utiles, mesurables
-                  <span className="text-white"> et orientées résultats.</span>
+                   à exploiter vos données
+                  <span className="text-white"> et améliorer vos performances</span>
                 </span>
               </h1>
 
-              <p className="mt-4 text-sm sm:text-base text-white/80 max-w-xl nexa-book">
-                De plus en plus d’activités se jouent en ligne ou sans mesure
-                claire sur le terrain. Chez DATAKLE, on vous aide à reprendre
-                le contrôle : des objectifs clairs, les bons outils, des
-                indicateurs fiables, des recommandations actionnables.
+              <p className="mt-4 text-sm sm:text-base text-white/80 max-w-xl nexa-book text-justify">
+                Aujourd’hui, de plus en plus de données sont produites : activités en ligne, ventes, campagnes marketing, enquêtes ou suivi de projets. 
+                Pourtant, dans beaucoup de cas, ces informations restent peu exploitées. 
+                Les données existent, mais elles ne sont pas toujours organisées, analysées ou utilisées pour orienter les décisions. 
+                Les équipes avancent alors avec une vision partielle de la réalité. 
+                C’est à partir de ce constat qu’est née DATAKLE.
+                Notre objectif est de vous aider à mieux organiser, 
+                analyser et comprendre vos données afin de transformer l’information disponible en décisions plus éclairées et en actions plus efficaces.
               </p>
 
               {/* mini badges */}
               <div className="mt-6 flex flex-wrap gap-3 text-[12px] nexa-book">
                 <div className="rounded-full bg-white/10 px-4 py-2">
-                  + de 30 projets accompagnés
+                  + de 5 projets accompagnés
                 </div>
                 <div className="rounded-full bg-white/10 px-4 py-2">
-                  Télécom, ONG, État, secteur privé
+                  ONG • Institutions publiques • Entreprises • Particuliers
                 </div>
                 <div className="rounded-full bg-white/10 px-4 py-2">
-                  Dashboard, pipelines, études & audits
+                  Gestion données, enquêtes, marketing digital, coaching ....
                 </div>
               </div>
             </div>
@@ -99,22 +102,24 @@ export default function About() {
                 Ce que nous sommes
               </p>
               <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044] nexa-bold">
-                Une équipe data proche du terrain,
-                <span className="text-[#0059FB]"> qui parle chiffres & réalité.</span>
+                une équipe qui aide 
+                <span className="text-[#0059FB]"> à exploiter les données pour mieux décider</span>
               </h2>
 
-              <p className="mt-4 text-sm sm:text-base text-[#4B5563] nexa-book">
-                DATAKLE est née d’un constat simple : beaucoup d’organisations
-                collectent des données… mais ont du mal à les transformer en
-                décisions concrètes. Nous faisons le lien entre les besoins du
-                terrain, la technique et vos enjeux stratégiques.
+              <p className="mt-4 text-sm sm:text-base text-[#4B5563] nexa-book  text-justify">
+                DATAKLE est une équipe pluridisciplinaire qui accompagne
+                les organisations dans l’exploitation de leurs données.
+                Nous travaillons à la croisée de la gestion des données, de la technologie,
+                du marketing digital, du suivi-évaluation et de la formation
+                pour aider nos clients à mieux comprendre leur réalité
+                et à prendre de meilleures décisions.
               </p>
 
-              <p className="mt-3 text-sm sm:text-base text-[#4B5563] nexa-book">
-                Nous combinons expertise en statistiques, science des données,
-                développement logiciel et compréhension des contextes
-                haïtiens : contraintes réseau, budgets serrés, équipes
-                hybrides terrain / bureau.
+              <p className="mt-3 text-sm sm:text-base text-[#4B5563] nexa-book  text-justify">
+             Notre rôle ne se limite pas à produire des analyses à partir des données.
+              Nous aidons aussi à structurer l’information, à concevoir des outils utiles,
+              à améliorer les processus et à rendre les données plus simples,
+              plus claires et plus utiles au quotidien.
               </p>
 
               {/* bullets */}
@@ -124,9 +129,8 @@ export default function About() {
                     Notre approche
                   </h3>
                   <ul className="space-y-1 text-[13px] text-[#4B5563] nexa-book">
-                    <li>• Pédagogie : on explique, on documente.</li>
-                    <li>• Co-construction avec vos équipes.</li>
-                    <li>• Focus culture data, pas seulement outils.</li>
+                    <li>Nous partons des besoins réels de chaque client</li>
+                    <li>Nous cherchons des solutions simples, utiles et adaptées</li>
                   </ul>
                 </div>
 
@@ -135,9 +139,8 @@ export default function About() {
                     Ce que vous gagnez
                   </h3>
                   <ul className="space-y-1 text-[13px] text-[#4B5563] nexa-book">
-                    <li>• Indicateurs clairs & fiables.</li>
-                    <li>• Reporting simplifié.</li>
-                    <li>• Plus de décisions basées sur “le feeling”.</li>
+                    <li>Des données mieux organisées et plus faciles à exploiter.</li>
+                    <li>Des décisions plus claires, plus rapides et mieux orientées.</li>
                   </ul>
                 </div>
               </div>
@@ -147,22 +150,22 @@ export default function About() {
             <div className="space-y-4 nexa-book">
               <div className="grid gap-4 sm:grid-cols-2">
                 <InfoCard
-                  label="Projets accompagnés"
-                  highlight="30+"
-                  description="Dashboards, pipelines, audits, études statistiques & dispositifs de suivi-évaluation."
+                  label="Notre expérience"
+                  highlight="5+"
+                  description="Nous avons accompagné différents clients à travers des enquêtes, des analyses stratégiques et des systèmes de gestion de données..."
                 />
                 <InfoCard
-                  label="Secteurs"
-                  highlight="Télécom, ONG, État"
-                  description="Programmes humanitaires, agriculture, santé, finance, éducation…"
+                  label="Nos clients"
+                  highlight="ONG, institutions, entreprises et professionnels"
+                  description="Nos services s’adressent à des structures de tailles et de secteurs différents."
                   dark
                 />
               </div>
 
               <InfoCard
-                label="Local & connecté"
-                highlight="Basés en Haïti, ouverts sur le monde."
-                description="On mixe bonnes pratiques internationales et contraintes locales : connexion, outils, équipe, budget."
+                label="Localisation"
+                highlight="Basée en Haïti, ouverts sur le monde."
+                description="Notre équipe évolue en Haïti et intervient avec une bonne connaissance du terrain et des réalités locales."
               />
             </div>
           </div>
@@ -194,37 +197,36 @@ export default function About() {
                 Ce que nous faisons
               </p>
               <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044] nexa-bold">
-                Des solutions data de bout en bout pour mesurer,
-                comprendre et agir.
+                Nous offrons des services pour vous aider à mesurer, comprendre et agir avec plus de clarté
               </h2>
 
               <p className="mt-3 text-sm sm:text-base text-[#4B5563] nexa-book">
-                Nous intervenons sur toute la chaîne de valeur de la donnée :
-                de la collecte sur le terrain jusqu’à la prise de décision au
-                niveau stratégique.
+              Nous accompagnons les organisations, les entreprises et les professionnels dans la gestion de leurs données.
+               Nous les aidons à concevoir ou à adopter des outils adaptés, à mieux exploiter leurs informations pour orienter leurs décisions, 
+               à renforcer les capacités de leurs équipes par la formation, à développer des stratégies de marketing digital et à améliorer leur performance.
               </p>
 
               <div className="mt-6 space-y-4 nexa-book">
                 {[
                   {
                     id: "01",
-                    title: "Choisir les bons outils",
-                    text: "Sélection et paramétrage des solutions adaptées à votre contexte, pas une usine à gaz impossible à maintenir.",
+                    title: "Évaluer vos besoins",
+                    text: "Nous analysons votre contexte, vos besoins et vos priorités pour identifier les solutions les plus utiles à votre activité.",
                   },
                   {
                     id: "02",
-                    title: "Booster, mesurer, suivre vos activités",
-                    text: "Tableaux de bord, pipelines, automatisation, suivi temps réel : vos indicateurs deviennent vivants.",
+                    title: "Concevoir ou choisir les outils adaptés",
+                    text: "Nous vous accompagnons dans la conception ou le choix d’outils adaptés à votre réalité et à vos objectifs",
                   },
                   {
                     id: "03",
-                    title: "Exploiter les données de votre entreprise",
-                    text: "Nettoyage, structuration, analyses, visualisations… pour voir enfin ce que les chiffres racontent.",
+                    title: "Exploiter vos données",
+                    text: "Nous vous aidons à organiser, analyser et valoriser vos données pour mieux comprendre votre activité et mieux décider.",
                   },
                   {
                     id: "04",
-                    title: "Recevoir des recommandations actionnables",
-                    text: "Des insights concrets, priorisés, alignés avec vos objectifs opérationnels et financiers.",
+                    title: "Mesurer et suivre vos activités",
+                    text: "Nous mettons en place des outils et des indicateurs pour suivre vos actions, mesurer vos progrès et améliorer vos performances.",
                   },
                 ].map((item) => (
                   <div key={item.id} className="flex gap-4">
@@ -260,29 +262,29 @@ export default function About() {
                 Vision • Mission • Valeurs • Impact
               </p>
               <h2 className="mt-3 text-2xl sm:text-[1.9rem] font-extrabold leading-snug nexa-bold">
-                Là où nous allons,
+                Ce qui nous guide
                 <span className="text-[#0AD1F0]">
                   {" "}
-                  et ce qui guide chacune de nos décisions.
+                  et donne du sens à notre travail.
                 </span>
               </h2>
 
               <p className="mt-4 text-sm sm:text-[15px] text-white/85 max-w-xl leading-relaxed nexa-book">
-                Pour nous, la donnée n’a de sens que si elle améliore la vie
-                réelle des équipes et des bénéficiaires. Nos engagements se
-                structurent autour de quatre piliers : une vision claire, une
-                mission opérationnelle, des valeurs assumées et un impact
-                mesurable dans vos projets.
+            Chez DATAKLE, nous croyons que les données ne prennent vraiment de valeur
+            que lorsqu’elles aident à mieux comprendre, mieux décider et mieux agir.
+            Notre travail repose sur une vision claire,
+            des valeurs solides et la volonté de produire un impact concret
+            pour les organisations que nous accompagnons.
               </p>
 
               <div className="mt-5 grid gap-2 text-[13px] text-white/80 sm:grid-cols-2 nexa-book">
                 <div className="space-y-1">
-                  <p>• Une boussole : là où nous voulons amener nos clients.</p>
-                  <p>• Une façon de faire : comment nous délivrons nos projets.</p>
+                  <p>• Contribuer à une utilisation plus simple, plus utile et plus stratégique des données.</p>
+                  <p>• Accompagner les organisations avec des solutions adaptées à leurs réalités et à leurs besoins.</p>
                 </div>
                 <div className="space-y-1">
-                  <p>• Un cadre : les valeurs qui régissent nos collaborations.</p>
-                  <p>• Un résultat : l’impact concret de nos interventions.</p>
+                  <p>•  Rigueur, clarté, proximité, responsabilité et volonté de bien faire.</p>
+                  <p>• Des outils utiles, des décisions mieux éclairées et des actions plus efficaces.</p>
                 </div>
               </div>
             </div>
@@ -296,7 +298,7 @@ export default function About() {
                   image: visionImg,
                   text: "Faire de chaque organisation une entité où les décisions sont guidées par les données et l’intelligence analytique.",
                   detail:
-                    "Nous aidons vos équipes à passer d’une logique de réaction à une logique d’anticipation, grâce à des indicateurs partagés.",
+                    "Nous croyons qu’une meilleure utilisation des données permet de travailler avec plus de clarté, plus de cohérence et plus d’efficacité.",
                 },
                 {
                   key: "mission",
@@ -304,23 +306,23 @@ export default function About() {
                   image: missionImg,
                   text: "Transformer vos données en leviers de performance et de rentabilité, avec des solutions concrètes et documentées.",
                   detail:
-                    "Nos interventions vont de la collecte à la visualisation, avec un accompagnement pour que les outils soient réellement utilisés.",
+                    "Nous proposons des solutions concrètes, des outils adaptés et un accompagnement pratique pour que les données servent réellement à décider et à agir.",
                 },
                 {
                   key: "valeurs",
                   label: "Valeurs",
                   image: aboutData,
-                  text: "Pédagogie, transparence, exigence de qualité et respect des réalités haïtiennes : pas de promesses impossibles.",
+                  text: "Clarté, rigueur, proximité et sens du concret guident notre manière de travailler.",
                   detail:
-                    "On préfère un tableau de bord simple qui tourne, plutôt qu’une usine à gaz qui dort dans un dossier partagé.",
+                    "tions utiles, compréhensibles et adaptées à la réalité de chaque client, plutôt que des outils complexes peu utilisés.",
                 },
                 {
                   key: "impact",
                   label: "Impact",
                   image: impactImg,
-                  text: "Des tableaux de bord qui servent vraiment, des décisions mieux informées et des programmes qui apprennent de leurs données.",
+                  text: "Des outils utiles, des analyses plus détaillées et des décisions mieux éclairées.",
                   detail:
-                    "L’impact se mesure dans vos chiffres, mais aussi dans la confiance retrouvée entre décideurs, équipes opérationnelles et partenaires.",
+                    "Notre impact se voit dans des équipes qui comprennent mieux leurs données, suivent mieux leurs activités et avancent avec plus d’assurance.",
                 },
               ].map((item, idx) => (
                 <article
@@ -370,36 +372,36 @@ export default function About() {
                 Notre façon de travailler
               </p>
               <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#000044] nexa-bold">
-                Une culture de la donnée pragmatique,
-                <span className="text-[#0059FB]"> pas de buzzword inutile.</span>
+               Une approche simple, claire
+                <span className="text-[#0059FB]">et adaptée à vos réalités.</span>
               </h2>
 
               <p className="mt-3 text-sm sm:text-base text-[#4B5563] nexa-book">
-                On parle Excel, SQL, Python, Power BI… mais aussi « réalité
-                terrain », « réseau qui coupe », « budget limité » et
-                « équipe débordée ». Notre rôle : traduire les concepts data en
-                solutions concrètes que vos équipes peuvent adopter.
+              Chaque organisation a sa propre réalité. C’est pourquoi nous ne venons pas
+              avec des solutions toutes faites. Chez DATAKLE, nous cherchons d’abord à comprendre
+              vos besoins, vos priorités et votre fonctionnement, pour construire un accompagnement
+              utile, réaliste et vraiment adapté à votre contexte.
               </p>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2 text-[13px] text-[#374151]">
                 <div className="space-y-1.5">
                   <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-[#0059FB] nexa-bold">
-                    Ce que nous garantissons
+                    Ce qui guide notre approche
                   </h3>
                   <ul className="space-y-1 nexa-book">
-                    <li>• Transparence sur les limites des données.</li>
-                    <li>• Documentation claire et réutilisable.</li>
-                    <li>• Transfert de compétences vers vos équipes.</li>
+                    <li>• Écouter avant de proposer</li>
+                    <li>• Adapter les outils à votre réalité, pas l’inverse</li>
+                    <li>• Construire des solutions simples, utiles et durables</li>
                   </ul>
                 </div>
                 <div className="space-y-1.5">
                   <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-[#0059FB] nexa-bold">
-                    Ce que nous évitons
+                    Ce que cela apporte pour vous
                   </h3>
                   <ul className="space-y-1 nexa-book">
-                    <li>• Projet “boîte noire” impossible à maintenir.</li>
-                    <li>• Dashboard joli mais jamais utilisé.</li>
-                    <li>• Outils surdimensionnés par rapport au besoin.</li>
+                    <li>• Des outils plus faciles à adopter par vos équipes</li>
+                    <li>• Des données plus claires pour mieux décider</li>
+                    <li>• Un accompagnement concret, du besoin jusqu’à l’usage</li>
                   </ul>
                 </div>
               </div>
@@ -453,7 +455,7 @@ export default function About() {
 
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center text-white relative z-10">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#0AD1F0]">
-            Notre mantra
+            Notre conviction
           </p>
           <p className="mt-3 text-lg sm:text-xl font-semibold">
             « La donnée n’est pas qu’une question de technologie,

@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 
 // À adapter avec les vraies photos de ton dossier
-import team1 from "@/assets/team/tanc2.jpg";
+import team1 from "@/assets/team/tanc77.jpeg";
 import team2 from "@/assets/team/Lorzero.jpg";
 import team3 from "@/assets/team/Valcy.jpg";
 import team4 from "@/assets/team/Kerly.png";
@@ -21,60 +21,56 @@ type TeamMember = {
 };
 
 const TEAM: TeamMember[] = [
-{
-  id: 1,
-  name: "Charles J. Tancrède",
-  role: "Co-fondateur • Technologie & systèmes data",
-  photo: team1,
-  tagline: "Conçoit les systèmes qui permettent aux données de circuler et d’être utilisées.",
-  story:
-    "Charles pilote la partie technologique de DATAKLE. Il conçoit les bases de données, développe les applications et met en place les outils qui permettent de collecter, structurer et exploiter les données de manière fiable. Son objectif est simple : transformer des données parfois dispersées en systèmes utiles pour la gestion et la décision.",
-  linkedin: "https://www.linkedin.com/in/joseph-tancrede-fils-charles-aaa112262",
-},
-
-{
-  id: 2,
-  name: "Marc-Elie Lorzéro",
-  role: "Co-fondateur • Analyse économique & suivi-évaluation",
-  photo: team2,
-  tagline: "Aide à comprendre les chiffres et ce qu’ils disent vraiment.",
-  story:
-    "Marc-Elie travaille sur l’analyse des données et l’interprétation des résultats. Il accompagne les organisations dans le suivi de leurs activités et l’évaluation de leurs projets. Son rôle est de transformer les chiffres en analyses compréhensibles et utiles pour orienter les décisions.",
-  linkedin: "https://www.linkedin.com/in/lorz%C3%A9ro-marc-elie-811b90167/",
-},
-
-{
-  id: 3,
-  name: "Jacques Daguerre Valcy",
-  role: "Fondateur & CEO • Vision et analytique",
-  photo: team3,
-  tagline: "Donne la direction et veille à la cohérence des analyses.",
-  story:
-    "Jacques assure la direction de DATAKLE et définit l’orientation stratégique de l’organisation. Il intervient également dans la supervision des analyses et veille à ce que les travaux réalisés répondent aux besoins réels des clients. Son rôle est de maintenir une vision claire et utile de l’utilisation des données.",
-  linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy-561bb0159/",
-},
-
-{
-  id: 4,
-  name: "Jean-Kerly Valcy",
-  role: "Co-fondateur • Marketing & médias sociaux",
-  photo: team4,
-  tagline: "Travaille sur la visibilité et la communication de DATAKLE.",
-  story:
-    "Jean-Kerly s’occupe du marketing et de la présence numérique de DATAKLE. Il accompagne les projets liés aux campagnes, aux médias sociaux et à la communication digitale. Son travail consiste à rendre les initiatives de l’équipe visibles et compréhensibles pour le public.",
-  linkedin: "https://www.linkedin.com/in/jean-kerly-valcy-0a0a882a5/",
-},
-
-{
-  id: 5,
-  name: "Marie Ernice",
-  role: "Co-fondatrice • Finance & opérations",
-  photo: team5,
-  tagline: "Veille au bon fonctionnement administratif et financier.",
-  story:
-    "Marie s’occupe des aspects financiers et opérationnels de DATAKLE. Elle veille à l’organisation interne, à la gestion des ressources et au bon déroulement des activités. Son rôle est de garantir un fonctionnement solide et structuré de l’organisation.",
-  linkedin: "https://www.linkedin.com/in/marie-ernice-valcy-158878223/",
-},
+  {
+    id: 1,
+    name: "Joseph Tancrède CHARLES",
+    role: "Responsable technologie et informatique",
+    photo: team1,
+    tagline: "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
+    story:
+      "Chez DATAKLE, Charles s’occupe de la partie technique. Il conçoit les outils, structure les systèmes et veille à ce que les données puissent être collectées, organisées et utilisées de façon simple, fiable et utile.",
+    linkedin: "https://www.linkedin.com/in/joseph-tancrede-fils-charles-aaa112262", // à adapter
+  },
+  {
+    id: 2,
+    name: "Marc-Elie LORZERO",
+    role: "Responsable Suivi & évaluation",
+    photo: team2,
+    tagline: "Exploite les données pour suivre les activités, orienter les décisions et évaluer l’impact des projets.",
+    story:
+      "Marc-Elie travaille sur le suivi des activités et la lecture des résultats. Il aide à transformer les données en repères clairs pour comprendre ce qui avance, ce qui bloque et ce qu’il faut ajuster pour améliorer l’impact des projets.",
+    linkedin: "https://www.linkedin.com/in/lorz%C3%A9ro-marc-elie-811b90167/", // à adapter
+  },
+  {
+    id: 3,
+    name: "Jacques Daguerre VALCY",
+    role: " Responsable analytique",
+    photo: team3,
+    tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
+    story:
+      "Jacques intervient sur l’analyse des données. Il s’assure que les traitements sont cohérents, que les résultats sont fiables et que les analyses produites par DATAKLE peuvent réellement servir à la décision.",
+    linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy-561bb0159/", // à adapter
+  },
+  {
+    id: 4,
+    name: "Jean-Kerly VALCY",
+    role: "Responsable marketing et médias sociaux",
+    photo: team4,
+    tagline: "Travaille sur les stratégies de communication et les campagnes marketing numériques.",
+    story:
+      "Jean-Kerly pilote la communication digitale et la présence en ligne des clients. Il travaille sur les contenus, les campagnes et les messages pour mieux faire connaître vos services, renforcer votre image et créer un lien plus direct avec votre audience.",
+    linkedin: "https://www.linkedin.com/in/jean-kerly-valcy-0a0a882a5/", // à adapter
+  },
+  {
+    id: 5,
+    name: "Marie Ernice VALCY",
+    role: "Responsable finance et opération",
+    photo: team5,
+    tagline: "Assure la gestion financière et le bon déroulement des activités.",
+    story:
+      "Marie veille à la bonne organisation des activités sur le plan opérationnel et financier. Elle aide à garder les projets bien cadrés, les ressources bien suivies et les interventions menées avec plus de rigueur, de clarté et de continuité.",
+    linkedin: "https://www.linkedin.com/in/marie-ernice-valcy-158878223/", // à adapter
+  },
 ];
 
 const SectionTeam: React.FC = () => {
@@ -115,29 +111,26 @@ const SectionTeam: React.FC = () => {
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#000044]/90 px-3 py-1">
               <span className="text-[10px] sm:text-[11px] tracking-[.25em] font-semibold uppercase text-white/80 nexa-black">
-                Équipe Datakle
+                Notre Équipe
               </span>
               <span className="inline-block h-2 w-2 rounded-full bg-[#0AD1F0]" />
             </div>
 
             <div>
               <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-extrabold text-[#000044] nexa-bold">
-                Derrière les dashboards, il y a surtout des personnes.
+                Une équipe réunie autour d’un même objectif.
               </h2>
               <p className="mt-2 text-sm sm:text-base text-[#1A2740]/80 nexa-book">
-                Chaque membre apporte sa manière de regarder les données&nbsp;:
-                certains pensent en lignes de code, d’autres en parcours
-                utilisateur ou en ateliers de formation. Ensemble, ils
-                construisent une même histoire autour de vos projets.
+                 Notre équipe réunit des profils complémentaires qui avancent avec la même exigence :
+                  proposer des solutions utiles, compréhensibles et adaptées aux réalités du terrain.
               </p>
             </div>
           </div>
 
           <p className="text-xs sm:text-sm text-[#4B5563]/80 nexa-book max-w-sm">
-            Plutôt que d’aligner des profils, nous préférons raconter comment
-            chacun intervient dans la vie d’un projet : de la première
-            extraction de données jusqu’au moment où les équipes se sentent
-            vraiment autonomes.
+            Chaque membre apporte son expertise, mais c’est surtout le travail d’équipe
+            qui fait la différence. Ensemble, nous cherchons à construire des solutions
+            claires, solides et adaptées.
           </p>
         </header>
 
@@ -228,7 +221,7 @@ const SectionTeam: React.FC = () => {
                   {/* Colonne récit */}
                   <div className="lg:w-[70%]">
                     <p className="text-[11px] sm:text-xs font-semibold tracking-[.22em] uppercase text-[#9CA3AF] mb-2">
-                      Chapitre {idx + 1}
+                      Story {idx + 1}
                     </p>
                     <p className="text-sm sm:text-[15px] leading-relaxed text-[#1F2937] nexa-book">
                       {member.story}
@@ -242,11 +235,11 @@ const SectionTeam: React.FC = () => {
                             h-full rounded-full bg-gradient-to-r
                             from-[#0AD1F0] via-[#0059FB] to-[#000044]
                           `}
-                          style={{ width: `${60 + idx * 8}%` }}
+                          style={{ width: `${100}%` }}
                         />
                       </div>
                       <span className="text-[11px] text-[#6B7280]">
-                        Présent sur {60 + idx * 8}% des projets
+                        Présent sur {100}% des projets
                       </span>
                     </div>
                   </div>

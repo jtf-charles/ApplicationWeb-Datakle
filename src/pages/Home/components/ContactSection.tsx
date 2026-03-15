@@ -114,7 +114,7 @@ export default function ContactSection() {
           title="Discutons de vos besoins"
           subtitle="Vous avez une question, une idée ou un besoin particulier ? Écrivez-nous, nous serons heureux d’en discuter avec vous."
           ctaLabel="Écrire un message"
-          ctaHref="#contact-form"
+          ctaHref="/#contact"
           inView={true}
           className="mb-10"
         />
@@ -317,7 +317,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-[#000044] text-white p-5 sm:p-6 space-y-4">
+            <div id="social-media" className="rounded-3xl bg-[#000044] text-white p-5 sm:p-6 space-y-4">
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-[#0AD1F0] nexa-bold">

@@ -16,7 +16,7 @@ const MENUS: Menu[] = [
     children: [
       { label: "Ce que nous sommes", to: "/a-propos#qui-nous-sommes" },
       { label: "Ce que nous faisons", to: "/a-propos#ce-que-nous-faisons" },
-      { label: "Équipe", to: "/a-propos#Equipe" },
+      { label: "Équipe", to: "/a-propos#equipe" },
       { label: "Vision", to: "/a-propos#vision-mission" },
       { label: "Mission", to: "/a-propos#vision-mission" },
     ],
@@ -54,8 +54,8 @@ const MENUS: Menu[] = [
     label: "Contact",
     to: "/default",
     children: [
-      { label: "Réseaux sociaux", to: "/default" },
-      { label: "Formulaire de contact", to: "/default" },
+      { label: "Réseaux sociaux", to: "/#social-media" },
+      { label: "Formulaire de contact", to: "/#contact" },
       { label: "Autres", to: "/default" },
     ],
   },

@@ -22,7 +22,7 @@ const TILES: Tile[] = [
     kicker: "IDENTITÉ",
     title: "Qui sommes-nous ?",
     short: "Une équipe dédiée à vous accompagner pour mieux comprendre et exploiter vos données.",
-    long: "Nous accompagnons les entreprises, les organisations et les gens qui souhaitent tirer un réel avantage de leurs données.",
+    long: "une équipe qui accompagne les entreprises, les organisations et les gens qui souhaitent tirer un réel avantage de leurs données.",
     to: "/a-propos#qui-nous-sommes",
     image: card12,
     Icon: ChartIcon,
