@@ -22,14 +22,14 @@ type TeamMember = {
 
 const TEAM: TeamMember[] = [
   {
-    id: 1,
-    name: "Joseph Tancrède CHARLES",
-    role: "Responsable technologie et informatique",
-    photo: team1,
-    tagline: "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
+    id: 3,
+    name: "Jacques Daguerre VALCY",
+    role: " Responsable analytique",
+    photo: team3,
+    tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
     story:
-      "Chez DATAKLE, Charles s’occupe de la partie technique. Il conçoit les outils, structure les systèmes et veille à ce que les données puissent être collectées, organisées et utilisées de façon simple, fiable et utile.",
-    linkedin: "https://www.linkedin.com/in/joseph-tancrede-fils-charles-aaa112262", // à adapter
+      "Jacques intervient sur l’analyse des données. Il s’assure que les traitements sont cohérents, que les résultats sont fiables et que les analyses produites par DATAKLE peuvent réellement servir à la décision.",
+    linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy-561bb0159/", // à adapter
   },
   {
     id: 2,
@@ -41,15 +41,15 @@ const TEAM: TeamMember[] = [
       "Marc-Elie travaille sur le suivi des activités et la lecture des résultats. Il aide à transformer les données en repères clairs pour comprendre ce qui avance, ce qui bloque et ce qu’il faut ajuster pour améliorer l’impact des projets.",
     linkedin: "https://www.linkedin.com/in/lorz%C3%A9ro-marc-elie-811b90167/", // à adapter
   },
-  {
-    id: 3,
-    name: "Jacques Daguerre VALCY",
-    role: " Responsable analytique",
-    photo: team3,
-    tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
+    {
+    id: 1,
+    name: "Joseph Tancrède CHARLES",
+    role: "Responsable technologie et informatique",
+    photo: team1,
+    tagline: "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
     story:
-      "Jacques intervient sur l’analyse des données. Il s’assure que les traitements sont cohérents, que les résultats sont fiables et que les analyses produites par DATAKLE peuvent réellement servir à la décision.",
-    linkedin: "https://www.linkedin.com/in/jacques-daguerre-valcy-561bb0159/", // à adapter
+      "Chez DATAKLE, Charles s’occupe de la partie technique. Il conçoit les outils, structure les systèmes et veille à ce que les données puissent être collectées, organisées et utilisées de façon simple, fiable et utile.",
+    linkedin: "https://www.linkedin.com/in/joseph-tancrede-fils-charles-aaa112262", // à adapter
   },
   {
     id: 4,

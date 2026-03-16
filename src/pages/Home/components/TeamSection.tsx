@@ -17,13 +17,12 @@ type TeamMember = {
 };
 
 const TEAM: TeamMember[] = [
-  {
-    id: 1,
-    name: "Charles J. Tancrède",
-    role: "Responsable technologie et informatique",
-    photo: team1,
-    tagline:
-      "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
+    {
+    id: 3,
+    name: "Jacques Daguerre Valcy",
+    role: "Responsable analytique",
+    photo: team3,
+    tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
   },
   {
     id: 2,
@@ -33,12 +32,13 @@ const TEAM: TeamMember[] = [
     tagline:
       "Exploite les données pour suivre les activités, orienter les décisions et évaluer l’impact des projets.",
   },
-  {
-    id: 3,
-    name: "Jacques Daguerre Valcy",
-    role: "Responsable analytique",
-    photo: team3,
-    tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
+   {
+    id: 1,
+    name: "Charles J. Tancrède",
+    role: "Responsable technologie et informatique",
+    photo: team1,
+    tagline:
+      "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
   },
   {
     id: 4,
