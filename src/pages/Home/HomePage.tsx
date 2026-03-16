@@ -17,8 +17,8 @@ export default function HomePage() {
         <ShowcaseTiles />
         <ServicesSummarySection/>
          {/* Services */}
-      <PartnersSection />  {/* Partenaires */}
-      <BlogSummarySection/>
+      {/*<PartnersSection /> */} {/* Partenaires */}
+     { /*<BlogSummarySection/>*/}
       <ContactSection/>
        <DatakleSloganSeparator />
       <TeamSection/>
