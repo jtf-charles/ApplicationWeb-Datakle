@@ -172,8 +172,7 @@ export default function Navbar() {
           {/* CTA (>= xl) — centré verticalement */}
           <div className="hidden 2xl:flex h-full items-center">
             <Link
-              to="https://wa.me/50934389448?text=Bonjour%2C%20je%20sollicite%20votre%20expertise%2C%20pourriez-vous%20m%27aider%20%3F
-"
+              to="/#contact"
               className="
                 inline-flex items-center justify-center leading-none nexa-black
                 btn btn--secondary btn-pill

@@ -52,8 +52,8 @@ export default function DefaultPage() {
             <Link to="/" className="btn btn-white">
               ← Retour à l’accueil
             </Link>
-            <Link to="/demander-une-consultation" className="btn btn--primary btn-pill">
-              Contact / Devis
+            <Link to="/#contact" className="btn btn--primary btn-pill">
+              Contactez-nous !
             </Link>
           </div>
         </div>
