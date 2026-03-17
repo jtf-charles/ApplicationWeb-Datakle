@@ -1,5 +1,5 @@
 // À adapter avec les vraies photos de ton dossier
-import team1 from "@/assets/team/tanc2.jpg";
+import team1 from "@/assets/team/tanc77.jpeg";
 import team2 from "@/assets/team/Lorzero.jpg";
 import team3 from "@/assets/team/Valcy.jpg";
 import team4 from "@/assets/team/Kerly.png";

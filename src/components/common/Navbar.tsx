@@ -404,8 +404,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
 
         <div className="pt-3">
           <Link
-            to="https://wa.me/50934389448?text=Bonjour%2C%20je%20sollicite%20votre%20expertise%2C%20pourriez-vous%20m%27aider%20%3F
-"
+            to="#contact"
             className="btn btn--primary btn-pill w-full justify-center text-[clamp(15px,3.5vw,17px)]"
             onClick={onClose}
           >
