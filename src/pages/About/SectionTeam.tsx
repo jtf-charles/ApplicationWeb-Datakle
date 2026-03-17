@@ -43,7 +43,7 @@ const TEAM: TeamMember[] = [
   },
     {
     id: 1,
-    name: "Joseph Tancrède CHARLES",
+    name: "Joseph Tancrède Fils CHARLES",
     role: "Responsable technologie et informatique",
     photo: team1,
     tagline: "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
