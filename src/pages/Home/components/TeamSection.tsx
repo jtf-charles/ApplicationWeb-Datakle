@@ -19,14 +19,14 @@ type TeamMember = {
 const TEAM: TeamMember[] = [
     {
     id: 3,
-    name: "Jacques Daguerre Valcy",
+    name: "Jacques Daguerre VALCY",
     role: "Responsable analytique",
     photo: team3,
     tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
   },
   {
     id: 2,
-    name: "Marc-Elie Lorzéro",
+    name: "Marc-Elie LORZERO",
     role: "Responsable Suivi & évaluation",
     photo: team2,
     tagline:
@@ -34,7 +34,7 @@ const TEAM: TeamMember[] = [
   },
    {
     id: 1,
-    name: "Charles J. Tancrède",
+    name: "Joseph Tancrède Fils CHARLES",
     role: "Responsable technologie et informatique",
     photo: team1,
     tagline:
@@ -42,14 +42,14 @@ const TEAM: TeamMember[] = [
   },
   {
     id: 4,
-    name: "Jean-Kerly Valcy",
+    name: "Jean-Kerly VALCY",
     role: "Responsable marketing et médias sociaux",
     photo: team4,
     tagline: "Travaille sur les stratégies de communication et les campagnes marketing numériques.",
   },
   {
     id: 5,
-    name: "Marie Ernice",
+    name: "Marie Ernice VALCY",
     role: "Responsable finance et opération",
     photo: team5,
     tagline:
