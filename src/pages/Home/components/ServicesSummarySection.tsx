@@ -32,7 +32,7 @@ const SERVICES: Service[] = [
   title: "Analytique web",
   description:
     "Analyse du comportement des visiteurs sur votre site web : audit des pages, suivi des activités en ligne et tests utilisateurs pour améliorer l’expérience et la performance.",
-  href: "/default",
+  href: "",
   Icon: FiBarChart2,
 },
 
@@ -41,7 +41,7 @@ const SERVICES: Service[] = [
   title: "Marketing et médias sociaux",
   description:
     "Études de positionnement, lancement et gestion de campagnes, ainsi qu’analyse des résultats pour mieux comprendre l’impact de vos actions marketing.",
-  href: "/default",
+  href: "",
   Icon: FiTrendingUp,
 },
 
@@ -50,7 +50,7 @@ const SERVICES: Service[] = [
   title: "Analyse de données & évaluation d’impact",
   description:
     "Accompagnement des organisations et ONG dans l’analyse de leurs données et l’évaluation des résultats de leurs projets afin de mieux orienter leurs actions.",
-  href: "/default",
+  href: "",
   Icon: FiDatabase,
 },
 
@@ -59,7 +59,7 @@ const SERVICES: Service[] = [
   title: "Formation en analyse de données",
   description:
     "Formations et ateliers pratiques pour aider les équipes à mieux collecter, analyser et utiliser les données dans leur travail quotidien.",
-  href: "/default",
+  href: "",
   Icon: FiUsers,
 },
 {
@@ -67,7 +67,7 @@ const SERVICES: Service[] = [
   title: "Systèmes de gestion de données",
   description:
     "Nous développons des bases de données et des applications web simples pour aider les entreprises et organisations à mieux gérer leurs informations et leurs activités.",
-  href: "/default",
+  href: "",
   Icon: FiServer,
 },
 {
@@ -75,7 +75,7 @@ const SERVICES: Service[] = [
   title: "Études et enquêtes",
   description:
     "Nous concevons et réalisons des enquêtes pour mieux comprendre une situation, mesurer des résultats et appuyer les décisions des organisations et des projets.",
-  href: "/default",
+  href: "",
   Icon: FiClipboard,
 },
 ];
@@ -113,7 +113,7 @@ export default function ServicesSummarySection() {
           title="Des solutions utiles pour piloter vos activités"
           subtitle="DATAKLE vous accompagne avec des services en gestion de données, analytique web, marketing et conception de solutions numériques adaptées à vos besoins."
           ctaLabel="Voir tous les services"
-          ctaHref="/default"
+          ctaHref=""
           inView={inView}
         />
 

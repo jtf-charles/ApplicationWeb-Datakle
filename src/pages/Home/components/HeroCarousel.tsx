@@ -20,8 +20,8 @@ const slides: Slide[] = [
     eyebrow: "MISSION",
     title: "Transformer vos données en leviers de performance",
     lead: "Collecte → nettoyage → analyse → interprétation→ rapport",
-    primary: { to: "/default", label: "Études de cas →" },
-    secondary: { to: "/default", label: "Nos analyses" },
+    primary: { to: "", label: "Études de cas →" },
+    secondary: { to: "", label: "Nos analyses" },
   },
   {
     image: hero2,
@@ -29,15 +29,15 @@ const slides: Slide[] = [
     title: "Prix compétitifs, qualité standard",
     lead: "Une équipe compétente, disciplinée, expérimentée et engagée pour des livrables standards",
     primary: { to: "/a-propos#Equipe", label: "Notre équipe →" },
-    secondary: { to: "/default", label: "Obtenir un devis" },
+    secondary: { to: "", label: "Obtenir un devis" },
   },
   {
     image: hero3,
     eyebrow: "SERVICES",
     title: "Exploitation données et marketing numériques",
     lead: "Analyse de données, évaluation d'impact, cybermétrie et coaching",
-    primary: { to: "/default", label: "Nos services →" },
-    secondary: { to: "/default", label: "Contactez-nous" },
+    primary: { to: "", label: "Nos services →" },
+    secondary: { to: "", label: "Contactez-nous" },
   },
 ];
 
