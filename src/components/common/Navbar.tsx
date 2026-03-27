@@ -26,37 +26,37 @@ const MENUS: Menu[] = [
     label: "Services",
     to: "/default",
     children: [
-      { label: "Marketing numériques", to: "/default" },
-      { label: "Cybermétrie", to: "/default" },
-      { label: "Analyse de données", to: "/default" },
-      { label: "Coaching", to: "/default" },
-      { label: "Évaluations d’impact", to: "/default" },
-      { label: "Autres", to: "/default" },
+      { label: "Marketing numériques", to: "" },
+      { label: "Cybermétrie", to: "" },
+      { label: "Analyse de données", to: "" },
+      { label: "Coaching", to: "" },
+      { label: "Évaluations d’impact", to: "" },
+      { label: "Autres", to: "" },
     ],
   },
 
-  { label: "Portfolio", to: "/default" },
+  { label: "Portfolio", to: "/" },
 
   {
     label: "Blog",
-    to: "/default",
+    to: "",
     children: [
-      { label: "Articles", to: "/default" },
-      { label: "Podcasts", to: "/default" },
-      { label: "FAQ", to: "/default" },
-      { label: "Vlogs", to: "/default" },
-      { label: "Interviews", to: "/default" },
-      { label: "Tutoriels", to: "/default" },
+      { label: "Articles", to: "" },
+      { label: "Podcasts", to: "" },
+      { label: "FAQ", to: "" },
+      { label: "Vlogs", to: "" },
+      { label: "Interviews", to: "" },
+      { label: "Tutoriels", to: "" },
     ],
   },
 
   {
     label: "Contact",
-    to: "/default",
+    to: "",
     children: [
       { label: "Réseaux sociaux", to: "/#social-media" },
       { label: "Formulaire de contact", to: "/#contact" },
-      { label: "Autres", to: "/default" },
+      { label: "Autres", to: "" },
     ],
   },
 ];

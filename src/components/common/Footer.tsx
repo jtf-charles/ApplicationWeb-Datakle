@@ -108,13 +108,13 @@ export default function Footer() {
           <nav>
             <h4 className="footer-title nexa-bold">Services</h4>
             <ul className="space-y-2 nexa-book">
-              <li><ScrollToTopLink to="/default" className="footer-link">Analytique web</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Marketing et médias sociaux</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Analyse de données</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">systèmes de gestion de données</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Etudes et enquêtes</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Formation</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Evaluation d'impact</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Analytique web</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Marketing et médias sociaux</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Analyse de données</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">systèmes de gestion de données</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Etudes et enquêtes</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Formation</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Evaluation d'impact</ScrollToTopLink></li>
             </ul>
           </nav>
 
@@ -122,8 +122,8 @@ export default function Footer() {
           <nav>
             <h4 className="footer-title nexa-bold">Ressources</h4>
             <ul className="space-y-2 nexa-book">
-              <li><ScrollToTopLink to="/default" className="footer-link">Études de cas</ScrollToTopLink></li>
-              <li><ScrollToTopLink to="/default" className="footer-link">Blog</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Études de cas</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="" className="footer-link">Blog</ScrollToTopLink></li>
               <li><ScrollToTopLink to="/a-propos" className="footer-link">À propos</ScrollToTopLink></li>
             </ul>
           </nav>
@@ -232,8 +232,8 @@ export default function Footer() {
             © {year} DATAKLE. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6 text-sm nexa-book">
-            <ScrollToTopLink to="/default" className="footer-link">Mentions légales</ScrollToTopLink>
-            <ScrollToTopLink to="/default" className="footer-link">Confidentialité</ScrollToTopLink>
+            <ScrollToTopLink to="" className="footer-link">Mentions légales</ScrollToTopLink>
+            <ScrollToTopLink to="" className="footer-link">Confidentialité</ScrollToTopLink>
           </div>
         </div>
       </div>
