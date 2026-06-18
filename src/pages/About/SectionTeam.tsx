@@ -24,7 +24,7 @@ const TEAM: TeamMember[] = [
   {
     id: 3,
     name: "Jacques Daguerre VALCY",
-    role: " Responsable analytique",
+    role: "",
     photo: team3,
     tagline: "Coordonne les analyses et veille à la qualité des résultats produits.",
     story:
@@ -34,7 +34,7 @@ const TEAM: TeamMember[] = [
   {
     id: 2,
     name: "Marc-Elie LORZERO",
-    role: "Responsable Suivi & évaluation",
+    role: "",
     photo: team2,
     tagline: "Exploite les données pour suivre les activités, orienter les décisions et évaluer l’impact des projets.",
     story:
@@ -44,7 +44,7 @@ const TEAM: TeamMember[] = [
     {
     id: 1,
     name: "Joseph Tancrède Fils CHARLES",
-    role: "Responsable technologie et informatique",
+    role: "",
     photo: team1,
     tagline: "Conçoit les outils et systèmes qui permettent de mieux exploiter les données.",
     story:
@@ -54,7 +54,7 @@ const TEAM: TeamMember[] = [
   {
     id: 4,
     name: "Jean-Kerly VALCY",
-    role: "Responsable marketing et médias sociaux",
+    role: "",
     photo: team4,
     tagline: "Travaille sur les stratégies de communication et les campagnes marketing numériques.",
     story:
@@ -64,7 +64,7 @@ const TEAM: TeamMember[] = [
   {
     id: 5,
     name: "Marie Ernice VALCY",
-    role: "Responsable finance et opération",
+    role: "",
     photo: team5,
     tagline: "Assure la gestion financière et le bon déroulement des activités.",
     story:

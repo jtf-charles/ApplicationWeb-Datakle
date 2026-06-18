@@ -24,7 +24,7 @@ const MENUS: Menu[] = [
 
   {
     label: "Services",
-    to: "/default",
+    to: "",
     children: [
       { label: "Marketing numériques", to: "" },
       { label: "Cybermétrie", to: "" },
@@ -35,11 +35,11 @@ const MENUS: Menu[] = [
     ],
   },
 
-  { label: "Portfolio", to: "/" },
+  { label: "Portfolio", to: "" },
 
   {
     label: "Blog",
-    to: "",
+    to: "blog",
     children: [
       { label: "Articles", to: "" },
       { label: "Podcasts", to: "" },
